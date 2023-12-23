@@ -5,6 +5,7 @@ import { HeroSection } from "../heroSection/HeroSection";
 import { Header } from "../header/Header";
 import { WelcomeSection } from "../welcomeSection/WelcomeSection";
 import { DraxSection } from "../draxSection/DraxSection";
+import { MediaSection } from "../mediaSection/MediaSection";
 
 interface LayoutProps {}
 
@@ -17,6 +18,7 @@ export const Layout: FC<LayoutProps> = () => {
           <HeroSection />
           <WelcomeSection />
           <DraxSection />
+          <MediaSection />
         </Main>
       </div>
       {/* footer */}
