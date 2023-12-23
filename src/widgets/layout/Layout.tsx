@@ -10,6 +10,10 @@ import { MessangerSection } from "../messangerSection/MessangerSection";
 import { PartnersSection } from "../partnersSection/PartnersSection";
 import { Footer } from "../footer/Footer";
 
+import { SocialSection } from "../socialSection/SocialSection";
+import { DraxSection } from "../draxSection/DraxSection";
+import { MediaSection } from "../mediaSection/MediaSection";
+import { ProgramSection } from "../programSection/ProgramSection";
 
 interface LayoutProps {}
 
@@ -24,7 +28,10 @@ export const Layout: FC<LayoutProps> = () => {
           <NftSection />
           <MessangerSection />
           <PartnersSection />
-
+          <DraxSection />
+          <MediaSection />
+          <ProgramSection />
+          <SocialSection />
         </Main>
       </div>
       <Footer />
