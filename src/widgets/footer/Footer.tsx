@@ -123,9 +123,9 @@ export const Footer: FC<FooterProps> = () => {
               <p className={s.footer_text}>
                 The content on this website is not intended to serve as
                 investment advice, financial advice, or trading advice, and you
-                should not interpret any of the website's information as such.
-                DRAX does not endorse the buying, selling, or holding of any
-                cryptocurrencies by users. We strongly advise you to conduct
+                should not interpret any of the website&apos;s information as
+                such. DRAX does not endorse the buying, selling, or holding of
+                any cryptocurrencies by users. We strongly advise you to conduct
                 your own thorough research and seek guidance from a qualified
                 financial advisor before making any investment choices. Please
                 note that the DRAX BEP-20 compatible token and exchange

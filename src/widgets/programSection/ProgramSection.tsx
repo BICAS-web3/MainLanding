@@ -21,7 +21,7 @@ export const ProgramSection: FC<ProgramSectionProps> = () => {
         </h2>
         <p className={s.drax_text}>
           Unlock a World of Exclusive Rewards, Personalized Assistance, and
-          Premium Benefits with Our Elite VIP Program"
+          Premium Benefits with Our Elite VIP Program&quot;
         </p>
         <Button className={clsx(s.program_btn)}>Learn more</Button>
       </div>
