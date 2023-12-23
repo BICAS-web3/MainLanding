@@ -7,6 +7,7 @@ import { WelcomeSection } from "../welcomeSection/WelcomeSection";
 import { DraxSection } from "../draxSection/DraxSection";
 import { MediaSection } from "../mediaSection/MediaSection";
 import { ProgramSection } from "../programSection/ProgramSection";
+import { SocialSection } from "../socialSection/SocialSection";
 
 interface LayoutProps {}
 
@@ -21,6 +22,7 @@ export const Layout: FC<LayoutProps> = () => {
           <DraxSection />
           <MediaSection />
           <ProgramSection />
+          <SocialSection />
         </Main>
       </div>
       {/* footer */}
