@@ -1,11 +1,13 @@
-.wrapp {
+.drax {
   border-top: 1px solid #787878;
   border-bottom: 1px solid #787878;
   background: #0a0a0a;
   padding: 192px 212px 230px 212px;
   display: flex;
   position: relative;
+  align-items: center;
   flex-direction: column;
+  z-index: 1;
   &::after {
     position: absolute;
     content: "";
