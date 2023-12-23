@@ -29,7 +29,7 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
               <p className={s.welcome_section_text}>
                 Step into a New Dimension of Gaming with Our Cutting-Edge Web
                 3.0 Platform: Seamless, Decentralized, and Limitless in
-                Possibilities"
+                Possibilities&quot;
               </p>
             </div>
             <button className={s.join_btn}>Join Game</button>
