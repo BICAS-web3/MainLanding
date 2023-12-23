@@ -1,0 +1,88 @@
+.program {
+  border-top: 1px solid #787878;
+  background: #0a0a0a;
+  padding: 301px 212px 1px 212px;
+  display: flex;
+  gap: 25px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 626px;
+    height: 184px;
+    border-radius: 626px;
+    background: #c19559;
+    filter: blur(305.5px);
+    top: 366px;
+    left: -253px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 414px;
+    height: 415px;
+    top: 377px;
+    border-radius: 415px;
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(305.5px);
+    right: 378px;
+  }
+}
+.drax_container {
+  min-width: 580px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 76px;
+  position: relative;
+  gap: 31px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 7px;
+    height: 280px;
+    background: #e5c787;
+  }
+}
+.drax_title {
+  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
+  // text-align: center;
+  font-family: var(--font-nunito-sans);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 60px */
+  span {
+    color: white;
+  }
+}
+
+.drax_text {
+  margin-top: 40px;
+  color: var(--white-1-ea, var(--White-1, #eaeaea));
+  font-family: var(--font-source-sans-3);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  letter-spacing: 1px;
+  max-width: 512px;
+}
+
+.program_leptop {
+  margin-top: 80px;
+  flex: 1 1 auto;
+  width: 1024px;
+  height: 623.5px;
+  position: relative;
+  @media (max-width: 1920px) {
+    width: 750px;
+    height: 500px;
+  }
+}
+
+.program_btn {
+  max-width: 238px;
+  margin-top: 81px;
+}
