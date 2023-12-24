@@ -4,6 +4,7 @@ import { FC } from "react";
 import bgImg from "@/public/media/welcomeSection/welcomeSectionBg.png";
 import bgImg2 from "@/public/media/common/commonSectionsBg.png";
 import imgsGroup from "@/public/media/welcomeSection/imgsGroup.png";
+import { Button } from "@/shared/ui/Button";
 
 interface WelcomeSectionProps {}
 
@@ -32,7 +33,7 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
                 Possibilities&quot;
               </p>
             </div>
-            <button className={s.join_btn}>Join Game</button>
+            <Button className={s.join_btn}>Join Game</Button>
           </div>
           {/* <div className={s.right_img_wrap}>
 

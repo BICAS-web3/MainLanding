@@ -4,6 +4,9 @@
   padding: 301px 212px 1px 212px;
   display: flex;
   gap: 25px;
+  @media (max-width: 1700px) {
+    padding: 192px 90px 230px 90px;
+  }
   position: relative;
   &::after {
     position: absolute;

@@ -4,6 +4,10 @@
   background: #0a0a0a;
   display: flex;
   gap: 91px;
+
+  @media (max-width: 1530px) {
+    flex-direction: column;
+  }
 }
 
 .social_container {
@@ -213,7 +217,7 @@
 
 .social_bottom_line {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 15px);
   transform: translateX(-50%);
-  bottom: 140px;
+  bottom: 60px;
 }

@@ -5,6 +5,7 @@ import imagesBgGroup from "@/public/media/messangerImgs/bgGroup.png";
 import phoneTop from "@/public/media/messangerImgs/topPhone.png";
 import phoneCenter from "@/public/media/messangerImgs/centerPhone.png";
 import phoneBottom from "@/public/media/messangerImgs/phoneBottom.png";
+import { Button } from "@/shared/ui/Button";
 
 interface MessangerSectionProps {}
 
@@ -53,7 +54,9 @@ export const MessangerSection: FC<MessangerSectionProps> = () => {
                       and distributed ledger data storage
                     </p>
                   </div>
-                  <button className={s.messanger_btn}>Release Soon</button>
+                  <Button isGray className={s.messanger_btn}>
+                    Release Soon
+                  </Button>
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-import bg from "@/public/media/draxSection/Vector.svg";
+import bg from "@/public/media/roadmapSection/roadmap_bg.png";
 import media_1 from "@/public/media/mediaSection/media_1.svg";
 import media_2 from "@/public/media/mediaSection/media_2.svg";
 import media_3 from "@/public/media/mediaSection/media_3.svg";
@@ -53,8 +53,8 @@ export const MediaSection: FC<MediaSectionProps> = () => {
 
   return (
     <section className={s.media}>
-      <h2>
-        GreekKeepers <span>in Media</span>
+      <h2 className={s.media_title}>
+        <span>GreekKeepers </span>in Media
       </h2>
       <Marquee className={s.media_marquee}>
         {[...imgArr, ...imgArr].map((el, i) => (

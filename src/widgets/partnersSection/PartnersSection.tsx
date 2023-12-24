@@ -4,6 +4,7 @@ import imgBg from "@/public/media/common/commonSectionsBg.png";
 import rightImg from "@/public/media/partnersImgs/rightImg.png";
 import topImg from "@/public/media/partnersImgs/topImg.png";
 import bottomImg from "@/public/media/partnersImgs/bottomImg.png";
+import { Button } from "@/shared/ui/Button";
 
 interface PartnersSectionProps {}
 
@@ -40,7 +41,7 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
                 Start sharing now and be part of our rewarding referral program!
               </p>
             </div>
-            <button className={s.alpha_btn}>Join Alpha</button>
+            <Button className={s.alpha_btn}>Join Alpha</Button>
           </div>
         </div>
       </div>

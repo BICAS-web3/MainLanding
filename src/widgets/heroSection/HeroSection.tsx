@@ -1,6 +1,7 @@
 import { FC } from "react";
 import s from "./styles.module.scss";
 import sectionBg from "@/public/media/heroSection/heroSecBg.png";
+import { Button } from "@/shared/ui/Button";
 
 interface HeroSectionProps {}
 
@@ -17,7 +18,7 @@ export const HeroSection: FC<HeroSectionProps> = () => {
             Space of Web3 Tools aims to cross the border of blockchain adoption
             and Fun dive into Crypto with Messenger, NFT, GameFi, Launchpad
           </p>
-          <button className={s.buy_token_btn}>Buy Token</button>
+          <Button className={s.buy_token_btn}>Buy Token</Button>
         </div>
       </div>
     </div>
