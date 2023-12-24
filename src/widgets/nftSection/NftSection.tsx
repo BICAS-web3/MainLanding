@@ -2,6 +2,7 @@ import s from "./styles.module.scss";
 import { FC } from "react";
 import bgImg from "@/public/media/nftSection/NftsectionBg.png";
 import mainBgImg from "@/public/media/common/commonSectionsBg.png";
+import { Button } from "@/shared/ui/Button";
 
 interface NftSectionProps {}
 
@@ -29,7 +30,7 @@ export const NftSection: FC<NftSectionProps> = () => {
                 addition to your digital portfolio
               </p>
             </div>
-            <button className={s.nft_market_btn}>NFT Market</button>
+            <Button className={s.nft_market_btn}>NFT Market</Button>
           </div>
         </div>
       </div>

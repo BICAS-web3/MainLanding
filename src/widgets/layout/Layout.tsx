@@ -14,6 +14,7 @@ import { SocialSection } from "../socialSection/SocialSection";
 import { DraxSection } from "../draxSection/DraxSection";
 import { MediaSection } from "../mediaSection/MediaSection";
 import { ProgramSection } from "../programSection/ProgramSection";
+import { RoadmapSection } from "../roadmapSection/RoadmapSection";
 
 interface LayoutProps {}
 
@@ -30,6 +31,7 @@ export const Layout: FC<LayoutProps> = () => {
           <PartnersSection />
           <DraxSection />
           <MediaSection />
+          <RoadmapSection />
           <ProgramSection />
           <SocialSection />
         </Main>

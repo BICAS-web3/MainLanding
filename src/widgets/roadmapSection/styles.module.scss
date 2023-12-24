@@ -1,0 +1,274 @@
+.roadmap {
+  padding: 121px 212px 0 212px;
+  border-top: 1px solid #916b3b;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  gap: 91px;
+  position: relative;
+  @media (max-width: 1700px) {
+    padding: 121px 90px 0 90px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    border-radius: 645px;
+    background: linear-gradient(0deg, #c18559 0%, #c18559 100%);
+    filter: blur(305.5px);
+    left: 50%;
+    top: -229px;
+    transform: translateX(-50%);
+    width: 645px;
+    height: 350px;
+  }
+}
+
+.roadmap_line {
+  position: absolute;
+  right: 140px;
+  top: 300px;
+  transform: rotate(-10deg);
+  opacity: 0.3;
+}
+
+.roadmap_container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 76px;
+  position: relative;
+  gap: 31px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 256px;
+    background: #e5c787;
+  }
+}
+.roadmap_title {
+  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
+  // text-align: center;
+  font-family: var(--font-nunito-sans);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 60px */
+  text-transform: uppercase;
+  span {
+    color: white;
+  }
+}
+
+.roadmap_text {
+  margin-top: 40px;
+  color: var(--white-1-ea, var(--White-1, #eaeaea));
+  font-family: var(--font-source-sans-3);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28px */
+  letter-spacing: 1px;
+  max-width: 512px;
+  span {
+    color: var(--gray-57-e, var(--White-1, #7e7e7e));
+  }
+}
+
+.roadmap_datapicker {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 87px;
+  width: 1396px;
+  height: 579px;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 3px solid #363636;
+  border-right: 3px solid #363636;
+  border-left: 3px solid #363636;
+  background: rgba(24, 24, 24, 0.58);
+  backdrop-filter: blur(5.349999904632568px);
+  overflow: hidden;
+  padding-top: 42px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 247px;
+    height: 387px;
+    right: -217px;
+    border-radius: 387px;
+    background: #c19159;
+    filter: blur(305.5px);
+    bottom: 70px;
+    z-index: 1;
+  }
+  @media (max-width: 1500px) {
+    width: 1200px;
+  }
+}
+
+.roadmap_swiper {
+  margin: 0 auto;
+  width: 931px;
+  justify-content: space-between;
+  // position: relative;
+  @media (max-width: 1530px) {
+    width: 800px;
+  }
+}
+
+.roadmap_swiper_slide {
+  color: var(--White-1, #eaeaea);
+  font-family: var(--font-nunito-sans);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 35px */
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.roadmap_arr {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+}
+
+.roadmap_arr_next {
+  left: 117px;
+}
+.roadmap_arr_prev {
+  right: 130px;
+  z-index: 1;
+}
+
+.roadmap_number_conteiner {
+  width: 100%;
+  max-width: 1251px;
+  margin: 0 auto;
+  margin-top: 39px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @media (max-width: 1530px) {
+    max-width: 1000px;
+  }
+}
+
+.roadmap_number {
+  color: #707070;
+  font-family: var(--font-nunito-sans);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
+}
+
+.roadmap_line_1 {
+  position: absolute;
+  top: 0;
+  left: 135px;
+}
+.roadmap_line_2 {
+  position: absolute;
+  left: 543px;
+  top: 0;
+}
+.roadmap_line_3 {
+  position: absolute;
+  top: 0;
+  right: 307px;
+}
+.roadmap_coun_1 {
+  position: absolute;
+  top: 52px;
+  right: 457px;
+  z-index: 2;
+}
+
+.roadmap_20 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  color: var(--White-1, #eaeaea);
+  font-family: var(--font-nunito-sans);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
+  background-color: #596c7a;
+  border-radius: 100%;
+  right: 440px;
+  top: -7px;
+}
+
+.roadmap_data_item {
+  height: 40px;
+  border-radius: 5px;
+  border-top: 1px solid #465967;
+  border-right: 1px solid #465967;
+  border-left: 1px solid #465967;
+  background: linear-gradient(180deg, #2e3537 0%, rgba(39, 38, 38, 0.5) 100%);
+  display: flex;
+  align-items: center;
+  color: rgba(256, 256, 256, 0.6);
+  font-family: var(--font-source-sans-3);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 0.8px;
+  padding-left: 20px;
+  position: relative;
+  z-index: 1;
+  &_1 {
+    width: 382px;
+  }
+  &_2 {
+    width: 382px;
+    color: white;
+    margin-top: -5px;
+    opacity: 1;
+  }
+  &_3 {
+    width: 514px;
+    margin-left: 260px;
+    margin-top: 20px;
+  }
+  &_4 {
+    width: 414px;
+    margin-left: 217px;
+    margin-top: 20px;
+  }
+  &_5 {
+    width: 382px;
+  }
+  &_6 {
+    width: 382px;
+    margin-bottom: -20px;
+  }
+  &_7 {
+    width: 382px;
+    margin-left: 194px;
+    margin-top: 20px;
+  }
+}
+
+.roadmap_data_container_1 {
+  margin-top: 88px;
+  display: flex;
+  margin-left: 179px;
+  gap: 63px;
+}
+
+.roadmap_data_container_2 {
+  display: flex;
+  margin-left: 304px;
+  gap: 298px;
+  margin-top: 20px;
+}

@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
+  @media (max-width: 1700px) {
+    padding: 192px 90px 230px 90px;
+  }
   &::after {
     position: absolute;
     content: "";
@@ -22,7 +26,19 @@
   gap: 105px;
   margin-top: 64px;
 }
-
+.media_title {
+  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
+  text-align: center;
+  font-family: var(--font-nunito-sans);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 60px */
+  text-transform: uppercase;
+  span {
+    color: white;
+  }
+}
 .media_img_wrap {
   width: 240px;
   height: 106.849px;
@@ -112,7 +128,7 @@
     right: 0;
   }
   &_6 {
-    top: 477px;
+    top: 456px;
     left: 131px;
     display: flex;
     justify-content: center;
