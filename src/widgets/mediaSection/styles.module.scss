@@ -275,6 +275,15 @@
   height: 98px;
   position: relative;
   overflow: hidden;
+  @media (max-width: 1280px) {
+    gap: 13px;
+    height: 65px;
+    svg,
+    img {
+      height: 26px;
+      width: 26px;
+    }
+  }
 }
 
 .media_links {
@@ -297,6 +306,10 @@
   letter-spacing: 0.48px;
   box-sizing: border-box;
   cursor: pointer;
+  @media (max-width: 1280px) {
+    font-size: 16px;
+    border-radius: 13px;
+  }
 }
 
 .media_links_img {

@@ -34,7 +34,7 @@ export const DraxSection: FC<DraxSectionProps> = () => {
 
   useEffect(() => {
     const width = window.innerWidth;
-    if (width < 1280) {
+    if (width < 700) {
       setis1280(true);
     }
   }, []);
