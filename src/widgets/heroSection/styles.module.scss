@@ -3,6 +3,14 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  @media screen and (max-width: 1280px) {
+    min-height: 700px;
+  }
+
+  @media screen and (max-width: 650px) {
+    // min-height: 550px;
+  }
 }
 
 .img_bg {
@@ -11,12 +19,18 @@
   height: 100%;
   top: 0;
   z-index: -1;
+  object-fit: cover;
 }
 
 .hero_section_container {
+  z-index: 10;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 1000px;
+  }
 }
 
 .hero_section_title {
@@ -29,6 +43,18 @@
   font-weight: 400;
   line-height: 96px;
   letter-spacing: 4px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 54px;
+    line-height: 64.8px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 36px;
+    line-height: 43.2px;
+    margin-bottom: 18px;
+  }
 }
 
 .hero_section_text {
@@ -42,6 +68,17 @@
   letter-spacing: 0.96px;
   margin-bottom: 55px;
   max-width: 708px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 16px;
+    line-height: 22.4px;
+    max-width: 470px;
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 35px;
+  }
 }
 
 .buy_token_btn {
@@ -63,4 +100,47 @@
   // border-radius: 12px;
   // border: 1px solid var(--Gold-solid, #e5c787);
   // background: #231f18;
+
+  @media screen and (max-width: 650px) {
+    width: 100% !important;
+  }
+}
+
+.hero_section_body {
+  padding: 0 30px;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 1280px) {
+    min-height: 700px;
+  }
+
+  @media screen and (max-width: 700px) {
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    padding: 0 30px 123px 30px;
+  }
+
+  @media screen and (max-width: 650px) {
+    // min-height: 550px;
+    align-items: start;
+    text-align: start;
+    padding: 0 16px 123px 16px;
+  }
+}
+
+.mob_ellipse {
+  @media screen and (max-width: 650px) {
+    width: 600px;
+    height: 600px;
+    background: rgb(0, 0, 0, 0.56);
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(105.5px);
+  }
 }

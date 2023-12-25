@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 
 import logo from "@/public/media/common/footerLogo.png";
@@ -99,6 +99,29 @@ const links = [
 interface FooterProps {}
 
 export const Footer: FC<FooterProps> = () => {
+  const [textBlockHeight, setTextBlockHeight] = useState(0);
+  const [is700, setIs700] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      const el = document.getElementById("footer-text");
+
+      width < 700 && setIs700(true);
+
+      el && setTextBlockHeight(el?.clientHeight);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={s.footer}>
       <div className={s.border_shadow}></div>
@@ -120,7 +143,7 @@ export const Footer: FC<FooterProps> = () => {
               </div>
             </div>
             <div className={s.footer_underTop_info_block}>
-              <p className={s.footer_text}>
+              <p className={s.footer_text} id="footer-text">
                 The content on this website is not intended to serve as
                 investment advice, financial advice, or trading advice, and you
                 should not interpret any of the website&apos;s information as
@@ -134,7 +157,10 @@ export const Footer: FC<FooterProps> = () => {
                 exchange distribution will be provided or discussed in regard to
                 these parties.
               </p>
-              <div className={s.footer_socials_list}>
+              <div
+                className={s.footer_socials_list}
+                style={{ height: is700 ? textBlockHeight : "100%" }}
+              >
                 {socialMediaList.map((item, ind) => (
                   <Link
                     key={ind}

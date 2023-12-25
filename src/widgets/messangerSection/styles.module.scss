@@ -1,7 +1,12 @@
 .messanger_section {
-  height: 1005px;
+  min-height: 1005px;
   position: relative;
   background: #080808;
+  overflow: hidden;
+
+  @media screen and (max-width: 1280px) {
+    min-height: 800px;
+  }
 }
 
 .bg_img {
@@ -13,23 +18,43 @@
 }
 
 .messanger_section_container {
+  height: 100%;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   height: 100%;
   z-index: 10;
   position: relative;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 1120px;
+  }
 }
 
 .messanger_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  min-height: 1005px;
+  padding: 0 30px;
 
-.messanger_content_block {
-  position: relative;
+  @media screen and (max-width: 1280px) {
+    min-height: 800px;
+  }
+
+  @media screen and (max-width: 700px) {
+    align-items: start;
+    padding: 100px 30px;
+  }
+
+  @media screen and (max-width: 650px) {
+    align-items: start;
+    padding: 124px 16px 0 16px;
+  }
 }
 
 .content_bg_img {
@@ -41,11 +66,29 @@
   left: 0;
 }
 
-.content_container {
+.messanger_content_block {
   width: 100%;
-  height: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1280px) {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 860px) {
+    grid-template-columns: 400px 1fr;
+  }
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 300px 1fr;
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .messanger_content_body {
@@ -53,18 +96,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.messanger_content_block {
-  overflow: hidden;
-  height: 600px;
-  border-radius: 20px;
-  background: rgba(18, 18, 18, 0.75);
-  width: 100%;
-  box-shadow: 2px 32px 33px 0px rgba(0, 0, 0, 0.25);
+  @media screen and (max-width: 700px) {
+    margin-right: 190px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-right: 0;
+  }
 }
 
 .messanger_info_title {
+  max-width: 475px;
   color: #eaeaea;
   font-family: var(--font-nunito-sans);
   font-size: 50px;
@@ -77,6 +120,23 @@
   span {
     color: #e5c787;
   }
+
+  @media screen and (max-width: 1280px) {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 32px;
+    line-height: 38.4px;
+    max-width: 390px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 24px;
+    line-height: 28.8px;
+    margin-bottom: 10px;
+  }
 }
 
 .messanger_info_text {
@@ -88,6 +148,16 @@
   font-weight: 400;
   line-height: 25.2px;
   letter-spacing: 0.9px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 15px;
+    line-height: 21px;
+    max-width: 475px;
+  }
+
+  @media screen and (max-width: 700px) {
+    max-width: 400px;
+  }
 }
 
 .messanger_info_wrap {
@@ -102,25 +172,148 @@
 .messanger_imgs_block {
   position: relative;
   height: 100%;
+
+  @media screen and (max-width: 1280px) {
+    bottom: -200px;
+  }
+
+  @media screen and (max-width: 765px) {
+    bottom: -180px;
+  }
+
+  @media screen and (max-width: 700px) {
+    bottom: -200px;
+    width: 100%;
+    height: 300px;
+    grid-row: 2;
+  }
 }
 
 .top_phone {
   position: absolute;
   top: 0;
-  left: 0;
+
+  @media screen and (min-width: 700px) {
+    left: 0;
+  }
+
+  @media screen and (max-width: 1280px) {
+    top: -300px;
+  }
+
+  @media screen and (max-width: 830px) {
+    top: -240px;
+  }
+
+  @media screen and (max-width: 765px) {
+    top: -180px;
+  }
+
+  @media screen and (max-width: 750px) {
+    top: -235px;
+  }
+
+  @media screen and (max-width: 700px) {
+    top: -460px;
+    right: 0;
+  }
+
+  @media screen and (max-width: 650px) {
+    top: -260px;
+    right: -50px;
+  }
+
+  @media screen and (max-width: 340px) {
+    right: -100px;
+  }
 }
 
 .bottom_phone {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
+
+  @media screen and (max-width: 1280px) {
+    bottom: -180px;
+  }
+
+  @media screen and (max-width: 750px) {
+    bottom: -70px;
+  }
+
+  @media screen and (max-width: 700px) {
+    left: auto;
+    right: 390px;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 650px) {
+    left: auto;
+    right: -50px;
+    bottom: -195px;
+  }
+
+  @media screen and (max-width: 340px) {
+    right: -100px;
+  }
+}
+
+.top_phone,
+.bottom_phone,
+.center_phone {
+  @media screen and (max-width: 1280px) {
+    width: 170px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 135px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 170px;
+  }
 }
 
 .center_phone {
   position: absolute;
-  left: 240px;
+  left: 220px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media screen and (max-width: 700px) {
+    transform: translateY(-50%);
+    left: 240px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    left: 190px;
+    top: 0%;
+  }
+
+  @media screen and (max-width: 765px) {
+    top: 20%;
+  }
+
+  @media screen and (max-width: 750px) {
+    top: 20%;
+    left: 155px;
+  }
+
+  @media screen and (max-width: 700px) {
+    right: 195px;
+    left: auto;
+    top: -60px;
+  }
+
+  @media screen and (max-width: 650px) {
+    right: auto;
+    left: 11px;
+    top: 10px;
+  }
+
+  @media screen and (max-width: 340px) {
+    left: -60px;
+  }
 }
 
 .left_ellipse {
@@ -145,14 +338,40 @@
   top: -150px;
   right: -100px;
   z-index: 0;
+
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 }
 
 .messanger_info_block {
   padding-left: 25px;
   border-left: 7px solid #e5c787;
+
+  @media screen and (max-width: 1280px) {
+    border-left: 4px solid #e5c787;
+  }
+
+  @media screen and (max-width: 650px) {
+    padding-left: 8px;
+  }
 }
 
 .messanger_btn {
   width: 240px;
   margin-top: 75px;
+  margin-left: 33px;
+
+  @media screen and (max-width: 1280px) {
+    margin-left: 29px;
+    width: 160px;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-left: 11px;
+  }
 }
