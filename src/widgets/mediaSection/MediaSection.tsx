@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -95,10 +95,16 @@ export const MediaSection: FC<MediaSectionProps> = () => {
             <Image className={s.media_token} src={media_token} alt="token" />
           </div>
           <div className={s.media_links_container}>
-            <div className={s.media_links}>
+            <div
+              onClick={() => window.open("", "_blank")}
+              className={s.media_links}
+            >
               Gitbook <GitbookIcon />
             </div>
-            <div className={s.media_links}>
+            <div
+              onClick={() => window.open("", "_blank")}
+              className={s.media_links}
+            >
               Github <GithubIcon />
             </div>
             <Image src={bg} className={s.media_links_img} alt="img" />

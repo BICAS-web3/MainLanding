@@ -7,3 +7,4 @@ export { USDTIcon } from "./USDTIcon";
 export { LogoIcon } from "./LogoIcon";
 export { GitbookIcon } from "./GitbookIcon";
 export { GithubIcon } from "./GithubIcon";
+export { ContactIcon } from "./ContactIcon";

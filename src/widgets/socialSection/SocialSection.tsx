@@ -53,7 +53,11 @@ export const SocialSection: FC<SocialSectionProps> = () => {
             </div>
             <div className={s.telegram_container}>
               <Image className={s.social_telegram} src={telegram} alt="" />
-              <button>
+              <button
+                onClick={() =>
+                  window.open("https://t.me/greekkeepers", "_blank")
+                }
+              >
                 Join Telegram{" "}
                 <svg
                   width="18"
