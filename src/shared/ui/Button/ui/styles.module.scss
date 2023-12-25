@@ -18,6 +18,16 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 1280px) {
+    height: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 0.56px;
+    text-transform: capitalize;
+  }
   &::before {
     transition: all 0.2s;
     content: "";

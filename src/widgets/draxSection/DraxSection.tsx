@@ -1,8 +1,9 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import {
   ArbitrumIcon,
   CardIcon,
+  ContactIcon,
   DraxIcon,
   LogoIcon,
   MetamaskIcon,
@@ -29,6 +30,15 @@ import Image from "next/image";
 interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
+  const [is1280, setis1280] = useState(false);
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    if (width < 700) {
+      setis1280(true);
+    }
+  }, []);
+
   const statistic = [
     { title: "Events", amount: "3,0%", icon: statistic_1 },
     { title: "NFT, GameFi Incentives", amount: "7,0%", icon: statistic_2 },
@@ -59,70 +69,37 @@ export const DraxSection: FC<DraxSectionProps> = () => {
             to vote on feature proposals in the future, get access to discount,
             bonuses, pools, messenger premium features and much more
           </p>
-          <Button className={clsx(s.drax_btn, s.drax_btn_1)}>
-            <MetamaskIcon /> Add Drax to MetaMask
-          </Button>
-          <Button className={clsx(s.drax_btn, s.drax_btn_2)}>
-            <PancakeIcon /> Buy on PancakeSwap
-          </Button>
-        </div>
-        <div className={s.drax_swap_under}>
-          {" "}
-          <div className={s.drax_swap}>
-            <Image className={s.drax_swap_bg} src={bg} alt="bg" />
-            <div className={s.drax_title_container}>
-              <span></span>
-              <h3 className={s.drax_swap_title}>1 DRAX = $0.0337</h3>
-              <span></span>
+          <div className={s.drax_bottom_container}>
+            <div className={s.btn_container}>
+              <Button className={clsx(s.drax_btn, s.drax_btn_1)}>
+                <MetamaskIcon /> Add Drax to MetaMask
+              </Button>
+              <Button className={clsx(s.drax_btn, s.drax_btn_2)}>
+                <PancakeIcon /> Buy on PancakeSwap
+              </Button>
             </div>
-            <div className={s.drax_swap_btns}>
-              <button className={s.drax_btn_pay}>
-                <ArbitrumIcon /> ARB
-              </button>
-              <button className={s.drax_btn_pay}>
-                <USDTIcon /> USDT
-              </button>
-              <button className={s.drax_btn_pay}>
-                <CardIcon /> CARD
-              </button>
-            </div>
-            <div className={s.drax_input_container}>
-              <div className={s.drax_amount_container}>
-                <span className={s.drax_amount}>Amount in ARB you pay</span>
-                <div className={s.drax_input_wrapp}>
-                  <input placeholder="0" className={s.drax_} type="text" />
-                  <ArbitrumIcon />
-                </div>
-              </div>
-              <div className={s.drax_amount_container}>
-                <span className={s.drax_amount}>
-                  Amount in DRAX you receive
-                </span>
-                <div className={s.drax_input_wrapp}>
-                  <input placeholder="0" className={s.drax_} type="text" />
-                  <DraxIcon />
-                </div>
-              </div>
-            </div>
-            <Button className={s.drax_connect}>Connect Wallet</Button>
-            <Button className={s.drax_buy} isGray={true}>
-              Buy with BNB
-            </Button>
-            <div className={s.drax_undertitle}>
-              Powered by
-              <LogoIcon />
-            </div>
-            <a className={s.drax_link} href="#">
-              HOW to buy
-            </a>
+            {is1280 && <Swap />}
           </div>
         </div>
+        {!is1280 && <Swap />}
       </article>
       <article className={s.allocation_contaoner}>
+        <div className={s.allocation_text}>
+          <h2 className={s.drax_title}>
+            <span>Token </span>Allocation
+          </h2>
+          <p>
+            Drax Burn each time of token transfer. Token burn will end until
+            total token burn becomes 200 million DRAX.
+          </p>
+          <Button className={s.contact_btn}>
+            <ContactIcon /> Contract
+          </Button>
+        </div>
         <div className={s.allocation_statistic}>
-          <div className={s.allowance_sricle_statistic}>
+          <div className={s.allowance_sircle_statistic}>
             <Image src={sircle} alt="statistic" />
-            <div className={s.allowance_sricle_text}>
+            <div className={s.allowance_sircle_text}>
               100%
               <span>of Drax token</span>
             </div>
@@ -170,16 +147,66 @@ export const DraxSection: FC<DraxSectionProps> = () => {
             </div>
           </div>
         </div>
-        <div className={s.allocation_text}>
-          <h2 className={s.drax_title}>
-            <span>Token </span>Allocation
-          </h2>
-          <p>
-            Drax Burn each time of token transfer. Token burn will end until
-            total token burn becomes 200 million DRAX.
-          </p>
-        </div>
       </article>
     </section>
+  );
+};
+
+export const Swap = () => {
+  return (
+    <div className={s.drax_swap_under}>
+      <div className={s.drax_swap}>
+        <Image className={s.drax_swap_bg} src={bg} alt="bg" />
+        <div className={s.drax_title_container}>
+          <span></span>
+          <h3 className={s.drax_swap_title}>1 DRAX = $0.0337</h3>
+          <span></span>
+        </div>
+        <div className={s.drax_swap_btns}>
+          <button className={s.drax_btn_pay}>
+            <ArbitrumIcon /> ARB
+          </button>
+          <button className={s.drax_btn_pay}>
+            <USDTIcon /> USDT
+          </button>
+          <button className={s.drax_btn_pay}>
+            <CardIcon /> CARD
+          </button>
+        </div>
+        <div className={s.drax_input_container}>
+          <div className={s.drax_amount_container}>
+            <span className={s.drax_amount}>
+              Amount in <span>ARB</span> you pay
+            </span>
+            <div className={s.drax_input_wrapp}>
+              <input placeholder="0" className={s.drax_} type="text" />
+              <ArbitrumIcon />
+            </div>
+          </div>
+          <div className={s.drax_amount_container}>
+            <span className={s.drax_amount}>
+              Amount in <span>DRAX</span> you receive
+            </span>
+            <div className={s.drax_input_wrapp}>
+              <input placeholder="0" className={s.drax_} type="text" />
+              <DraxIcon />
+            </div>
+          </div>
+        </div>
+        <div className={s.drax_btn_container}>
+          <Button className={s.drax_connect}>Connect Wallet</Button>
+          <Button className={s.drax_buy} isGray={true}>
+            Buy with BNB
+          </Button>
+        </div>
+        <div className={s.drax_undertitle}>
+          Powered by
+          <LogoIcon />
+        </div>
+        <a className={s.drax_link} href="#">
+          HOW to buy
+        </a>
+      </div>
+    </div>
   );
 };
