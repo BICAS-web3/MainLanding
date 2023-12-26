@@ -41,7 +41,7 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
   }, []);
 
   return (
-    <div className={s.welcome_section}>
+    <div className={s.welcome_section} id="welcome_section">
       <img src={bgImg2.src} alt="bg-img" className={s.section_bg_img} />
       <img src={bgImg.src} alt="bg-img-2" className={s.section_bg_img_2} />
       <div className={s.bg_ellipse}></div>

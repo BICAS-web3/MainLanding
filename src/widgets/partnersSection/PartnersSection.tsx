@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 import imgBg from "@/public/media/common/commonSectionsBg.png";
-import rightImg from "@/public/media/partnersImgs/rightImg.png";
-import topImg from "@/public/media/partnersImgs/topImg.png";
-import bottomImg from "@/public/media/partnersImgs/bottomImg.png";
+import rightImg from "@/public/media/partnersImgs/rightImg.webp";
+import topImg from "@/public/media/partnersImgs/topImg.webp";
+import bottomImg from "@/public/media/partnersImgs/bottomImg.webp";
 import { Button } from "@/shared/ui/Button";
 import recentIco from "@/public/media/common/recentIco.svg";
 
@@ -66,7 +66,7 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
   }, []);
 
   return (
-    <div className={s.partners_section}>
+    <div className={s.partners_section} id="partners_section">
       <img src={imgBg.src} alt="img-bg-static" className={s.bg_img} />
       <div className={s.left_ellipse}></div>
       <div className={s.right_ellipse}></div>

@@ -32,7 +32,7 @@ export const SocialSection: FC<SocialSectionProps> = () => {
   }, []);
 
   return (
-    <section className={s.social}>
+    <section className={s.social} id="community_section">
       <div className={clsx("container", s.container)}>
         {" "}
         <span className={s.eclipse}></span>
