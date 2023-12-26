@@ -32,7 +32,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
     swiperRef.current.swiper.slideNext();
   }, []);
   return (
-    <section className={s.roadmap}>
+    <section className={s.roadmap} id="roadmap_section">
       <Image src={bg} className={s.roadmap_line} alt="" />
       <div className={s.roadmap_container}>
         <h2 className={s.roadmap_title}>

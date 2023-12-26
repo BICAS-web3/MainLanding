@@ -21,7 +21,7 @@ interface SocialSectionProps {}
 
 export const SocialSection: FC<SocialSectionProps> = () => {
   return (
-    <section className={s.social}>
+    <section className={s.social} id="community_section">
       <div className={s.social_container}>
         <h2 className={s.social_title}>
           <span>Stay</span>
@@ -53,7 +53,11 @@ export const SocialSection: FC<SocialSectionProps> = () => {
             </div>
             <div className={s.telegram_container}>
               <Image className={s.social_telegram} src={telegram} alt="" />
-              <button>
+              <button
+                onClick={() =>
+                  window.open("https://t.me/greekkeepers", "_blank")
+                }
+              >
                 Join Telegram{" "}
                 <svg
                   width="18"

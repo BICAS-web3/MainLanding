@@ -8,6 +8,7 @@ interface HeroSectionProps {}
 export const HeroSection: FC<HeroSectionProps> = () => {
   return (
     <div className={s.hero_section}>
+      <div className={s.mob_ellipse}></div>
       <img src={sectionBg.src} alt="img-bg" className={s.img_bg} />
       <div className={s.hero_section_container}>
         <div className={s.hero_section_body}>

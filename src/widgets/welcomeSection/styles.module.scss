@@ -1,13 +1,26 @@
 .welcome_section {
   background: #080808;
   position: relative;
-  height: 1005px;
+  min-height: 1005px;
+
+  @media screen and (max-width: 1280px) {
+    min-height: 700px;
+  }
 }
 
 .welcome_section_container {
   width: 100%;
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 1120px;
+  }
+}
+
+.welcome_section_info {
+  position: relative;
+  z-index: 10;
 }
 
 .section_bg_img {
@@ -35,6 +48,30 @@
   z-index: 2;
   width: fit-content;
   height: fit-content;
+
+  @media screen and (max-width: 1280px) {
+    height: 40vw;
+    width: 60%;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 50vw;
+    width: 75%;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: fit-content;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 520px) {
+    height: fit-content;
+    width: 250px;
+  }
+
+  // @media screen and (max-width: 400px) {
+  //   width: 60%;
+  // }
 }
 
 .bg_ellipse {
@@ -47,6 +84,11 @@
   background: rgba(193, 149, 89, 0.56);
   filter: blur(305.5px);
   border-radius: 50%;
+
+  @media screen and (max-width: 1280px) {
+    bottom: -100px;
+    right: 100px;
+  }
 }
 
 .welcome_section_container {
@@ -56,7 +98,24 @@
 
 .welcome_section_body {
   width: 100%;
-  padding: 117px 16px 0 16px;
+  padding: 117px 30px 0 30px;
+  min-height: 1005px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 1280px) {
+    padding: 217px 30px 0 30px;
+    min-height: 700px;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 127px 30px 0 30px;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 650px) {
+    padding: 127px 16px 0 16px;
+  }
 }
 
 .welcome_section_title {
@@ -72,6 +131,17 @@
   span {
     color: #e5c787;
   }
+
+  @media screen and (max-width: 1280px) {
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
 }
 
 .welcome_section_text {
@@ -83,32 +153,38 @@
   font-weight: 400;
   line-height: 25.2px;
   letter-spacing: 0.9px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 14px;
+    line-height: 19.6px;
+    max-width: 390px;
+  }
 }
 
 .welcome_section_info_block {
   border-left: 7px solid #e5c787;
   padding-left: 70px;
+  @media screen and (max-width: 1280px) {
+    border-left: 4px solid #e5c787;
+    padding-left: 30px;
+  }
+  @media screen and (max-width: 650px) {
+    padding-left: 8px;
+  }
 }
 
 .join_btn {
-  // border-radius: 12px;
-  // border: 1px solid #e5c787;
-  // background: #231f18;
-  // color: #ffe09d;
-  // text-align: center;
-  // font-family: var(--font-nunito-sans);
-  // font-size: 16px;
-  // font-style: normal;
-  // font-weight: 700;
-  // line-height: 22.4px;
-  // letter-spacing: 0.64px;
-  // text-transform: capitalize;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // height: 50px;
   width: 240px;
   margin-top: 50px;
   margin-left: 77px;
-  // cursor: pointer;
+
+  @media screen and (max-width: 1280px) {
+    width: 160px;
+    margin-top: 30px;
+    margin-left: 39px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-left: 12px;
+  }
 }

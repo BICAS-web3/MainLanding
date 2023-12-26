@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -16,10 +16,10 @@ import integration_1 from "@/public/media/mediaSection/integration_1.png";
 import integration_2 from "@/public/media/mediaSection/integration_2.png";
 import integration_3 from "@/public/media/mediaSection/integration_3.svg";
 import integration_4 from "@/public/media/mediaSection/integration_4.png";
-import integration_5 from "@/public/media/mediaSection/integration_5.svg";
+import integration_5 from "@/public/media/mediaSection/integration_5.png";
 import integration_6 from "@/public/media/mediaSection/integration_6.svg";
 import integration_7 from "@/public/media/mediaSection/integration_7.png";
-import integration_8 from "@/public/media/mediaSection/integration_8.svg";
+import integration_8 from "@/public/media/mediaSection/integration_8.png";
 
 import s from "./styles.module.scss";
 
@@ -52,7 +52,7 @@ export const MediaSection: FC<MediaSectionProps> = () => {
   ];
 
   return (
-    <section className={s.media}>
+    <section className={s.media} id="media_section">
       <h2 className={s.media_title}>
         <span>GreekKeepers </span>in Media
       </h2>
@@ -71,15 +71,15 @@ export const MediaSection: FC<MediaSectionProps> = () => {
             innovations
           </p>
           {integrationImg.map((el, i) => (
-            <div
+            <Image
               key={i}
               className={clsx(
                 s.media_integration_img,
                 s[`media_integration_img_${i + 1}`]
               )}
-            >
-              <Image src={el} alt="integration" />
-            </div>
+              src={el}
+              alt="integration"
+            />
           ))}
         </div>
 
@@ -95,10 +95,16 @@ export const MediaSection: FC<MediaSectionProps> = () => {
             <Image className={s.media_token} src={media_token} alt="token" />
           </div>
           <div className={s.media_links_container}>
-            <div className={s.media_links}>
+            <div
+              onClick={() => window.open("", "_blank")}
+              className={s.media_links}
+            >
               Gitbook <GitbookIcon />
             </div>
-            <div className={s.media_links}>
+            <div
+              onClick={() => window.open("", "_blank")}
+              className={s.media_links}
+            >
               Github <GithubIcon />
             </div>
             <Image src={bg} className={s.media_links_img} alt="img" />
