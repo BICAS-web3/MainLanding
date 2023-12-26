@@ -1,21 +1,28 @@
 .program {
   border-top: 1px solid #787878;
   background: #0a0a0a;
-  padding: 301px 212px 1px 212px;
+  padding: 301px 0 1px 0;
   display: flex;
   gap: 25px;
   @media (max-width: 1600px) {
-    padding: 60px 20px 0px 90px;
+    padding: 60px 0 0px 0;
+    justify-content: space-between;
+    gap: 0;
+  }
+  @media (max-width: 1500px) {
+    padding: 60px 0 0px 0;
     justify-content: space-between;
     gap: 0;
   }
 
-  @media (max-width: 1000px) {
-    padding: 71px 30px 0px 24px;
+  @media (max-width: 1280px) {
+    padding: 71px 0 0px 0;
   }
   @media (max-width: 700px) {
-    padding: 98px 30px 0px 24px;
+    padding: 98px 0 0px 0;
+    flex-direction: column;
   }
+
   position: relative;
   &::after {
     position: absolute;
@@ -27,6 +34,27 @@
     filter: blur(305.5px);
     top: 366px;
     left: -253px;
+    @media (max-width: 1600px) {
+      width: 626px;
+      height: 184px;
+      border-radius: 626px;
+      top: 128px;
+      left: -339px;
+    }
+    @media (max-width: 1280px) {
+      width: 452px;
+      height: 133px;
+      border-radius: 452px;
+      top: 48px;
+      left: -329px;
+    }
+    @media (max-width: 700px) {
+      width: 72px;
+      height: 141px;
+      border-radius: 0;
+      top: 90px;
+      left: -40px;
+    }
   }
   &::before {
     position: absolute;
@@ -38,38 +66,85 @@
     background: rgba(255, 255, 255, 0.6);
     filter: blur(305.5px);
     right: 378px;
+    @media (max-width: 1280px) {
+      display: none;
+    }
   }
 }
+
+.container {
+  display: flex;
+  gap: 25px;
+  max-width: 1500px;
+  margin: 0 auto;
+  @media screen and (max-width: 1280px) {
+    max-width: 1120px;
+  }
+
+  padding-left: 20px;
+  padding-right: 30px;
+
+  @media screen and (max-width: 650px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+  }
+  @media (max-width: 1600px) {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
 .drax_container {
   min-width: 580px;
   display: flex;
   flex-direction: column;
-  padding-left: 76px;
   position: relative;
-  // gap: 31px;
   @media (max-width: 1280px) {
-    padding-left: 37px;
     width: 351px;
     min-width: 351px;
   }
-  &::after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    left: 0;
-    width: 7px;
-    height: 280px;
-    background: #e5c787;
-    @media (max-width: 1280px) {
-      width: 4px;
-      height: 169px;
-    }
+  @media (max-width: 998px) {
+  }
+  @media (max-width: 700px) {
+    width: auto;
+    min-width: auto;
   }
 
   @media (max-width: 1920px) {
     min-width: auto;
   }
 }
+
+.drax_after {
+  position: relative;
+  padding-left: 76px;
+  @media (max-width: 1280px) {
+    padding-left: 38px;
+  }
+  @media (max-width: 998px) {
+    padding-left: 18px;
+  }
+  @media (max-width: 700px) {
+    padding-left: 12px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: #e5c787;
+    @media (max-width: 1280px) {
+      width: 4px;
+    }
+    @media (max-width: 998px) {
+      width: 4px;
+    }
+  }
+}
+
 .drax_title {
   color: var(--Gold-Solid-1, var(--White-1, #e5c787));
   // text-align: center;
@@ -83,6 +158,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 48px */
+  }
+  @media (max-width: 998px) {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
   }
   span {
     color: white;
@@ -114,6 +195,14 @@
     width: 351px;
     letter-spacing: 0.6px;
   }
+  @media (max-width: 998px) {
+    margin-top: 5px;
+    max-width: 293px;
+  }
+  @media (max-width: 700px) {
+    margin-top: 5px;
+    max-width: auto;
+  }
 }
 
 .program_leptop {
@@ -137,12 +226,30 @@
     width: 617.647px;
     height: 377.005px;
   }
+  @media (max-width: 700px) {
+    width: 617.647px;
+    height: 377.005px;
+  }
 }
 
 .program_btn {
   max-width: 238px;
   margin-top: 81px;
+  margin-left: 76px;
+  @media (max-width: 1280px) {
+    margin-left: 38px;
+  }
+  @media (max-width: 998px) {
+    margin-left: 18px;
+  }
+  @media (max-width: 700px) {
+    margin-left: 12px;
+  }
   @media (max-width: 1280px) {
     margin-top: 30px;
+  }
+  @media (max-width: 998px) {
+    margin-top: 20px;
+    max-width: 160px;
   }
 }
