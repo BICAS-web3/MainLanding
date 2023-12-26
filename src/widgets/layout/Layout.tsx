@@ -31,7 +31,7 @@ export const Layout: FC<LayoutProps> = () => {
           <PartnersSection />
           <DraxSection />
           <MediaSection />
-          {/* <RoadmapSection /> */}
+          <RoadmapSection />
           <ProgramSection />
           <SocialSection />
         </Main>

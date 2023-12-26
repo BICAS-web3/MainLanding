@@ -10,7 +10,6 @@ export const NextArrIcon: FC<IIconInterface> = ({ className, onClick }) => {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={onClick}
       className={className}
     >
       <rect width="40" height="40" rx="12" fill="#202020" />

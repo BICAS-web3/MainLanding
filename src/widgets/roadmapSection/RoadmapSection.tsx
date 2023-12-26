@@ -7,12 +7,12 @@ import clsx from "clsx";
 import { Button } from "@/shared/ui/Button";
 import { SwiperSlide, Swiper, SwiperRef } from "swiper/react";
 import "swiper/css";
-import { Scrollbar } from "swiper/modules";
+import { Navigation, Scrollbar } from "swiper/modules";
 import { PrevArrIcon } from "@/shared/SVG/PrevArrIcon";
 import { NextArrIcon } from "@/shared/SVG/NextArrIcon";
 
 import bg from "@/public/media/draxSection/Vector.svg";
-import roadmap_line_1 from "@/public/media/roadmapSection/roadmap_line_1.svg";
+import roadmap_line_1 from "@/public/media/roadmapSection/line.svg";
 import roadmap_line_2 from "@/public/media/roadmapSection/roadmap_line_2.svg";
 import roadmap_line_3 from "@/public/media/roadmapSection/roadmap_line_3.svg";
 import roadmap_coun_1 from "@/public/media/roadmapSection/roadmap_coun_1.svg";
@@ -20,109 +20,178 @@ import roadmap_coun_1 from "@/public/media/roadmapSection/roadmap_coun_1.svg";
 interface RoadmapSectionProps {}
 
 export const RoadmapSection: FC<RoadmapSectionProps> = () => {
+  const data = [
+    {
+      title: "May",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Project structuring and development",
+        "Creation and development of token issue",
+        "Creation of the official website and social networks",
+      ],
+    },
+    {
+      title: "June",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Listing of Drax token on Dex exchanges",
+        "Expansion of the development team",
+        "Planning the marketing strategy and branding of the project",
+        "Planning and development of platform and game testing strategy",
+      ],
+    },
+    {
+      title: "July",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Active development of our Web3.0 game platform",
+        "Development of Content Marketing Strategy",
+      ],
+    },
+    {
+      title: "August",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Launch the game platform on the main network",
+        "Testing the platform on a test network to ensure it works flawlessly",
+      ],
+    },
+    {
+      title: "September",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Creating channels to collect and analyze feedback from users.",
+        "Developing a unique collection of NFTs",
+      ],
+    },
+    {
+      title: "October",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Launch the game platform on the main network",
+        "Add support for new networks to expand availability",
+        "Introduce new games, enriching our catalog",
+      ],
+    },
+    {
+      title: "November",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Start selling NFT on the popular Element marketplace",
+        "Create our own NFT-placement",
+        "Implement referral and affiliate programs to attract and reward users",
+        "Improve interface and optimize user experience",
+        "Begin collaborating with arbitrage companies",
+        "Continue adding new games to ensure content is constantly updated",
+      ],
+    },
+    {
+      title: "December",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Develop partnerships with various projects and investors",
+        "Creating a basis for long-term cooperation.",
+        "Update the design  of the main site",
+        "Developing a VIP level system",
+        "Continuing to add new games",
+        "Providing fresh and exciting gaming content.",
+      ],
+    },
+    {
+      title: "January",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Adding token exchange (swap)",
+        "Development and launch of messenger",
+        "Actively attracting audience to our gaming platform",
+        "Collaborate with various projects",
+      ],
+    },
+  ];
+
   const swiperRef = useRef<SwiperRef>(null);
 
-  const handlePrev = useCallback(() => {
-    if (!swiperRef.current) return;
-    swiperRef.current.swiper.slidePrev();
-  }, []);
-
-  const handleNext = useCallback(() => {
-    if (!swiperRef.current) return;
-    swiperRef.current.swiper.slideNext();
-  }, []);
   return (
     <section className={s.roadmap} id="roadmap_section">
       <Image src={bg} className={s.roadmap_line} alt="" />
-      <div className={s.roadmap_container}>
-        <h2 className={s.roadmap_title}>
-          <span> Roadmap</span>
-        </h2>
-        <p className={s.roadmap_text}>
-          <span>Realised:</span> Build team and discuss issues,
-          Launch of marketing, Whitelist registration, Distribution of NFTs to
-          Whitelist owners, Develop project concept
-        </p>
+      <div className={clsx("container", s.container)}>
+        {" "}
+        <div className={s.roadmap_container}>
+          <h2 className={s.roadmap_title}>
+            <span> Roadmap</span>
+          </h2>
+          <p className={s.roadmap_text}>
+            <span>Realised:</span> Build team and discuss issues,
+            Launch of marketing, Whitelist registration, Distribution of NFTs to
+            Whitelist owners, Develop project concept
+          </p>
+        </div>
+        <div className={clsx(s.roadmap_datapicker)}>
+          <PrevArrIcon
+            className={clsx(s.roadmap_arr, s.roadmap_arr_next, "road_prev_el")}
+          />
+          <NextArrIcon
+            className={clsx(s.roadmap_arr, s.roadmap_arr_prev, "road_next_el")}
+          />
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={"auto"}
+            ref={swiperRef}
+            navigation={{
+              prevEl: ".road_prev_el",
+              nextEl: ".road_next_el",
+            }}
+          >
+            {data.map((article, i) => (
+              <SwiperSlide
+                className={clsx(
+                  s.roadmap_article,
+                  s[`roadmap_article_${article.title.toLowerCase()}`]
+                )}
+                key={article.title}
+              >
+                <Image
+                  className={s.roadmap_line}
+                  src={roadmap_line_1}
+                  alt="line"
+                />
+                <h3
+                  className={clsx(
+                    s.roadmap_article_title,
+                    s[`roadmap_article_title_${article.title.toLowerCase()}`]
+                  )}
+                >
+                  {article.title}
+                </h3>
+                <div className={s.roadmap_data_container}>
+                  {article.times.map((time, i) => (
+                    <span key={time}>{time}</span>
+                  ))}
+                </div>
+                <div className={s.roadmap_text_container}>
+                  {" "}
+                  {article.text.map((text, i_text) => (
+                    <div
+                      className={clsx(
+                        s.roadmap_item,
+                        s[`roadmap_item_${article.title.toLowerCase()}`],
+                        s[
+                          `roadmap_item_${article.title.toLowerCase()}_${
+                            i_text + 1
+                          }`
+                        ]
+                      )}
+                      key={i_text}
+                    >
+                      {text}
+                    </div>
+                  ))}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-      <article className={s.roadmap_datapicker}>
-        <Swiper
-          ref={swiperRef}
-          direction="horizontal"
-          spaceBetween={279}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          className={s.roadmap_swiper}
-          modules={[Scrollbar]}
-        >
-          {[
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December",
-          ].map((el) => (
-            <SwiperSlide className={s.roadmap_swiper_slide} key={el}>
-              {el}
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <PrevArrIcon
-          className={clsx(s.roadmap_arr, s.roadmap_arr_next)}
-          onClick={handlePrev}
-        />
-        <NextArrIcon
-          onClick={handleNext}
-          className={clsx(s.roadmap_arr, s.roadmap_arr_prev)}
-        />
-        <div className={s.roadmap_number_conteiner}>
-          {" "}
-          {[22, 29, 5, 12, 19, 26, 29, 3, 10, 17, 24, 31, 7, 14, 21, 28].map(
-            (el, i) => (
-              <span className={s.roadmap_number} key={i}>
-                {el}
-              </span>
-            )
-          )}
-          <Image className={s.roadmap_line_1} src={roadmap_line_1} alt="" />
-          <Image className={s.roadmap_line_2} src={roadmap_line_2} alt="" />
-          <Image className={s.roadmap_line_3} src={roadmap_line_3} alt="" />
-          <Image className={s.roadmap_coun_1} src={roadmap_coun_1} alt="" />
-          <span className={s.roadmap_20}>20</span>
-        </div>
-        <div className={s.roadmap_data_container_1}>
-          <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_1)}>
-            1. Project architecture and design
-          </div>
-          <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_2)}>
-            6. Release of additional NFT collections
-          </div>
-        </div>
-        <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_3)}>
-          2. Development and token release (Token Generation Event)
-        </div>
-        <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_4)}>
-          3. Official website and communication channels
-        </div>
-        <div className={s.roadmap_data_container_2}>
-          <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_5)}>
-            4. Involve the community and media
-          </div>
-          <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_6)}>
-            5. Integration with other sales platforms
-          </div>
-        </div>
-        <div className={clsx(s.roadmap_data_item, s.roadmap_data_item_7)}>
-          7. Listing on Defi Exchange
-        </div>
-      </article>
     </section>
   );
 };
