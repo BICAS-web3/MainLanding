@@ -57,7 +57,7 @@ export const DraxSection: FC<DraxSectionProps> = () => {
   type TypeButtons = "Overall" | "Last Year";
   const [activeTab, setActiveTab] = useState<TypeButtons>("Overall");
   return (
-    <section className={s.drax}>
+    <section className={s.drax} id="drax_section">
       <article className={s.drax_container}>
         <div className={s.drax_}>
           <h2 className={s.drax_title}>

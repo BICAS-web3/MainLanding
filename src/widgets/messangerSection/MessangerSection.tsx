@@ -11,7 +11,7 @@ interface MessangerSectionProps {}
 
 export const MessangerSection: FC<MessangerSectionProps> = () => {
   return (
-    <div className={s.messanger_section}>
+    <div className={s.messanger_section} id="messanger_section">
       <img src={imgBg.src} alt="img-bg" className={s.bg_img} />
       <div className={s.left_ellipse}></div>
       <div className={s.right_ellipse}></div>

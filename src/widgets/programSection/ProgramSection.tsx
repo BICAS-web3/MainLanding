@@ -12,7 +12,7 @@ interface ProgramSectionProps {}
 
 export const ProgramSection: FC<ProgramSectionProps> = () => {
   return (
-    <section className={s.program}>
+    <section className={s.program} id="vip_section">
       {" "}
       <div className={s.drax_container}>
         <h2 className={s.drax_title}>

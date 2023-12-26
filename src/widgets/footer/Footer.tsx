@@ -177,6 +177,12 @@ export const Footer: FC<FooterProps> = () => {
             <span className={s.copy_text}>
               Copyright © 2023-2024 «GREEK KEEPERS».
             </span>
+            <span className={s.footer_bottom_mob_text}>
+              © 2023 GreekKeepers
+            </span>
+            <span className={s.footer_bottom_mob_text}>
+              BSC METAVERSE LIMITED | License no. 26818
+            </span>
           </div>
         </div>
       </div>

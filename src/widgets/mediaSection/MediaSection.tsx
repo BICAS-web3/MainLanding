@@ -52,7 +52,7 @@ export const MediaSection: FC<MediaSectionProps> = () => {
   ];
 
   return (
-    <section className={s.media}>
+    <section className={s.media} id="media_section">
       <h2 className={s.media_title}>
         <span>GreekKeepers </span>in Media
       </h2>

@@ -21,7 +21,7 @@ interface SocialSectionProps {}
 
 export const SocialSection: FC<SocialSectionProps> = () => {
   return (
-    <section className={s.social}>
+    <section className={s.social} id="community_section">
       <div className={s.social_container}>
         <h2 className={s.social_title}>
           <span>Stay</span>

@@ -27,7 +27,7 @@ export const NftSection: FC<NftSectionProps> = () => {
   }, []);
 
   return (
-    <div className={s.nft_section}>
+    <div className={s.nft_section} id="nft_section">
       <img src={bgImg.src} className={s.nft_bg_img} alt="bg-img-nft-static" />
       <img src={mainBgImg.src} className={s.main_bg_img} alt="bg-static" />
       <div className={s.bg_ellipse}></div>
