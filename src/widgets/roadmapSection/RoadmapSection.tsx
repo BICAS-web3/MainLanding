@@ -127,12 +127,42 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
           </p>
         </div>
         <div className={clsx(s.roadmap_datapicker)}>
-          <PrevArrIcon
+          <div
             className={clsx(s.roadmap_arr, s.roadmap_arr_next, "road_prev_el")}
-          />
-          <NextArrIcon
+          >
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.44466 0.443848L6.778 1.83274L2.77799 5.9994L6.778 10.1661L5.44466 11.555L0.111328 5.9994L5.44466 0.443848Z"
+                fill="#7E7E7E"
+              />
+            </svg>
+          </div>
+          <div
             className={clsx(s.roadmap_arr, s.roadmap_arr_prev, "road_next_el")}
-          />
+          >
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.55534 11.5547L0.222005 10.1658L4.22201 5.99913L0.222006 1.83247L1.55534 0.443576L6.88867 5.99913L1.55534 11.5547Z"
+                fill="#7E7E7E"
+              />
+            </svg>
+          </div>
           <Swiper
             modules={[Navigation]}
             slidesPerView={"auto"}

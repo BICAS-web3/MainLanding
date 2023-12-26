@@ -27,13 +27,38 @@ import s from "./styles.module.scss";
 
 import clsx from "clsx";
 import Image from "next/image";
-import { useMediaQuery } from "@/shared/utils";
 
 interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
-  const isMobile = useMediaQuery("(max-width:700px)");
-  const is1280 = useMediaQuery("(max-width:998px)");
+  const [is1280, setis1280] = useState(false);
+  const [isMobile, setisMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 700) {
+        setisMobile(true);
+      } else {
+        setisMobile(false);
+      }
+
+      if (width < 998) {
+        setis1280(true);
+      } else {
+        setis1280(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const statistic = [
     { title: "Events", amount: "3,0%", icon: statistic_1 },
