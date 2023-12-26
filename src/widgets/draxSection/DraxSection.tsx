@@ -31,11 +31,18 @@ interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
   const [is1280, setis1280] = useState(false);
+  const [isMobile, setisMobile] = useState(false);
 
   useEffect(() => {
     const width = window.innerWidth;
-    if (width < 700) {
+    if (width < 998) {
       setis1280(true);
+    }
+  }, []);
+  useEffect(() => {
+    const width = window.innerWidth;
+    if (width < 700) {
+      setisMobile(true);
     }
   }, []);
 
@@ -58,96 +65,116 @@ export const DraxSection: FC<DraxSectionProps> = () => {
   const [activeTab, setActiveTab] = useState<TypeButtons>("Overall");
   return (
     <section className={s.drax} id="drax_section">
-      <article className={s.drax_container}>
-        <div className={s.drax_}>
-          <h2 className={s.drax_title}>
-            DRAX <span>Token</span>
-          </h2>
-          <p className={s.drax_text}>
-            DRAX is the native token that powers GreekKeepers Space to open
-            certain rights and rewards for each stakeholder. Holders be able
-            to vote on feature proposals in the future, get access to discount,
-            bonuses, pools, messenger premium features and much more
-          </p>
-          <div className={s.drax_bottom_container}>
-            <div className={s.btn_container}>
-              <Button className={clsx(s.drax_btn, s.drax_btn_1)}>
-                <MetamaskIcon /> Add Drax to MetaMask
-              </Button>
-              <Button className={clsx(s.drax_btn, s.drax_btn_2)}>
-                <PancakeIcon /> Buy on PancakeSwap
-              </Button>
+      <div className="container">
+        {" "}
+        <article className={s.drax_container}>
+          <div className={s.drax_wrap}>
+            <div className={s.drax_after}>
+              <h2 className={s.drax_title}>
+                DRAX <span>Token</span>
+              </h2>
+              <p className={s.drax_text}>
+                DRAX is the native token that powers GreekKeepers Space to open
+                certain rights and rewards for each stakeholder. Holders be able
+                to vote on feature proposals in the future, get access to
+                discount, bonuses, pools, messenger premium features and much
+                more
+              </p>
             </div>
-            {is1280 && <Swap />}
-          </div>
-        </div>
-        {!is1280 && <Swap />}
-      </article>
-      <article className={s.allocation_contaoner}>
-        <div className={s.allocation_text}>
-          <h2 className={s.drax_title}>
-            <span>Token </span>Allocation
-          </h2>
-          <p>
-            Drax Burn each time of token transfer. Token burn will end until
-            total token burn becomes 200 million DRAX.
-          </p>
-          <Button className={s.contact_btn}>
-            <ContactIcon /> Contract
-          </Button>
-        </div>
-        <div className={s.allocation_statistic}>
-          <div className={s.allowance_sircle_statistic}>
-            <Image src={sircle} alt="statistic" />
-            <div className={s.allowance_sircle_text}>
-              100%
-              <span>of Drax token</span>
+            <div className={s.drax_bottom_container}>
+              <div className={s.btn_container}>
+                <Button className={clsx(s.drax_btn, s.drax_btn_1)}>
+                  <MetamaskIcon /> Add Drax to MetaMask
+                </Button>
+                <Button className={clsx(s.drax_btn, s.drax_btn_2)}>
+                  <PancakeIcon /> Buy on PancakeSwap
+                </Button>
+              </div>
+              {is1280 && <Swap />}
             </div>
           </div>
-          <div className={s.statistic}>
-            <div className={s.statistic_head}>
-              <div className={s.allocation_contaoner_data}>
-                <span className={s.allowance_about_token}>Total Supply</span>
-                <p className={s.allowance_token_price}>
-                  764,262,999 <span>DRAX</span>
-                </p>
+          {!is1280 && <Swap />}
+        </article>
+        <article className={s.allocation_contaoner}>
+          <div className={s.allocation_text}>
+            <div className={s.allocation_after}>
+              {" "}
+              <h2 className={s.drax_title}>
+                <span>Token </span>Allocation
+              </h2>
+              <p>
+                Drax Burn each time of token transfer. Token burn will end until
+                total token burn becomes 200 million DRAX.{" "}
+                {isMobile && (
+                  <div className={s.allowance_sircle_statistic}>
+                    <Image src={sircle} alt="statistic" />
+                    <div className={s.allowance_sircle_text}>
+                      100%
+                      <span>of Drax token</span>
+                    </div>
+                  </div>
+                )}
+              </p>
+            </div>
+            <Button className={s.contact_btn}>
+              <ContactIcon /> Contract
+            </Button>
+          </div>
+          <div className={s.allocation_statistic}>
+            {!isMobile && (
+              <div className={s.allowance_sircle_statistic}>
+                <Image src={sircle} alt="statistic" />
+                <div className={s.allowance_sircle_text}>
+                  100%
+                  <span>of Drax token</span>
+                </div>
               </div>
-              <div className={s.allocation_contaoner_data}>
-                <span className={s.allowance_about_token}>
-                  Burn in Smart Contract
-                </span>
-                <p className={s.allowance_token_price}>
-                  200,000,000 <span>DRAX</span>
-                </p>
+            )}
+            <div className={s.statistic}>
+              <div className={s.statistic_head}>
+                <div className={s.allocation_contaoner_data}>
+                  <span className={s.allowance_about_token}>Total Supply</span>
+                  <p className={s.allowance_token_price}>
+                    764,262,999 <span>DRAX</span>
+                  </p>
+                </div>
+                <div className={s.allocation_contaoner_data}>
+                  <span className={s.allowance_about_token}>
+                    Burn in Smart Contract
+                  </span>
+                  <p className={s.allowance_token_price}>
+                    200,000,000 <span>DRAX</span>
+                  </p>
+                </div>
+                <div className={s.statistic_tabs}>
+                  {TypeButtons.map((el: any) => (
+                    <button
+                      className={clsx(
+                        s.statistic_tab,
+                        el === activeTab && s.statistic_tab_active
+                      )}
+                      onClick={() => setActiveTab(el)}
+                      key={el}
+                    >
+                      {el}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className={s.statistic_tabs}>
-                {TypeButtons.map((el: any) => (
-                  <button
-                    className={clsx(
-                      s.statistic_tab,
-                      el === activeTab && s.statistic_tab_active
-                    )}
-                    onClick={() => setActiveTab(el)}
-                    key={el}
-                  >
-                    {el}
-                  </button>
+              <div className={s.statistic_container}>
+                {statistic.map((el, i) => (
+                  <div className={s.statistic_item} key={i}>
+                    {el.title}
+                    <span>
+                      {el.amount} <Image src={el.icon} alt="icon" />
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
-            <div className={s.statistic_container}>
-              {statistic.map((el, i) => (
-                <div className={s.statistic_item} key={i}>
-                  {el.title}
-                  <span>
-                    {el.amount} <Image src={el.icon} alt="icon" />
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
   );
 };
