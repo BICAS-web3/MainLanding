@@ -4,8 +4,17 @@
   padding: 301px 212px 1px 212px;
   display: flex;
   gap: 25px;
-  @media (max-width: 1700px) {
-    padding: 192px 90px 230px 90px;
+  @media (max-width: 1600px) {
+    padding: 60px 20px 0px 90px;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 71px 30px 0px 24px;
+  }
+  @media (max-width: 700px) {
+    padding: 98px 30px 0px 24px;
   }
   position: relative;
   &::after {
@@ -37,7 +46,12 @@
   flex-direction: column;
   padding-left: 76px;
   position: relative;
-  gap: 31px;
+  // gap: 31px;
+  @media (max-width: 1280px) {
+    padding-left: 37px;
+    width: 351px;
+    min-width: 351px;
+  }
   &::after {
     position: absolute;
     content: "";
@@ -46,6 +60,14 @@
     width: 7px;
     height: 280px;
     background: #e5c787;
+    @media (max-width: 1280px) {
+      width: 4px;
+      height: 169px;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    min-width: auto;
   }
 }
 .drax_title {
@@ -56,6 +78,12 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 60px */
+  @media (max-width: 1280px) {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+  }
   span {
     color: white;
   }
@@ -71,21 +99,50 @@
   line-height: 140%; /* 28px */
   letter-spacing: 1px;
   max-width: 512px;
+  @media (max-width: 1600px) {
+    max-width: 430px;
+    // margin-top: 10px;
+  }
+  // @media (max-width: 1600px) {
+  //   font-size: 15px;
+  //   letter-spacing: 0.6px;
+  // }
+  @media (max-width: 1280px) {
+    max-width: 351px;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 351px;
+    letter-spacing: 0.6px;
+  }
 }
 
 .program_leptop {
   margin-top: 80px;
   flex: 1 1 auto;
   width: 1024px;
+  max-width: 1024px;
   height: 623.5px;
   position: relative;
   @media (max-width: 1920px) {
     width: 750px;
+    max-width: 750px;
     height: 500px;
+  }
+  @media (max-width: 1600px) {
+    width: 667.539px;
+    max-width: 667.539px;
+    height: 406.455px;
+  }
+  @media (max-width: 1280px) {
+    width: 617.647px;
+    height: 377.005px;
   }
 }
 
 .program_btn {
   max-width: 238px;
   margin-top: 81px;
+  @media (max-width: 1280px) {
+    margin-top: 30px;
+  }
 }

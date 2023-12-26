@@ -9,7 +9,7 @@
     padding: 90px 159px 90px 159px;
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1000px) {
     padding: 30px 30px 76px 24px;
   }
   &::after {
@@ -45,6 +45,10 @@
   @media (max-width: 1280px) {
     font-size: 32px;
   }
+  @media (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+  }
   span {
     color: white;
   }
@@ -55,6 +59,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 45px;
+    width: 84px;
+  }
 }
 
 .media_body {
@@ -64,6 +72,9 @@
   position: relative;
   @media (max-width: 1280px) {
     margin-top: 40px;
+  }
+  @media (max-width: 700px) {
+    margin-top: 28px;
   }
   &::after {
     position: absolute;

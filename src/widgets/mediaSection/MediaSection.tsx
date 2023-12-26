@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -11,6 +11,16 @@ import media_5 from "@/public/media/mediaSection/media_5.svg";
 import media_6 from "@/public/media/mediaSection/media_6.svg";
 import media_7 from "@/public/media/mediaSection/media_7.svg";
 import media_8 from "@/public/media/mediaSection/media_8.svg";
+
+import media_mob_1 from "@/public/media/mediaSection/media_mob_1.svg";
+import media_mob_2 from "@/public/media/mediaSection/media_mob_2.svg";
+import media_mob_3 from "@/public/media/mediaSection/media_mob_3.svg";
+import media_mob_4 from "@/public/media/mediaSection/media_mob_4.svg";
+import media_mob_5 from "@/public/media/mediaSection/media_mob_5.svg";
+import media_mob_6 from "@/public/media/mediaSection/media_mob_6.svg";
+import media_mob_7 from "@/public/media/mediaSection/media_mob_7.svg";
+import media_mob_8 from "@/public/media/mediaSection/media_mob_8.svg";
+
 import media_token from "@/public/media/mediaSection/media_token.png";
 import integration_1 from "@/public/media/mediaSection/integration_1.png";
 import integration_2 from "@/public/media/mediaSection/integration_2.png";
@@ -29,6 +39,15 @@ import { GitbookIcon, GithubIcon } from "@/shared/SVG";
 interface MediaSectionProps {}
 
 export const MediaSection: FC<MediaSectionProps> = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    if (width < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   const imgArr = [
     media_1,
     media_2,
@@ -38,6 +57,17 @@ export const MediaSection: FC<MediaSectionProps> = () => {
     media_6,
     media_7,
     media_8,
+  ];
+
+  const imgMobArr = [
+    media_mob_1,
+    media_mob_2,
+    media_mob_3,
+    media_mob_4,
+    media_mob_5,
+    media_mob_6,
+    media_mob_7,
+    media_mob_8,
   ];
 
   const integrationImg = [
@@ -57,7 +87,10 @@ export const MediaSection: FC<MediaSectionProps> = () => {
         <span>GreekKeepers </span>in Media
       </h2>
       <Marquee className={s.media_marquee}>
-        {[...imgArr, ...imgArr].map((el, i) => (
+        {(isMobile
+          ? [...imgMobArr, ...imgMobArr, ...imgMobArr]
+          : [...imgArr, ...imgArr]
+        ).map((el, i) => (
           <div className={s.media_img_wrap} key={i}>
             <Image src={el} alt="img" />
           </div>
