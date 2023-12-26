@@ -1,25 +1,21 @@
 .program {
   border-top: 1px solid #787878;
   background: #0a0a0a;
-  padding: 301px 0 1px 0;
+  padding: 301px 0px 1px 0px;
   display: flex;
   gap: 25px;
+
   @media (max-width: 1600px) {
-    padding: 60px 0 0px 0;
-    justify-content: space-between;
-    gap: 0;
-  }
-  @media (max-width: 1500px) {
-    padding: 60px 0 0px 0;
+    padding: 60px 0px 0px 0px;
     justify-content: space-between;
     gap: 0;
   }
 
   @media (max-width: 1280px) {
-    padding: 71px 0 0px 0;
+    padding: 71px 0px 0px 0px;
   }
   @media (max-width: 700px) {
-    padding: 98px 0 0px 0;
+    padding: 98px 0px 0px 0px;
     flex-direction: column;
   }
 
@@ -96,6 +92,7 @@
 }
 
 .drax_container {
+  width: 100%;
   min-width: 580px;
   display: flex;
   flex-direction: column;
