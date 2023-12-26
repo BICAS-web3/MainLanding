@@ -24,11 +24,23 @@ export const SocialSection: FC<SocialSectionProps> = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const width = window.innerWidth;
+    const handleResize = () => {
+      const width = window.innerWidth;
 
-    if (width < 998) {
-      setIsMobile(true);
-    }
+      if (width < 998) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (

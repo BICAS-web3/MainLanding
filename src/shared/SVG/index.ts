@@ -8,3 +8,4 @@ export { LogoIcon } from "./LogoIcon";
 export { GitbookIcon } from "./GitbookIcon";
 export { GithubIcon } from "./GithubIcon";
 export { ContactIcon } from "./ContactIcon";
+export { MapIcon } from "./MapIcon";

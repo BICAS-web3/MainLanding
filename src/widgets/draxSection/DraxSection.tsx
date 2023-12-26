@@ -6,6 +6,7 @@ import {
   ContactIcon,
   DraxIcon,
   LogoIcon,
+  MapIcon,
   MetamaskIcon,
   PancakeIcon,
   USDTIcon,
@@ -34,16 +35,29 @@ export const DraxSection: FC<DraxSectionProps> = () => {
   const [isMobile, setisMobile] = useState(false);
 
   useEffect(() => {
-    const width = window.innerWidth;
-    if (width < 998) {
-      setis1280(true);
-    }
-  }, []);
-  useEffect(() => {
-    const width = window.innerWidth;
-    if (width < 700) {
-      setisMobile(true);
-    }
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 700) {
+        setisMobile(true);
+      } else {
+        setisMobile(false);
+      }
+
+      if (width < 998) {
+        setis1280(true);
+      } else {
+        setis1280(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const statistic = [
@@ -68,6 +82,8 @@ export const DraxSection: FC<DraxSectionProps> = () => {
       <div className="container">
         {" "}
         <article className={s.drax_container}>
+          <MapIcon className={s.map_1} />
+          <MapIcon className={s.map_2} />
           <div className={s.drax_wrap}>
             <div className={s.drax_after}>
               <h2 className={s.drax_title}>
@@ -183,7 +199,7 @@ export const Swap = () => {
   return (
     <div className={s.drax_swap_under}>
       <div className={s.drax_swap}>
-        <Image className={s.drax_swap_bg} src={bg} alt="bg" />
+        {/* <Image className={s.drax_swap_bg} src={bg} alt="bg" /> */}
         <div className={s.drax_title_container}>
           <span></span>
           <h3 className={s.drax_swap_title}>1 DRAX = $0.0337</h3>

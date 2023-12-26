@@ -67,22 +67,25 @@
     }
   }
 }
-
+.d {
+  display: flex;
+}
 .container {
   display: flex;
   gap: 25px;
-  max-width: 1500px;
-  margin: 0 auto;
+  width: 100%;
+  // max-width: 1500px;
+  // margin: 0 auto;
   @media screen and (max-width: 1280px) {
-    max-width: 1120px;
+    // max-width: 1120px;
   }
 
-  padding-left: 20px;
-  padding-right: 30px;
+  // padding-left: 30px;
+  // padding-right: 30px;
 
   @media screen and (max-width: 650px) {
-    padding-left: 16px;
-    padding-right: 16px;
+    // padding-left: 16px;
+    // padding-right: 16px;
     flex-direction: column;
   }
   @media (max-width: 1600px) {
@@ -92,14 +95,14 @@
 }
 
 .drax_container {
-  width: 100%;
-  min-width: 580px;
+  // width: 100%;
+  // min-width: 580px;
   display: flex;
   flex-direction: column;
   position: relative;
   @media (max-width: 1280px) {
-    width: 351px;
-    min-width: 351px;
+    // width: 351px;
+    // min-width: 351px;
   }
   @media (max-width: 998px) {
   }
@@ -179,12 +182,7 @@
   max-width: 512px;
   @media (max-width: 1600px) {
     max-width: 430px;
-    // margin-top: 10px;
   }
-  // @media (max-width: 1600px) {
-  //   font-size: 15px;
-  //   letter-spacing: 0.6px;
-  // }
   @media (max-width: 1280px) {
     max-width: 351px;
     margin-top: 10px;
