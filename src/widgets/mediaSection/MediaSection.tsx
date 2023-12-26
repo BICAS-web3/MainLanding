@@ -11,6 +11,7 @@ import media_5 from "@/public/media/mediaSection/media_5.svg";
 import media_6 from "@/public/media/mediaSection/media_6.svg";
 import media_7 from "@/public/media/mediaSection/media_7.svg";
 import media_8 from "@/public/media/mediaSection/media_8.svg";
+import imgBg from "@/public/media/common/commonSectionsBg.png";
 
 import media_mob_1 from "@/public/media/mediaSection/media_mob_1.svg";
 import media_mob_2 from "@/public/media/mediaSection/media_mob_2.svg";
@@ -35,18 +36,12 @@ import s from "./styles.module.scss";
 
 import clsx from "clsx";
 import { GitbookIcon, GithubIcon } from "@/shared/SVG";
+import { useMediaQuery } from "@/shared/utils";
 
 interface MediaSectionProps {}
 
 export const MediaSection: FC<MediaSectionProps> = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    if (width < 998) {
-      setIsMobile(true);
-    }
-  }, []);
+  const isMobile = useMediaQuery("(max-width:998px)");
 
   const imgArr = [
     media_1,
@@ -83,6 +78,7 @@ export const MediaSection: FC<MediaSectionProps> = () => {
 
   return (
     <section className={s.media} id="media_section">
+      <img src={imgBg.src} alt="img-bg-static" className={s.bg_img} />
       <div className={clsx("container", s.container)}>
         <h2 className={s.media_title}>
           <span>GreekKeepers </span>in Media

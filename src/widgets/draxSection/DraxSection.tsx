@@ -6,6 +6,7 @@ import {
   ContactIcon,
   DraxIcon,
   LogoIcon,
+  MapIcon,
   MetamaskIcon,
   PancakeIcon,
   USDTIcon,
@@ -26,25 +27,13 @@ import s from "./styles.module.scss";
 
 import clsx from "clsx";
 import Image from "next/image";
+import { useMediaQuery } from "@/shared/utils";
 
 interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
-  const [is1280, setis1280] = useState(false);
-  const [isMobile, setisMobile] = useState(false);
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    if (width < 998) {
-      setis1280(true);
-    }
-  }, []);
-  useEffect(() => {
-    const width = window.innerWidth;
-    if (width < 700) {
-      setisMobile(true);
-    }
-  }, []);
+  const isMobile = useMediaQuery("(max-width:700px)");
+  const is1280 = useMediaQuery("(max-width:998px)");
 
   const statistic = [
     { title: "Events", amount: "3,0%", icon: statistic_1 },
@@ -68,6 +57,8 @@ export const DraxSection: FC<DraxSectionProps> = () => {
       <div className="container">
         {" "}
         <article className={s.drax_container}>
+          <MapIcon className={s.map_1} />
+          <MapIcon className={s.map_2} />
           <div className={s.drax_wrap}>
             <div className={s.drax_after}>
               <h2 className={s.drax_title}>
@@ -183,7 +174,7 @@ export const Swap = () => {
   return (
     <div className={s.drax_swap_under}>
       <div className={s.drax_swap}>
-        <Image className={s.drax_swap_bg} src={bg} alt="bg" />
+        {/* <Image className={s.drax_swap_bg} src={bg} alt="bg" /> */}
         <div className={s.drax_title_container}>
           <span></span>
           <h3 className={s.drax_swap_title}>1 DRAX = $0.0337</h3>

@@ -44,6 +44,15 @@
     }
   }
 }
+
+.bg_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  z-index: 0;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -434,6 +443,7 @@
 
 .media_token_wrap {
   position: relative;
+  z-index: 2;
   height: 557px;
   overflow: hidden;
   border-radius: 20px;
@@ -447,7 +457,7 @@
   gap: 20px;
   flex: 1 1 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding-right: 20px;
   @media (max-width: 1600px) {
     padding-top: 100px;
