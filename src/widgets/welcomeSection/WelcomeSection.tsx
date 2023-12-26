@@ -1,6 +1,5 @@
 import s from "./styles.module.scss";
 import { FC, useEffect, useState } from "react";
-import useMatchMedia from "use-match-media-hook";
 import bgImg from "@/public/media/welcomeSection/welcomeSectionBg.png";
 import bgImg2 from "@/public/media/common/commonSectionsBg.png";
 import imgsGroup from "@/public/media/welcomeSection/imgsGroup.png";
