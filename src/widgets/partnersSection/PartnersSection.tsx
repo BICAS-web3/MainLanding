@@ -6,8 +6,11 @@ import topImg from "@/public/media/partnersImgs/topImg.webp";
 import bottomImg from "@/public/media/partnersImgs/bottomImg.webp";
 import { Button } from "@/shared/ui/Button";
 import recentIco from "@/public/media/common/recentIco.svg";
+import clsx from "clsx";
+
 import Image from "next/image";
 import line from "@/public/media/common/gold_line.svg";
+
 const animatedItems = [
   {
     amount: "1.00056",
@@ -49,38 +52,13 @@ const animatedItems = [
 interface PartnersSectionProps {}
 
 export const PartnersSection: FC<PartnersSectionProps> = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      setWindowWidth(window.innerWidth);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div className={s.partners_section} id="partners_section">
       <img src={imgBg.src} alt="img-bg-static" className={s.bg_img} />
       <Image className={s.silver_line} src={line} alt="line" />
       <div className={s.left_ellipse}></div>
       <div className={s.right_ellipse}></div>
-      <div
-        className={s.partners_section_container}
-        style={{
-          maxWidth:
-            windowWidth > 1280
-              ? 1500 + (windowWidth - 1500) / 2
-              : 1075 + (windowWidth - 1075) / 2,
-        }}
-      >
+      <div className={s.partners_section_container}>
         <div className={s.partners_section_body}>
           <div className={s.partners_info_wrap}>
             <div className={s.partners_info_block}>
@@ -106,25 +84,6 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
             <img src={rightImg.src} alt="right-img" className={s.right_img} />
             <img src={topImg.src} alt="top-img" className={s.top_img} />
             <img src={bottomImg.src} alt="top-img" className={s.bottom_img} />
-            {/* <div className={s.bottom_img}>
-              <div className={s.anim_head_block}>
-                <img src={recentIco.src} alt="recent-ico" />
-                Last Withdrawals
-              </div>
-              <div className={s.anim_underline}></div>
-              <ul className={s.animated_items_list}>
-                {animatedItems.map((item, ind) => (
-                  <li className={s.animated_items_list_item}>
-                    <div className={s.animated_items_list_item_body_block}>
-                      <div className={s.amount_title_block}>
-                        <span>Amount</span>
-                        {item.amount} BNB
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
-
+import bgGroup from "@/public/media/common/commonSectionsBg.png";
 import logo from "@/public/media/common/footerLogo.png";
 
 import youtubeIco from "@/public/media/footerImages/youtube.png";
@@ -124,6 +124,7 @@ export const Footer: FC<FooterProps> = () => {
 
   return (
     <div className={s.footer}>
+      <img src={bgGroup.src} className={s.footer_bg_img} alt="" />
       <div className={s.border_shadow}></div>
       <div className={s.footer_container}>
         <div className={s.footer_body}>
