@@ -16,6 +16,8 @@ import roadmap_line_1 from "@/public/media/roadmapSection/line.svg";
 import roadmap_line_2 from "@/public/media/roadmapSection/roadmap_line_2.svg";
 import roadmap_line_3 from "@/public/media/roadmapSection/roadmap_line_3.svg";
 import roadmap_coun_1 from "@/public/media/roadmapSection/roadmap_coun_1.svg";
+import silver_line from "@/public/media/common/silver_line.svg";
+import gold_line from "@/public/media/common/gold_line.svg";
 
 interface RoadmapSectionProps {}
 
@@ -114,6 +116,8 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
   return (
     <section className={s.roadmap} id="roadmap_section">
       <Image src={bg} className={s.roadmap_line} alt="" />
+      <Image className={s.line_1} src={gold_line} alt="line" />
+      <Image className={s.line_2} src={silver_line} alt="line" />
       <div className={clsx("container", s.container)}>
         {" "}
         <div className={s.roadmap_container}>
@@ -127,12 +131,42 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
           </p>
         </div>
         <div className={clsx(s.roadmap_datapicker)}>
-          <PrevArrIcon
+          <div
             className={clsx(s.roadmap_arr, s.roadmap_arr_next, "road_prev_el")}
-          />
-          <NextArrIcon
+          >
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.44466 0.443848L6.778 1.83274L2.77799 5.9994L6.778 10.1661L5.44466 11.555L0.111328 5.9994L5.44466 0.443848Z"
+                fill="#7E7E7E"
+              />
+            </svg>
+          </div>
+          <div
             className={clsx(s.roadmap_arr, s.roadmap_arr_prev, "road_next_el")}
-          />
+          >
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.55534 11.5547L0.222005 10.1658L4.22201 5.99913L0.222006 1.83247L1.55534 0.443576L6.88867 5.99913L1.55534 11.5547Z"
+                fill="#7E7E7E"
+              />
+            </svg>
+          </div>
           <Swiper
             modules={[Navigation]}
             slidesPerView={"auto"}

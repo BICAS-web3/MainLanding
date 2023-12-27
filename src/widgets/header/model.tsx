@@ -1,6 +1,6 @@
 import { createEffect, createEvent, createStore, sample } from "effector";
 
-export const $isOpen = createStore<boolean>(true);
+export const $isOpen = createStore<boolean>(false);
 
 export const Open = createEvent<void>();
 export const Close = createEvent<void>();

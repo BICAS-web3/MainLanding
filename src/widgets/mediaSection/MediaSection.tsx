@@ -36,12 +36,30 @@ import s from "./styles.module.scss";
 
 import clsx from "clsx";
 import { GitbookIcon, GithubIcon } from "@/shared/SVG";
-import { useMediaQuery } from "@/shared/utils";
 
 interface MediaSectionProps {}
 
 export const MediaSection: FC<MediaSectionProps> = () => {
-  const isMobile = useMediaQuery("(max-width:998px)");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 998) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const imgArr = [
     media_1,

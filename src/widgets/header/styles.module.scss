@@ -136,7 +136,7 @@
 
 .burger_menu_wrap {
   transition: all 0.7s;
-  right: -100%;
+  right: -250px;
   overflow: auto;
   z-index: 100;
   width: 215px;
@@ -169,6 +169,10 @@
   *::-ms-scrollbar-thumb {
     background-color: #3e3e3e;
     border-radius: 4px;
+  }
+
+  @media screen and (max-width: 650px) {
+    right: -100%;
   }
 }
 

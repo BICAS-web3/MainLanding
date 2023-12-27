@@ -13,7 +13,7 @@ interface ProgramSectionProps {}
 export const ProgramSection: FC<ProgramSectionProps> = () => {
   return (
     <section className={s.program} id="vip_section">
-      <div className={s.container}>
+      <div className={clsx(s.container, "container")}>
         <div className={s.drax_container}>
           <div className={s.drax_after}>
             <h2 className={s.drax_title}>

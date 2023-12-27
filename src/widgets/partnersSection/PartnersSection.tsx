@@ -8,6 +8,9 @@ import { Button } from "@/shared/ui/Button";
 import recentIco from "@/public/media/common/recentIco.svg";
 import clsx from "clsx";
 
+import Image from "next/image";
+import line from "@/public/media/common/gold_line.svg";
+
 const animatedItems = [
   {
     amount: "1.00056",
@@ -52,6 +55,7 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
   return (
     <div className={s.partners_section} id="partners_section">
       <img src={imgBg.src} alt="img-bg-static" className={s.bg_img} />
+      <Image className={s.silver_line} src={line} alt="line" />
       <div className={s.left_ellipse}></div>
       <div className={s.right_ellipse}></div>
       <div className={s.partners_section_container}>

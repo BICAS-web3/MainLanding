@@ -1,13 +1,19 @@
 .roadmap {
   padding: 121px 0 0 0;
-  border-top: 1px solid #916b3b;
+  // border-top: 1px solid #916b3b;
   background: #0a0a0a;
   display: flex;
   flex-direction: column;
   gap: 91px;
   position: relative;
-  @media (max-width: 1700px) {
-    padding: 121px 0 0 0;
+  @media (max-width: 1600px) {
+    padding: 180px 0 0 0;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 120px;
+  }
+  @media (max-width: 700px) {
+    padding-top: 97px;
   }
   &::after {
     position: absolute;
@@ -20,12 +26,60 @@
     transform: translateX(-50%);
     width: 645px;
     height: 350px;
+    @media (max-width: 1600px) {
+    }
+    @media (max-width: 998px) {
+      width: 375px;
+      height: 204px;
+      border-radius: 375px;
+      top: -183px;
+    }
+    @media (max-width: 700px) {
+      top: 90px;
+      left: -10px;
+      width: 72px;
+      height: 141px;
+    }
   }
+  &::before {
+    @media (max-width: 700px) {
+      position: absolute;
+      content: "";
+      bottom: 89px;
+      right: -46px;
+      width: 82px;
+      height: 159px;
+      background: #979797;
+      filter: blur(125.49585723876953px);
+    }
+  }
+}
+
+.line_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+}
+
+.line_2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 5;
 }
 
 .container {
   position: relative;
   z-index: 2;
+  @media (max-width: 998px) {
+    // padding-left: 0 !important;
+    // padding-right: 0 !important;
+  }
 }
 .roadmap_container {
   display: flex;
@@ -36,12 +90,14 @@
   padding-left: 76px;
   @media (max-width: 1280px) {
     padding-left: 38px;
+    gap: 10px;
   }
   @media (max-width: 998px) {
     padding-left: 18px;
   }
   @media (max-width: 700px) {
     padding-left: 12px;
+    gap: 14px;
   }
   &::after {
     position: absolute;
@@ -68,6 +124,18 @@
   font-weight: 600;
   line-height: 100%; /* 60px */
   text-transform: uppercase;
+  @media (max-width: 1280px) {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+  }
+  @media (max-width: 998px) {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
   span {
     color: white;
   }
@@ -83,6 +151,17 @@
   line-height: 120%; /* 28px */
   letter-spacing: 1px;
   max-width: 512px;
+  @media (max-width: 1600px) {
+    max-width: 534px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    max-width: 455px;
+  }
+  @media (max-width: 700px) {
+    max-width: auto;
+  }
   span {
     color: var(--gray-57-e, var(--White-1, #7e7e7e));
   }
@@ -93,15 +172,6 @@
   margin: 0 auto;
   padding-top: 20px;
   width: 1396px;
-  @media (max-width: 1600px) {
-    width: 1200px;
-  }
-  @media (max-width: 1280px) {
-    width: calc(100vw - 90px);
-  }
-  @media (max-width: 998px) {
-    width: calc(100vw - 32px);
-  }
   height: 508px;
   border-radius: 20px 20px 0px 0px;
   border-top: 3px solid #363636;
@@ -115,6 +185,24 @@
   padding-right: 20px;
   display: flex;
   margin-top: 158px;
+  @media (max-width: 1600px) {
+    width: 1200px;
+    margin-top: 39px;
+  }
+  @media (max-width: 1280px) {
+    width: calc(100vw - 90px);
+    height: 400px;
+    margin-top: 64px;
+  }
+  @media (max-width: 998px) {
+    width: calc(100vw - 32px);
+    padding-top: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 43px;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -126,6 +214,9 @@
     filter: blur(305.5px);
     bottom: 70px;
     z-index: 1;
+    @media (max-width: 998px) {
+      display: none;
+    }
   }
   // @media (max-width: 1500px) {
   //   width: 1200px;
@@ -137,12 +228,20 @@
   min-width: 451px;
   max-width: 451px;
   position: relative;
+  @media (max-width: 1280px) {
+    width: 361px;
+    min-width: 361px;
+    max-width: 361px;
+  }
 }
 
 .roadmap_line {
   position: absolute;
   top: 55px;
   left: 0;
+  @media (max-width: 998px) {
+    display: none;
+  }
 }
 
 .roadmap_datapicker_scroll {
@@ -173,19 +272,37 @@
 .roadmap_arr {
   cursor: pointer;
   position: absolute;
-  top: 32px;
-  // background-color: #363636;
+  background-color: #2a2a2a;
+  transition: all 0.5s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: #363636;
+  }
+  top: 20px;
   border-radius: 12px;
   z-index: 22;
+  @media (max-width: 998px) {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
 }
 
 .roadmap_arr_next {
   right: 74px;
+  @media (max-width: 1280px) {
+    right: 60px;
+  }
   // background-color: #2a2a2a;
 }
 .roadmap_arr_prev {
   right: 20px;
-  z-index: 1;
+  z-index: 50;
   // background-color: #363636;
 }
 
@@ -328,6 +445,10 @@
   font-weight: 400;
   line-height: 140%; /* 35px */
   letter-spacing: 0.5px;
+  @media (max-width: 1280px) {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
 }
 
 .roadmap_data_container {
@@ -347,6 +468,10 @@
     text-decoration: none !important;
     text-shadow: none !important;
     border: none !important;
+    @media (max-width: 1280px) {
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
   }
 }
 
@@ -383,12 +508,19 @@
   box-sizing: border-box;
   @media (max-width: 1280px) {
     height: 30px;
+    font-size: 13px;
+    color: var(--white-1-ea, #eaeaea);
+    font-size: 13px;
+    letter-spacing: 0.65px;
   }
   &_may {
     &_1 {
       width: 445px;
       top: 0;
       left: 4px;
+      @media (max-width: 1280px) {
+        width: 349px;
+      }
     }
     &_2 {
       width: 445px;
@@ -404,6 +536,7 @@
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
+        width: 710px;
       }
     }
   }
@@ -411,6 +544,9 @@
   &_june {
     &_1 {
       width: 445px;
+      @media (max-width: 1280px) {
+        width: 349px;
+      }
       top: 0;
       left: 4px;
     }
@@ -420,6 +556,7 @@
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 349px;
       }
     }
     &_3 {
@@ -428,6 +565,8 @@
       top: 100px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 400px;
+        left: 187px;
       }
     }
     &_4 {
@@ -436,6 +575,8 @@
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 400px;
+        left: 187px;
       }
     }
   }
@@ -445,6 +586,10 @@
       left: 290px;
       width: 605px;
       top: 0;
+      @media (max-width: 1280px) {
+        width: 483px;
+        left: 231px;
+      }
     }
     &_2 {
       left: 290px;
@@ -452,6 +597,8 @@
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 483px;
+        left: 231px;
       }
     }
   }
@@ -463,6 +610,7 @@
       left: 4px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 349px;
       }
     }
     &_2 {
@@ -471,6 +619,7 @@
       left: 4px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 503px;
       }
     }
   }
@@ -479,6 +628,9 @@
       top: 0;
       left: 4px;
       width: 519px;
+      @media (max-width: 1280px) {
+        width: 407px;
+      }
     }
     &_2 {
       top: 50px;
@@ -486,6 +638,7 @@
       width: 687px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 540px;
       }
     }
   }
@@ -496,6 +649,7 @@
       top: 100px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 349px;
       }
     }
     &_2 {
@@ -504,6 +658,7 @@
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 349px;
       }
     }
     &_3 {
@@ -512,6 +667,7 @@
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
+        width: 349px;
       }
     }
   }
@@ -520,6 +676,9 @@
       left: 4px;
       top: 0;
       width: 437px;
+      @media (max-width: 1280px) {
+        width: 343px;
+      }
     }
     &_2 {
       top: 50px;
@@ -527,6 +686,7 @@
       right: 4px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 346px;
       }
     }
     &_3 {
@@ -535,6 +695,7 @@
       width: 551px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 429px;
       }
     }
     &_4 {
@@ -543,6 +704,7 @@
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 304px;
       }
     }
     &_5 {
@@ -551,6 +713,7 @@
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
+        width: 319px;
       }
     }
     &_6 {
@@ -559,6 +722,7 @@
       top: 250px;
       @media (max-width: 1280px) {
         top: 190px;
+        width: 429px;
       }
     }
   }
@@ -567,6 +731,9 @@
       width: 432px;
       top: 0;
       left: 4px;
+      @media (max-width: 1280px) {
+        width: 339px;
+      }
     }
     &_2 {
       width: 390px;
@@ -574,6 +741,7 @@
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 306px;
       }
     }
     &_3 {
@@ -582,6 +750,7 @@
       width: 322px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 252px;
       }
     }
     &_4 {
@@ -590,6 +759,7 @@
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 288px;
       }
     }
     &_5 {
@@ -598,6 +768,7 @@
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
+        width: 305px;
       }
     }
     &_6 {
@@ -606,6 +777,8 @@
       width: 782px;
       @media (max-width: 1280px) {
         top: 190px;
+        width: 621px;
+        left: 90px;
       }
     }
   }
@@ -614,6 +787,9 @@
       top: 0;
       left: 4px;
       width: 445px;
+      @media (max-width: 1280px) {
+        width: 349px;
+      }
     }
     &_2 {
       top: 50px;
@@ -621,6 +797,7 @@
       width: 445px;
       @media (max-width: 1280px) {
         top: 38px;
+        width: 349px;
       }
     }
     &_3 {
@@ -629,6 +806,7 @@
       width: 445px;
       @media (max-width: 1280px) {
         top: 76px;
+        width: 349px;
       }
     }
     &_4 {
@@ -637,6 +815,7 @@
       width: 445px;
       @media (max-width: 1280px) {
         top: 114px;
+        width: 349px;
       }
     }
   }

@@ -6,6 +6,8 @@ import phoneTop from "@/public/media/messangerImgs/phoneTop.png";
 import phoneCenter from "@/public/media/messangerImgs/phoneCenter.png";
 import phoneBottom from "@/public/media/messangerImgs/phoneBottom.png";
 import { Button } from "@/shared/ui/Button";
+import line from "@/public/media/common/silver_line.svg";
+import Image from "next/image";
 
 interface MessangerSectionProps {}
 
@@ -13,6 +15,7 @@ export const MessangerSection: FC<MessangerSectionProps> = () => {
   return (
     <div className={s.messanger_section} id="messanger_section">
       <img src={imgBg.src} alt="img-bg" className={s.bg_img} />
+      <Image className={s.silver_line} src={line} alt="line" />
       <div className={s.left_ellipse}></div>
       <div className={s.right_ellipse}></div>
       <img

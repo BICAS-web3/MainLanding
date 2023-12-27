@@ -17,15 +17,36 @@ import { FacebookIcon } from "@/shared/SVG/FacebookIcon";
 import { RedditIcon } from "@/shared/SVG/RedditIcon";
 import { GreenIcon } from "@/shared/SVG/GreenIcon";
 import { SocialDraxIcon } from "@/shared/SVG/SocialDraxIcon";
-import { useMediaQuery } from "@/shared/utils";
+import line_silver from "@/public/media/common/silver_line.svg";
 
 interface SocialSectionProps {}
 
 export const SocialSection: FC<SocialSectionProps> = () => {
-  const isMobile = useMediaQuery("(max-width:998px)");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 998) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <section className={s.social} id="community_section">
+      <Image className={s.line} src={line_silver} alt="line" />
       <div className={clsx("container", s.container)}>
         {" "}
         <span className={s.eclipse}></span>
