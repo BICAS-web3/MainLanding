@@ -11,12 +11,13 @@ import { Navigation, Scrollbar } from "swiper/modules";
 import { PrevArrIcon } from "@/shared/SVG/PrevArrIcon";
 import { NextArrIcon } from "@/shared/SVG/NextArrIcon";
 
-import bg from "@/public/media/draxSection/Vector.svg";
+import bg from "@/public/media/roadmapSection/bg.svg";
 import roadmap_line_1 from "@/public/media/roadmapSection/line.svg";
 import roadmap_line_2 from "@/public/media/roadmapSection/roadmap_line_2.svg";
 import roadmap_line_3 from "@/public/media/roadmapSection/roadmap_line_3.svg";
 import roadmap_coun_1 from "@/public/media/roadmapSection/roadmap_coun_1.svg";
 import silver_line from "@/public/media/common/silver_line.svg";
+import imgBg from "@/public/media/common/commonSectionsBg.png";
 import gold_line from "@/public/media/common/gold_line.svg";
 
 interface RoadmapSectionProps {}
@@ -115,6 +116,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
 
   return (
     <section className={s.roadmap} id="roadmap_section">
+      <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
       <Image src={bg} className={s.roadmap_line} alt="" />
       <Image className={s.line_1} src={gold_line} alt="line" />
       <Image className={s.line_2} src={silver_line} alt="line" />

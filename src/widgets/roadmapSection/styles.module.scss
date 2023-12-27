@@ -54,7 +54,14 @@
     }
   }
 }
-
+.bg_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  // z-index: 0;
+}
 .line_1 {
   position: absolute;
   top: 0;
@@ -239,6 +246,7 @@
   position: absolute;
   top: 55px;
   left: 0;
+  // z-index: 1;
   @media (max-width: 998px) {
     display: none;
   }

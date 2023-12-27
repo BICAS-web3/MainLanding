@@ -19,6 +19,7 @@ import { GreenIcon } from "@/shared/SVG/GreenIcon";
 import { SocialDraxIcon } from "@/shared/SVG/SocialDraxIcon";
 import line_silver from "@/public/media/common/silver_line.svg";
 
+import imgBg from "@/public/media/common/commonSectionsBg.png";
 interface SocialSectionProps {}
 
 export const SocialSection: FC<SocialSectionProps> = () => {
@@ -46,6 +47,7 @@ export const SocialSection: FC<SocialSectionProps> = () => {
 
   return (
     <section className={s.social} id="community_section">
+      <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
       <Image className={s.line} src={line_silver} alt="line" />
       <div className={clsx("container", s.container)}>
         {" "}

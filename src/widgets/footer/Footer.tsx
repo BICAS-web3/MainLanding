@@ -126,7 +126,10 @@ export const Footer: FC<FooterProps> = () => {
     <div className={s.footer}>
       <img src={bgGroup.src} className={s.footer_bg_img} alt="" />
       <div className={s.border_shadow}></div>
-      <div className={s.footer_container}>
+      <div
+        className={"container"}
+        // s.footer_container
+      >
         <div className={s.footer_body}>
           <div className={s.footer_top}>
             <div className={s.footer_top_group}>

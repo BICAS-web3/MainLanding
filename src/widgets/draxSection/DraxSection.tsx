@@ -29,6 +29,7 @@ import s from "./styles.module.scss";
 import clsx from "clsx";
 import Image from "next/image";
 
+import imgBg from "@/public/media/common/commonSectionsBg.png";
 interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
@@ -80,6 +81,7 @@ export const DraxSection: FC<DraxSectionProps> = () => {
   const [activeTab, setActiveTab] = useState<TypeButtons>("Overall");
   return (
     <section className={s.drax} id="drax_section">
+      <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
       <Image className={s.silver_line} src={line} alt="line" />
       <Image className={s.silver_line_2} src={line} alt="line" />
       <div className="container">
