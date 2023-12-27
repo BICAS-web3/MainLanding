@@ -8,6 +8,8 @@ interface HeroSectionProps {}
 export const HeroSection: FC<HeroSectionProps> = () => {
   return (
     <div className={s.hero_section}>
+      <div className={s.mob_dark_left_ellipse}></div>
+      <div className={s.mob_dark_bottom_ellipse}></div>
       <div className={s.mob_ellipse}></div>
       <img src={sectionBg.src} alt="img-bg" className={s.img_bg} />
       <div className={s.hero_section_container}>
@@ -16,8 +18,9 @@ export const HeroSection: FC<HeroSectionProps> = () => {
             THE ANCIENT <br /> GREEK HISTORY <br /> KEEPERS CLUB
           </h1>
           <p className={s.hero_section_text}>
-            Space of Web3 Tools aims to cross the border of blockchain adoption
-            and Fun dive into Crypto with Messenger, NFT, GameFi, Launchpad
+            Embark on an adventure with Greek Keepers, blending ancient Greek
+            mythology and modern blockchain. Discover a Web3.0 filled with
+            decentralized apps, NFT games, and GameFi experiences.
           </p>
           <Button className={s.buy_token_btn}>Buy Token</Button>
         </div>
