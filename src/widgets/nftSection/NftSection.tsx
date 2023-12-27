@@ -5,6 +5,9 @@ import mainBgImg from "@/public/media/common/commonSectionsBg.png";
 import mainBgImgMob from "@/public/media/nftSection/bgMobImg.png";
 import { Button } from "@/shared/ui/Button";
 
+import line from "@/public/media/common/silver_line.svg";
+import Image from "next/image";
+
 interface NftSectionProps {}
 
 export const NftSection: FC<NftSectionProps> = () => {
@@ -30,6 +33,7 @@ export const NftSection: FC<NftSectionProps> = () => {
     <div className={s.nft_section} id="nft_section">
       <img src={bgImg.src} className={s.nft_bg_img} alt="bg-img-nft-static" />
       <img src={mainBgImg.src} className={s.main_bg_img} alt="bg-static" />
+      <Image className={s.silver_line} src={line} alt="line" />
       <div className={s.bg_ellipse}></div>
       <div className={s.nft_section_container}>
         <div className={s.nft_section_body}>

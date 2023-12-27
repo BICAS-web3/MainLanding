@@ -13,6 +13,7 @@ import {
 } from "@/shared/SVG";
 import { Button } from "@/shared/ui/Button";
 
+import line from "@/public/media/common/silver_line.svg";
 import bg from "@/public/media/draxSection/Vector.svg";
 import sircle from "@/public/media/draxSection/sircle.png";
 import statistic_1 from "@/public/media/draxSection/statistic_1.svg";
@@ -79,6 +80,8 @@ export const DraxSection: FC<DraxSectionProps> = () => {
   const [activeTab, setActiveTab] = useState<TypeButtons>("Overall");
   return (
     <section className={s.drax} id="drax_section">
+      <Image className={s.silver_line} src={line} alt="line" />
+      <Image className={s.silver_line_2} src={line} alt="line" />
       <div className="container">
         {" "}
         <article className={s.drax_container}>
