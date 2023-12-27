@@ -178,7 +178,11 @@ export const Header: FC<HeaderProps> = () => {
             <img src={pattern.src} className={s.burger_mob_pattern} alt="" />
             <div className={s.yak_list}>
               {links.map((item, ind) => (
-                <Link href={item.href} className={s.header_links_list_item}>
+                <Link
+                  href={item.href}
+                  className={s.header_links_list_item}
+                  key={ind}
+                >
                   {item.title}
                 </Link>
               ))}
