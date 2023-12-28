@@ -18,7 +18,7 @@
 }
 
 .nft_section_container {
-  width: 100%;
+  // width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   z-index: 10;
@@ -123,9 +123,10 @@
 
 .nft_section_info_block {
   border-left: 7px solid #e5c787;
-  padding-left: 30px;
+  padding-left: 59px;
 
   @media screen and (max-width: 1280px) {
+    padding-left: 30px;
     border-left: 4px solid #e5c787;
   }
 
