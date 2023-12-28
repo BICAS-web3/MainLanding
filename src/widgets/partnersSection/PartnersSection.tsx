@@ -80,12 +80,12 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
             </div>
             <Button className={s.alpha_btn}>Join Alpha</Button>
           </div>
-          <div className={s.imgs_group_block}>
-            <img src={rightImg.src} alt="right-img" className={s.right_img} />
-            <img src={topImg.src} alt="top-img" className={s.top_img} />
-            <img src={bottomImg.src} alt="top-img" className={s.bottom_img} />
-          </div>
         </div>
+      </div>
+      <div className={s.imgs_group_block}>
+        <img src={rightImg.src} alt="right-img" className={s.right_img} />
+        <img src={topImg.src} alt="top-img" className={s.top_img} />
+        <img src={bottomImg.src} alt="top-img" className={s.bottom_img} />
       </div>
     </div>
   );

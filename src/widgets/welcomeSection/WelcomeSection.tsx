@@ -46,13 +46,13 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
       <img src={bgImg.src} alt="bg-img-2" className={s.section_bg_img_2} />
       <div className={s.bg_ellipse}></div>
       <div
-        className={s.welcome_section_container}
-        style={{
-          maxWidth:
-            windowWidth > 1280
-              ? 1500 + (windowWidth - 1500) / 2
-              : 1075 + (windowWidth - 1075) / 2,
-        }}
+        className={"container"}
+        // style={{
+        //   maxWidth:
+        //     windowWidth > 1280
+        //       ? 1500 + (windowWidth - 1500) / 2
+        //       : 1075 + (windowWidth - 1075) / 2,
+        // }}
       >
         <div className={s.welcome_section_body}>
           <div className={s.welcome_section_info}>

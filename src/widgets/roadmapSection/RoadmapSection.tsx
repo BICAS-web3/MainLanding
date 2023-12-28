@@ -1,4 +1,4 @@
-import { FC, useCallback, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import s from "./styles.module.scss";
@@ -11,12 +11,13 @@ import { Navigation, Scrollbar } from "swiper/modules";
 import { PrevArrIcon } from "@/shared/SVG/PrevArrIcon";
 import { NextArrIcon } from "@/shared/SVG/NextArrIcon";
 
-import bg from "@/public/media/draxSection/Vector.svg";
+import bg from "@/public/media/roadmapSection/bg.svg";
 import roadmap_line_1 from "@/public/media/roadmapSection/line.svg";
 import roadmap_line_2 from "@/public/media/roadmapSection/roadmap_line_2.svg";
 import roadmap_line_3 from "@/public/media/roadmapSection/roadmap_line_3.svg";
 import roadmap_coun_1 from "@/public/media/roadmapSection/roadmap_coun_1.svg";
 import silver_line from "@/public/media/common/silver_line.svg";
+import imgBg from "@/public/media/common/commonSectionsBg.png";
 import gold_line from "@/public/media/common/gold_line.svg";
 
 interface RoadmapSectionProps {}
@@ -112,9 +113,36 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
   ];
 
   const swiperRef = useRef<SwiperRef>(null);
+  const [isBeginning, setIsBeginning] = useState<any>(null);
+  const [isEnd, setIsEnd] = useState<any>(null);
+  const [click, setClick] = useState(false);
+
+  const handleSlideChange = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      setIsBeginning(swiperRef.current.swiper.isBeginning);
+      setIsEnd(swiperRef.current.swiper.isEnd);
+    }
+  };
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current?.swiper;
+
+    if (swiperInstance) {
+      swiperInstance.on("slideChange", handleSlideChange);
+      setIsBeginning(swiperInstance.isBeginning);
+      setIsEnd(swiperInstance.isEnd);
+    }
+
+    return () => {
+      if (swiperInstance) {
+        swiperInstance.off("slideChange", handleSlideChange);
+      }
+    };
+  }, [click]);
 
   return (
     <section className={s.roadmap} id="roadmap_section">
+      <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
       <Image src={bg} className={s.roadmap_line} alt="" />
       <Image className={s.line_1} src={gold_line} alt="line" />
       <Image className={s.line_2} src={silver_line} alt="line" />
@@ -131,8 +159,15 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
           </p>
         </div>
         <div className={clsx(s.roadmap_datapicker)}>
-          <div
-            className={clsx(s.roadmap_arr, s.roadmap_arr_next, "road_prev_el")}
+          <button
+            onClick={() => setClick((prev) => !prev)}
+            disabled={isBeginning}
+            className={clsx(
+              s.roadmap_arr,
+              s.roadmap_arr_next,
+              "road_prev_el",
+              isBeginning && s.not_active
+            )}
           >
             <svg
               width="7"
@@ -148,9 +183,16 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                 fill="#7E7E7E"
               />
             </svg>
-          </div>
-          <div
-            className={clsx(s.roadmap_arr, s.roadmap_arr_prev, "road_next_el")}
+          </button>
+          <button
+            onClick={() => setClick((prev) => !prev)}
+            disabled={isEnd}
+            className={clsx(
+              s.roadmap_arr,
+              s.roadmap_arr_prev,
+              "road_next_el",
+              isEnd && s.not_active
+            )}
           >
             <svg
               width="7"
@@ -166,11 +208,13 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                 fill="#7E7E7E"
               />
             </svg>
-          </div>
+          </button>
           <Swiper
+            initialSlide={data.length - 1}
             modules={[Navigation]}
             slidesPerView={"auto"}
             ref={swiperRef}
+            on={{ slideChange: handleSlideChange }}
             navigation={{
               prevEl: ".road_prev_el",
               nextEl: ".road_next_el",
@@ -217,7 +261,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                       )}
                       key={i_text}
                     >
-                      {text}
+                      <span className={s.iten_text}> {text}</span>
                     </div>
                   ))}
                 </div>

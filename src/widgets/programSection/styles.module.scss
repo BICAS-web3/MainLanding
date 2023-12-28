@@ -70,22 +70,18 @@
 .d {
   display: flex;
 }
+.bg_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+}
 .container {
   display: flex;
   gap: 25px;
   width: 100%;
-  // max-width: 1500px;
-  // margin: 0 auto;
-  @media screen and (max-width: 1280px) {
-    // max-width: 1120px;
-  }
-
-  // padding-left: 30px;
-  // padding-right: 30px;
-
   @media screen and (max-width: 650px) {
-    // padding-left: 16px;
-    // padding-right: 16px;
     flex-direction: column;
   }
   @media (max-width: 1600px) {
@@ -118,30 +114,21 @@
 
 .drax_after {
   position: relative;
-  padding-left: 76px;
-  @media (max-width: 1280px) {
-    padding-left: 38px;
+  padding-left: 59px;
+  border-left: 7px solid #e5c787;
+
+  @media screen and (max-width: 1280px) {
+    border-left: 4px solid #e5c787;
+    padding-left: 30px;
   }
-  @media (max-width: 998px) {
-    padding-left: 18px;
+
+  @media screen and (max-width: 700px) {
+    margin-right: 150px;
   }
-  @media (max-width: 700px) {
-    padding-left: 12px;
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 7px;
-    height: 100%;
-    background: #e5c787;
-    @media (max-width: 1280px) {
-      width: 4px;
-    }
-    @media (max-width: 998px) {
-      width: 4px;
-    }
+
+  @media screen and (max-width: 650px) {
+    padding-left: 8px;
+    margin-right: 0;
   }
 }
 
@@ -203,9 +190,9 @@
 .program_leptop {
   margin-top: 80px;
   flex: 1 1 auto;
-  width: 1024px;
-  max-width: 1024px;
-  height: 623.5px;
+  max-width: 1053px;
+  width: 1053.586px;
+  height: 641.514px;
   position: relative;
   @media (max-width: 1920px) {
     width: 750px;
@@ -222,8 +209,8 @@
     height: 377.005px;
   }
   @media (max-width: 700px) {
-    width: 617.647px;
-    height: 377.005px;
+    width: 505.093px;
+    height: 327.33px;
   }
 }
 
