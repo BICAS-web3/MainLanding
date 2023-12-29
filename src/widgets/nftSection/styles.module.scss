@@ -72,13 +72,7 @@
   @media screen and (max-width: 1280px) {
     height: 550px;
     bottom: -50px;
-    // width: 700px;
   }
-
-  // @media screen and (max-width: px) {
-  //   height: 550px;
-  //   width: 700px;
-  // }
 }
 
 .nft_section_title {
@@ -100,7 +94,11 @@
     font-size: 32px;
     max-width: 387px;
     line-height: 38.4px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 650px) {
@@ -112,7 +110,7 @@
 .nft_market_btn {
   margin-top: 30px;
   width: 240px;
-  margin-left: 34px;
+  margin-left: 67px;
 
   @media screen and (max-width: 1280px) {
     width: 160px;
@@ -121,6 +119,7 @@
 
   @media screen and (max-width: 650px) {
     margin-left: 12px;
+    margin-top: 20px;
   }
 }
 

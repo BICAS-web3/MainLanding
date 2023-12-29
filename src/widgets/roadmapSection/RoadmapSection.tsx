@@ -147,7 +147,6 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
       <Image className={s.line_1} src={gold_line} alt="line" />
       <Image className={s.line_2} src={silver_line} alt="line" />
       <div className={clsx("container", s.container)}>
-        {" "}
         <div className={s.roadmap_container}>
           <h2 className={s.roadmap_title}>
             <span> Roadmap</span>

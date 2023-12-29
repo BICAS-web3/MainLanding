@@ -15,30 +15,30 @@ import clsx from "clsx";
 
 import bgGroup from "@/public/media/common/commonSectionsBg.png";
 
-import youtubeIco from "@/public/media/footerImages/youtube.png";
-import tiktokIco from "@/public/media/footerImages/tiktok.png";
-import githubIco from "@/public/media/footerImages/github.png";
-import linkedinIco from "@/public/media/footerImages/linkedin.png";
-import tgIco from "@/public/media/footerImages/tg.png";
-import inst from "@/public/media/footerImages/inst.png";
-import twitter from "@/public/media/footerImages/twitter.png";
-import discord from "@/public/media/footerImages/discord.png";
-import facebook from "@/public/media/footerImages/facebook.png";
-import reddit from "@/public/media/footerImages/reddit.png";
-import meduim from "@/public/media/footerImages/medium.png";
-import main from "@/public/media/footerImages/main.png";
+import youtubeIco from "@/public/media/footerImages/youtube.svg";
+import tiktokIco from "@/public/media/footerImages/tiktok.svg";
+import githubIco from "@/public/media/footerImages/github.svg";
+import linkedinIco from "@/public/media/footerImages/linkedin.svg";
+import tgIco from "@/public/media/footerImages/tg.svg";
+import inst from "@/public/media/footerImages/inst.svg";
+import twitter from "@/public/media/footerImages/twitter.svg";
+import discord from "@/public/media/footerImages/discord.svg";
+import facebook from "@/public/media/footerImages/facebook.svg";
+import reddit from "@/public/media/footerImages/reddiut.svg";
+import meduim from "@/public/media/footerImages/medium.svg";
+import main from "@/public/media/footerImages/main.svg";
 import { useUnit } from "effector-react";
 
 import * as HeaderM from "./model";
 
-const socialLinks = [
+export const socialLinks = [
   {
     ico: youtubeIco,
-    href: "#",
+    href: "https://www.youtube.com/@GreekKeepers",
   },
   {
     ico: tiktokIco,
-    href: "#",
+    href: "https://www.tiktok.com/@greekkeepersclub?is_from_webapp=1&sender_device=pc",
   },
   {
     ico: githubIco,
@@ -46,39 +46,39 @@ const socialLinks = [
   },
   {
     ico: linkedinIco,
-    href: "#",
+    href: "https://www.linkedin.com/in/greek-keepers-458b78283/",
   },
   {
     ico: tgIco,
-    href: "#",
+    href: "https://t.me/greekkeepers",
   },
   {
     ico: inst,
-    href: "#",
+    href: "https://instagram.com/greekkeepers?igshid=NTc4MTIwNjQ2YQ==",
   },
   {
     ico: twitter,
-    href: "#",
+    href: "https://twitter.com/GreekKeepers",
   },
   {
     ico: discord,
-    href: "#",
+    href: "https://discord.gg/ReJVd2xJSk",
   },
   {
     ico: facebook,
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=100092326343777",
   },
   {
     ico: reddit,
-    href: "#",
+    href: "https://www.reddit.com/user/GreekKeepers/?rdt=59831",
   },
   {
     ico: meduim,
-    href: "#",
+    href: "https://medium.com/@greekkeepers",
   },
   {
     ico: main,
-    href: "#",
+    href: "https://www.greekkeepers.io/",
   },
 ];
 
@@ -168,7 +168,7 @@ export const Header: FC<HeaderProps> = () => {
           className={clsx(s.burger_bg_img, s.burger_mob_hidden)}
           alt=""
         />
-        <div>
+        <div className={s.burger_menu_wrap_block}>
           <div className={s.burger_menu_block}>
             <img
               src={bgGroup.src}

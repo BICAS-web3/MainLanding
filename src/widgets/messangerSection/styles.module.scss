@@ -131,12 +131,14 @@
   @media screen and (max-width: 1280px) {
     font-size: 32px;
     line-height: 38.4px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: 700px) {
     font-size: 32px;
     line-height: 38.4px;
     max-width: 390px;
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 650px) {
@@ -366,19 +368,21 @@
 
 .messanger_btn {
   width: 240px;
-  margin-top: 75px;
+  margin-top: 45px;
   margin-left: 33px;
 
   @media screen and (max-width: 1280px) {
     margin-left: 29px;
     width: 160px;
+    margin-top: 35px;
   }
 
   @media screen and (max-width: 700px) {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   @media screen and (max-width: 650px) {
     margin-left: 11px;
+    margin-top: 20px;
   }
 }
