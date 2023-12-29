@@ -1,73 +1,23 @@
 import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 import bgGroup from "@/public/media/common/commonSectionsBg.png";
-import logo from "@/public/media/common/footerLogo.png";
+import logo from "@/public/media/common/footerLogo.svg";
 
-import youtubeIco from "@/public/media/footerImages/youtube.png";
-import tiktokIco from "@/public/media/footerImages/tiktok.png";
-import githubIco from "@/public/media/footerImages/github.png";
-import linkedinIco from "@/public/media/footerImages/linkedin.png";
-import tgIco from "@/public/media/footerImages/tg.png";
-import inst from "@/public/media/footerImages/inst.png";
-import twitter from "@/public/media/footerImages/twitter.png";
-import discord from "@/public/media/footerImages/discord.png";
-import facebook from "@/public/media/footerImages/facebook.png";
-import reddit from "@/public/media/footerImages/reddit.png";
-import meduim from "@/public/media/footerImages/medium.png";
-import main from "@/public/media/footerImages/main.png";
+import youtubeIco from "@/public/media/footerImages/youtube.svg";
+import tiktokIco from "@/public/media/footerImages/tiktok.svg";
+import githubIco from "@/public/media/footerImages/github.svg";
+import linkedinIco from "@/public/media/footerImages/linkedin.svg";
+import tgIco from "@/public/media/footerImages/tg.svg";
+import inst from "@/public/media/footerImages/inst.svg";
+import twitter from "@/public/media/footerImages/twitter.svg";
+import discord from "@/public/media/footerImages/discord.svg";
+import facebook from "@/public/media/footerImages/facebook.svg";
+import reddit from "@/public/media/footerImages/reddiut.svg";
+import meduim from "@/public/media/footerImages/medium.svg";
+import main from "@/public/media/footerImages/main.svg";
 
 import Link from "next/link";
-
-const socialMediaList = [
-  {
-    ico: youtubeIco,
-    href: "#",
-  },
-  {
-    ico: tiktokIco,
-    href: "#",
-  },
-  {
-    ico: githubIco,
-    href: "#",
-  },
-  {
-    ico: linkedinIco,
-    href: "#",
-  },
-  {
-    ico: tgIco,
-    href: "#",
-  },
-  {
-    ico: inst,
-    href: "#",
-  },
-  {
-    ico: twitter,
-    href: "#",
-  },
-  {
-    ico: discord,
-    href: "#",
-  },
-  {
-    ico: facebook,
-    href: "#",
-  },
-  {
-    ico: reddit,
-    href: "#",
-  },
-  {
-    ico: meduim,
-    href: "#",
-  },
-  {
-    ico: main,
-    href: "#",
-  },
-];
+import { socialLinks } from "../header/Header";
 
 const links = [
   {
@@ -165,7 +115,7 @@ export const Footer: FC<FooterProps> = () => {
                 className={s.footer_socials_list}
                 style={{ height: is700 ? textBlockHeight : "100%" }}
               >
-                {socialMediaList.map((item, ind) => (
+                {socialLinks.map((item, ind) => (
                   <Link
                     key={ind}
                     href={item.href}

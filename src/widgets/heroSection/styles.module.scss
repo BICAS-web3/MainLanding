@@ -48,7 +48,7 @@
   @media screen and (max-width: 650px) {
     font-size: 36px;
     line-height: 43.2px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 }
 
@@ -61,8 +61,9 @@
   font-weight: 600;
   line-height: 33.6px;
   letter-spacing: 0.96px;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   max-width: 708px;
+  margin-left: 6px;
 
   @media screen and (max-width: 1280px) {
     font-size: 16px;
@@ -71,33 +72,26 @@
     margin-bottom: 50px;
   }
 
+  @media screen and (max-width: 700px) {
+    margin-bottom: 3px;
+  }
+
   @media screen and (max-width: 650px) {
-    margin-bottom: 35px;
+    margin-bottom: 70px;
   }
 }
 
 .buy_token_btn {
-  // cursor: pointer;
   width: 240px;
-  // height: 50px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // color: #ffe09d;
-  // text-align: center;
-  // font-family: var(--font-nunito-sans);
-  // font-size: 16px;
-  // font-style: normal;
-  // font-weight: 700;
-  // line-height: 22.4px;
-  // letter-spacing: 0.64px;
-  // text-transform: capitalize;
-  // border-radius: 12px;
-  // border: 1px solid var(--Gold-solid, #e5c787);
-  // background: #231f18;
+  margin-left: 6px;
+  @media screen and (max-width: 700px) {
+    width: 330px !important;
+    margin-top: 30px;
+  }
 
   @media screen and (max-width: 650px) {
     width: 100% !important;
+    margin-top: 0;
   }
 }
 
@@ -120,7 +114,6 @@
   }
 
   @media screen and (max-width: 650px) {
-    // min-height: 550px;
     align-items: start;
     text-align: start;
     padding: 0 16px 123px 16px;

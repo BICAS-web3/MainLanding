@@ -28,6 +28,14 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+
+  @media screen and (max-width: 700px) {
+    padding: 0 30px 0 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    padding: 0 16px;
+  }
 }
 
 .burger_menu_block {
@@ -128,7 +136,22 @@
   }
 }
 
+.burger_menu_wrap_block {
+  height: 100%;
+}
+
+// .burger_bg_img_2 {
+
+// }
+
+@media screen and (max-height: 714px) and (max-width: 650px) {
+  .burger_menu_wrap_block {
+    height: auto;
+  }
+}
+
 .burger_menu_block {
+  height: 100%;
   z-index: 20;
   position: relative;
   padding: 36px 12px 20px 12px;
