@@ -1,6 +1,4 @@
 .drax {
-  // border-top: 1px solid #787878;
-  // border-bottom: 1px solid #787878;
   background: #0a0a0a;
   padding: 192px 0 230px 0;
   display: flex;
@@ -98,16 +96,16 @@
 
 .drax_after,
 .allocation_after {
-  padding-left: 59px;
+  padding-left: 30px;
   border-left: 7px solid #e5c787;
 
   @media screen and (max-width: 1280px) {
     border-left: 4px solid #e5c787;
-    padding-left: 30px;
   }
 
   @media screen and (max-width: 700px) {
     margin-right: 150px;
+    padding-left: 14px;
   }
 
   @media screen and (max-width: 650px) {
@@ -117,21 +115,25 @@
 }
 
 .drax_title {
-  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
-  // text-align: center;
+  color: #e5c787;
   font-family: var(--font-nunito-sans);
   font-size: 50px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%; /* 60px */
+  line-height: 60px;
+  margin-bottom: 30px;
   span {
     color: white;
   }
   @media (max-width: 1280px) {
+    line-height: 38px;
     font-size: 32px;
+    margin-bottom: 20px;
   }
   @media (max-width: 700px) {
+    line-height: 28.8px;
     font-size: 24px;
+    margin-bottom: 10px;
   }
 }
 .bg_img {
@@ -142,13 +144,12 @@
   top: 0;
 }
 .drax_text {
-  margin-top: 10px;
-  color: var(--white-1-ea, var(--White-1, #eaeaea));
+  color: #eaeaea;
   font-family: var(--font-source-sans-3);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 28px */
+  line-height: 28px;
   letter-spacing: 1px;
   max-width: 661px;
   @media (max-width: 1280px) {
@@ -162,7 +163,7 @@
   @media (max-width: 700px) {
     font-size: 24px;
     font-size: 15px;
-    line-height: 140%; /* 21px */
+    line-height: 21px;
     letter-spacing: 0.75px;
   }
 }
@@ -170,13 +171,16 @@
 .drax_btn {
   gap: 16px;
   width: 356px;
-  padding-left: 60px;
-  justify-content: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 1280px) {
     width: 278px;
   }
-  @media (max-width: 700px) {
-    width: 100%;
+
+  @media screen and (max-width: 650px) {
+    max-width: 250px;
+    padding-left: 0;
   }
 }
 
@@ -552,10 +556,10 @@
 
 .contact_btn {
   width: 260px;
-  margin-top: 40px;
+  margin-top: 50px;
   display: flex;
   gap: 16px;
-  margin-left: 76px;
+  margin-left: 37px;
   @media (max-width: 1280px) {
     margin-left: 38px;
   }
@@ -917,7 +921,7 @@
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 18.2px */
+  line-height: 140%;
   letter-spacing: 0.52px;
   @media (max-width: 998px) {
     font-size: 10px;
@@ -941,7 +945,6 @@
   @media (max-width: 1280px) {
   }
   @media (max-width: 998px) {
-    margin-top: 21px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -950,7 +953,6 @@
   @media (max-width: 700px) {
     flex-direction: column;
     gap: 30px;
-    margin-top: 30px;
   }
 }
 
@@ -959,16 +961,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 50px;
   gap: 20px;
   position: relative;
   z-index: 1;
-  padding-left: 76px;
+  padding-left: 39px;
   @media (max-width: 1280px) {
     padding-left: 38px;
   }
   @media (max-width: 998px) {
-    padding-left: 18px;
+    padding-left: 32px;
   }
   @media (max-width: 700px) {
     padding-left: 12px;
@@ -983,10 +985,12 @@
       height: 18px;
     }
   }
-  @media (max-width: 998px) {
-    margin-top: 19px;
-  }
   @media (max-width: 700px) {
     max-width: 100%;
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 20px;
   }
 }

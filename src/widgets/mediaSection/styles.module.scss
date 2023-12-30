@@ -54,35 +54,45 @@
   z-index: 0;
 }
 .container {
+  z-index: 5;
   display: flex;
   flex-direction: column;
 }
 .media_marquee {
   gap: 105px;
-  margin-top: 64px;
+  margin-top: 44px;
   @media (max-width: 1280px) {
-    margin-top: 0;
+    margin-top: 10px;
     gap: 0;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 0;
   }
 }
 .media_title {
-  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
+  color: #e5c787;
   text-align: center;
   font-family: var(--font-nunito-sans);
   font-size: 50px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 60px */
+  line-height: 60px;
+  width: 100%;
   text-transform: uppercase;
   @media (max-width: 1280px) {
     font-size: 32px;
+    line-height: 48px;
   }
   @media (max-width: 998px) {
-    font-size: 24px;
-    // color: white;
   }
   span {
     color: white;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 24px;
+    line-height: 28.8px;
   }
 }
 .media_img_wrap {
@@ -104,15 +114,16 @@
 .media_body {
   display: flex;
   gap: 20px;
-  margin-top: 122px;
+  margin-top: 52px;
   position: relative;
   @media (max-width: 1280px) {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   @media (max-width: 700px) {
     width: 100%;
     margin-top: 28px;
     flex-direction: column;
+    margin-top: 18px;
   }
   &::after {
     position: absolute;
@@ -123,6 +134,10 @@
     filter: blur(305.5px);
     bottom: -76px;
     right: 421px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 40px;
   }
 }
 
@@ -155,19 +170,19 @@
     overflow: visible;
   }
   h3 {
-    color: var(--White-1, #eaeaea);
+    color: #eaeaea;
     text-align: left;
     font-family: var(--font-nunito-sans);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 44px;
     letter-spacing: 0.64px;
     @media (max-width: 1280px) {
       font-size: 21.333px;
       font-style: normal;
       font-weight: 700;
-      line-height: normal;
+      line-height: 29px;
       letter-spacing: 0.427px;
     }
     @media (max-width: 998px) {
@@ -175,10 +190,16 @@
       letter-spacing: 0.262px;
     }
     @media (max-width: 700px) {
-      font-size: 24px;
+      font-size: 15px;
       letter-spacing: 0.48px;
       position: relative;
+      line-height: 20px;
       z-index: 1;
+    }
+
+    @media screen and (max-width: 650px) {
+      font-size: 24px;
+      line-height: 33px;
     }
   }
   p {

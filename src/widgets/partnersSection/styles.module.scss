@@ -34,7 +34,7 @@
 .partners_info_title {
   max-width: 500px;
   display: block;
-  margin-bottom: 47px;
+  margin-bottom: 30px;
   color: #eaeaea;
   font-family: var(--font-nunito-sans);
   font-size: 50px;
@@ -49,27 +49,30 @@
   @media screen and (max-width: 1280px) {
     font-size: 32px;
     line-height: 38.4px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 650px) {
     font-size: 24px;
     line-height: 28.8px;
-    margin-bottom: 10px;
   }
 }
 
 .partners_info_block {
-  padding-left: 70px;
+  padding-left: 40px;
   border-left: 7px solid #e5c787;
 
   @media screen and (max-width: 1280px) {
     border-left: 4px solid #e5c787;
-    padding-left: 30px;
   }
 
   @media screen and (max-width: 700px) {
     margin-right: 150px;
+    padding-left: 14px;
   }
 
   @media screen and (max-width: 650px) {
@@ -96,10 +99,10 @@
 
 .partners_info_text_one {
   max-width: 480px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 
-  @media screen and (max-width: 650px) {
-    margin-bottom: 10px;
+  @media screen and (max-width: 700px) {
+    margin-bottom: 5px;
   }
 }
 
@@ -113,13 +116,18 @@
 
 .alpha_btn {
   width: 240px;
-  margin-left: 77px;
-  margin-top: 60px;
+  margin-left: 47px;
+  margin-top: 50px;
 
   @media screen and (max-width: 1280px) {
     width: 160px;
     margin-top: 30px;
-    margin-left: 34px;
+    margin-left: 44px;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 20px;
+    margin-left: 19px;
   }
 
   @media screen and (max-width: 650px) {

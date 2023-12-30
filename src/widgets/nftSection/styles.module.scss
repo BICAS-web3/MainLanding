@@ -108,13 +108,14 @@
 }
 
 .nft_market_btn {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 240px;
-  margin-left: 67px;
+  margin-left: 45px;
 
   @media screen and (max-width: 1280px) {
     width: 160px;
-    margin-left: 34px;
+    margin-left: 20px;
+    margin-top: 30px;
   }
 
   @media screen and (max-width: 650px) {
@@ -125,10 +126,10 @@
 
 .nft_section_info_block {
   border-left: 7px solid #e5c787;
-  padding-left: 59px;
+  padding-left: 40px;
 
   @media screen and (max-width: 1280px) {
-    padding-left: 30px;
+    padding-left: 14px;
     border-left: 4px solid #e5c787;
   }
 
