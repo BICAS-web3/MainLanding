@@ -172,6 +172,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
             modules={[Navigation]}
             slidesPerView={"auto"}
             ref={swiperRef}
+            className={s.swiper_wrapp}
             navigation={{
               prevEl: ".road_prev_el",
               nextEl: ".road_next_el",
@@ -185,11 +186,6 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                 )}
                 key={article.title}
               >
-                <Image
-                  className={s.roadmap_line}
-                  src={roadmap_line_1}
-                  alt="line"
-                />
                 <h3
                   className={clsx(
                     s.roadmap_article_title,
@@ -204,7 +200,6 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                   ))}
                 </div>
                 <div className={s.roadmap_text_container}>
-                  {" "}
                   {article.text.map((text, i_text) => (
                     <div
                       className={clsx(
@@ -222,6 +217,20 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                     </div>
                   ))}
                 </div>
+                {article.title !== "January" && (
+                  <Image
+                    className={s.roadmap_line}
+                    src={roadmap_line_1}
+                    alt="line"
+                  />
+                )}
+                {article.title === "May" && (
+                  <Image
+                    className={s.roadmap_line_2}
+                    src={roadmap_line_1}
+                    alt="line"
+                  />
+                )}
               </SwiperSlide>
             ))}
           </Swiper>
