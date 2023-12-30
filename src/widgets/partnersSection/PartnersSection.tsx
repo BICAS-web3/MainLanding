@@ -182,6 +182,7 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
               >
                 {animatedItems.map((item, ind) => (
                   <li
+                    key={ind}
                     className={clsx(
                       s.animated_items_list_item,
                       "animated-item"
