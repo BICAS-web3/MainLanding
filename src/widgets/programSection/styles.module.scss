@@ -1,5 +1,4 @@
 .program {
-  // border-top: 1px solid #787878;
   background: #0a0a0a;
   padding: 301px 0px 1px 0px;
   display: flex;
@@ -91,15 +90,9 @@
 }
 
 .drax_container {
-  // width: 100%;
-  // min-width: 580px;
   display: flex;
   flex-direction: column;
   position: relative;
-  @media (max-width: 1280px) {
-    // width: 351px;
-    // min-width: 351px;
-  }
   @media (max-width: 998px) {
   }
   @media (max-width: 700px) {
@@ -114,7 +107,7 @@
 
 .drax_after {
   position: relative;
-  padding-left: 59px;
+  padding-left: 40px;
   border-left: 7px solid #e5c787;
 
   @media screen and (max-width: 1280px) {
@@ -124,6 +117,7 @@
 
   @media screen and (max-width: 700px) {
     margin-right: 150px;
+    padding-left: 15px;
   }
 
   @media screen and (max-width: 650px) {
@@ -133,18 +127,17 @@
 }
 
 .drax_title {
-  color: var(--Gold-Solid-1, var(--White-1, #e5c787));
-  // text-align: center;
+  color: #e5c787;
   font-family: var(--font-nunito-sans);
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%; /* 60px */
+  line-height: 60px;
   @media (max-width: 1280px) {
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 48px */
+    line-height: 48px;
   }
   @media (max-width: 998px) {
     font-size: 24px;
@@ -158,13 +151,13 @@
 }
 
 .drax_text {
-  margin-top: 40px;
-  color: var(--white-1-ea, var(--White-1, #eaeaea));
+  margin-top: 30px;
+  color: #eaeaea;
   font-family: var(--font-source-sans-3);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 28px */
+  line-height: 28px;
   letter-spacing: 1px;
   max-width: 512px;
   @media (max-width: 1600px) {
@@ -178,11 +171,10 @@
     letter-spacing: 0.6px;
   }
   @media (max-width: 998px) {
-    margin-top: 5px;
     max-width: 293px;
   }
   @media (max-width: 700px) {
-    margin-top: 5px;
+    margin-top: 10px;
     max-width: auto;
   }
 }
@@ -216,22 +208,25 @@
 
 .program_btn {
   max-width: 238px;
-  margin-top: 81px;
-  margin-left: 76px;
+  margin-top: 60px;
+  margin-left: 49px;
   @media (max-width: 1280px) {
     margin-left: 38px;
   }
   @media (max-width: 998px) {
-    margin-left: 18px;
+    margin-left: 33px;
   }
   @media (max-width: 700px) {
-    margin-left: 12px;
-  }
-  @media (max-width: 1280px) {
+    margin-left: 18px;
     margin-top: 30px;
   }
   @media (max-width: 998px) {
     margin-top: 20px;
     max-width: 160px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 20px;
+    margin-left: 12px;
   }
 }

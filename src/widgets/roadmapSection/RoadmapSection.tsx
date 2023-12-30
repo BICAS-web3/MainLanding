@@ -113,33 +113,6 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
   ];
 
   const swiperRef = useRef<SwiperRef>(null);
-  const [isBeginning, setIsBeginning] = useState<any>(null);
-  const [isEnd, setIsEnd] = useState<any>(null);
-  const [click, setClick] = useState(false);
-
-  const handleSlideChange = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      setIsBeginning(swiperRef.current.swiper.isBeginning);
-      setIsEnd(swiperRef.current.swiper.isEnd);
-    }
-  };
-
-  useEffect(() => {
-    const swiperInstance = swiperRef.current?.swiper;
-
-    if (swiperInstance) {
-      swiperInstance.on("slideChange", handleSlideChange);
-      setIsBeginning(swiperInstance.isBeginning);
-      setIsEnd(swiperInstance.isEnd);
-    }
-
-    return () => {
-      if (swiperInstance) {
-        swiperInstance.off("slideChange", handleSlideChange);
-      }
-    };
-  }, [click]);
-
   return (
     <section className={s.roadmap} id="roadmap_section">
       <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
@@ -159,14 +132,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
         </div>
         <div className={clsx(s.roadmap_datapicker)}>
           <button
-            onClick={() => setClick((prev) => !prev)}
-            disabled={isBeginning}
-            className={clsx(
-              s.roadmap_arr,
-              s.roadmap_arr_next,
-              "road_prev_el",
-              isBeginning && s.not_active
-            )}
+            className={clsx(s.roadmap_arr, s.roadmap_arr_next, "road_prev_el")}
           >
             <svg
               width="7"
@@ -184,14 +150,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
             </svg>
           </button>
           <button
-            onClick={() => setClick((prev) => !prev)}
-            disabled={isEnd}
-            className={clsx(
-              s.roadmap_arr,
-              s.roadmap_arr_prev,
-              "road_next_el",
-              isEnd && s.not_active
-            )}
+            className={clsx(s.roadmap_arr, s.roadmap_arr_prev, "road_next_el")}
           >
             <svg
               width="7"
@@ -213,7 +172,6 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
             modules={[Navigation]}
             slidesPerView={"auto"}
             ref={swiperRef}
-            on={{ slideChange: handleSlideChange }}
             navigation={{
               prevEl: ".road_prev_el",
               nextEl: ".road_next_el",
