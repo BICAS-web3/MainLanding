@@ -101,16 +101,21 @@ export const MediaSection: FC<MediaSectionProps> = () => {
         <h2 className={s.media_title}>
           <span>GreekKeepers </span>in Media
         </h2>
-        <Marquee className={s.media_marquee}>
-          {(isMobile
-            ? [...imgMobArr, ...imgMobArr, ...imgMobArr]
-            : [...imgArr, ...imgArr]
-          ).map((el, i) => (
-            <div className={s.media_img_wrap} key={i}>
-              <Image src={el} alt="img" />
-            </div>
-          ))}
-        </Marquee>
+        <div className={s.back} style={{ widows: "100%" }}>
+          <span className={s.hover_1}></span>
+          <span className={s.hover_2}></span>
+
+          <Marquee className={s.media_marquee}>
+            {(isMobile
+              ? [...imgMobArr, ...imgMobArr, ...imgMobArr]
+              : [...imgArr, ...imgArr]
+            ).map((el, i) => (
+              <div className={s.media_img_wrap} key={i}>
+                <Image src={el} alt="img" />
+              </div>
+            ))}
+          </Marquee>
+        </div>
         <div className={s.media_body}>
           <div className={s.media_integration}>
             <h3>Integrations</h3>
