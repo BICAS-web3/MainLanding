@@ -99,7 +99,7 @@
   border-left: 7px solid #e5c787;
 
   @media screen and (max-width: 1280px) {
-    border-left: 4px solid #e5c787;
+    border-left: 5px solid #e5c787;
     gap: 10px;
     padding-left: 30px;
   }
@@ -175,6 +175,7 @@
 .roadmap_datapicker {
   position: relative;
   margin: 0 auto;
+  padding-right: 20px;
   padding-top: 20px;
   width: 1396px;
   height: 508px;
@@ -213,6 +214,10 @@
 
   @media screen and (max-width: 650px) {
     margin-top: 44px;
+    width: 100vw;
+    // margin-right: 16px;
+    margin-left: -16px;
+    overflow-x: visible;
   }
 
   &::before {
@@ -235,13 +240,29 @@
   // }
 }
 
+.swiper_wrapp {
+  // padding: 0 20px;
+  @media (max-width: 650px) {
+    margin-left: -16px;
+    margin-right: 16px;
+  }
+}
+
 .roadmap_article {
   padding: 0 20px;
+  padding: 0;
   width: 100%;
   max-width: 451px;
   // position: relative;
+
   @media (max-width: 1280px) {
     max-width: 361px;
+  }
+  &_may {
+    margin-left: 20px;
+  }
+  &_january {
+    width: 471px;
   }
 }
 
@@ -252,11 +273,19 @@
 .roadmap_line {
   position: absolute;
   top: 55px;
+  // left: 0;
+  right: 0;
+  z-index: 1;
+  // @media (max-width: 998px) {
+  //   display: none;
+  // }
+}
+
+.roadmap_line_2 {
+  position: absolute;
+  top: 55px;
   left: 0;
-  // z-index: 1;
-  @media (max-width: 998px) {
-    display: none;
-  }
+  z-index: 1;
 }
 
 .roadmap_datapicker_scroll {
@@ -313,7 +342,7 @@
 .roadmap_arr_next {
   right: 74px;
   @media (max-width: 1280px) {
-    right: 60px;
+    right: 70px;
   }
   // background-color: #2a2a2a;
 }
@@ -373,6 +402,7 @@
   border-right: 1px solid #465967;
   border-left: 1px solid #465967;
   background: linear-gradient(180deg, #2e3537 0%, rgba(39, 38, 38, 0.5) 100%);
+
   display: flex;
   align-items: center;
   color: rgba(256, 256, 256, 0.6);
@@ -510,26 +540,30 @@
   }
   &_may {
     &_1 {
-      width: 445px;
+      width: 440px;
       top: 0;
-      left: 4px;
+      left: 5px;
       @media (max-width: 1280px) {
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_2 {
-      width: 445px;
-      left: 4px;
+      width: 440px;
+      left: 5px;
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_3 {
       width: 804px;
-      left: 4px;
+      left: 5px;
       top: 200px;
       @media (max-width: 1280px) {
+        left: 3px;
         top: 152px;
         width: 710px;
       }
@@ -538,20 +572,22 @@
 
   &_june {
     &_1 {
-      width: 445px;
+      width: 440px;
       @media (max-width: 1280px) {
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
       top: 0;
-      left: 4px;
+      left: 5px;
     }
     &_2 {
-      width: 445px;
-      left: 4px;
+      width: 440px;
+      left: 5px;
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_3 {
@@ -578,22 +614,22 @@
 
   &_july {
     &_1 {
-      left: 290px;
-      width: 605px;
+      left: 295px;
+      width: 601px;
       top: 0;
       @media (max-width: 1280px) {
-        width: 483px;
-        left: 231px;
+        width: 492px;
+        left: 226px;
       }
     }
     &_2 {
-      left: 290px;
-      width: 605px;
+      left: 295px;
+      width: 601px;
       top: 50px;
       @media (max-width: 1280px) {
         top: 38px;
-        width: 483px;
-        left: 231px;
+        width: 492px;
+        left: 226px;
       }
     }
   }
@@ -601,101 +637,110 @@
   &_august {
     &_1 {
       top: 100px;
-      width: 445px;
-      left: 4px;
+      width: 440px;
+      left: 5px;
       @media (max-width: 1280px) {
         top: 76px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_2 {
       top: 150px;
       width: 640px;
-      left: 4px;
+      left: 5px;
       @media (max-width: 1280px) {
         top: 114px;
         width: 503px;
+        left: 3px;
       }
     }
   }
   &_september {
     &_1 {
       top: 0;
-      left: 4px;
+      left: 5px;
       width: 519px;
       @media (max-width: 1280px) {
         width: 407px;
+        left: 3px;
       }
     }
     &_2 {
       top: 50px;
-      left: 4px;
+      left: 5px;
       width: 687px;
       @media (max-width: 1280px) {
         top: 38px;
         width: 540px;
+        left: 3px;
       }
     }
   }
   &_october {
     &_1 {
-      left: 4px;
-      width: 444px;
+      left: 5px;
+      width: 440px;
       top: 100px;
       @media (max-width: 1280px) {
         top: 76px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_2 {
-      left: 4px;
-      width: 444px;
+      left: 5px;
+      width: 440px;
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_3 {
-      left: 4px;
-      width: 444px;
+      left: 5px;
+      width: 440px;
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
   }
   &_november {
     &_1 {
-      left: 4px;
+      left: 5px;
       top: 0;
-      width: 437px;
+      width: 440px;
       @media (max-width: 1280px) {
-        width: 343px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_2 {
       top: 50px;
       width: 305px;
-      right: 4px;
+      right: 5px;
       @media (max-width: 1280px) {
         top: 38px;
         width: 346px;
       }
     }
     &_3 {
-      left: 4px;
+      left: 5px;
       top: 100px;
       width: 551px;
       @media (max-width: 1280px) {
         top: 76px;
         width: 429px;
+        left: 3px;
       }
     }
     &_4 {
       width: 387px;
-      right: 4px;
+      right: 5px;
       top: 150px;
       @media (max-width: 1280px) {
         top: 114px;
@@ -704,7 +749,7 @@
     }
     &_5 {
       width: 407px;
-      right: 4px;
+      right: 5px;
       top: 200px;
       @media (max-width: 1280px) {
         top: 152px;
@@ -713,11 +758,12 @@
     }
     &_6 {
       width: 507px;
-      left: 4px;
+      left: 5px;
       top: 250px;
       @media (max-width: 1280px) {
         top: 190px;
         width: 429px;
+        left: 3px;
       }
     }
   }
@@ -743,9 +789,9 @@
       );
     }
     &_1 {
-      width: 432px;
+      width: 440px;
       top: 0;
-      left: 4px;
+      left: 5px;
       border-radius: 5px;
       &::after {
         width: 323px;
@@ -756,11 +802,12 @@
 
       @media (max-width: 1280px) {
         width: 339px;
+        left: 3px;
       }
     }
     &_2 {
       width: 390px;
-      right: 4px;
+      right: 5px;
       top: 50px;
       &::after {
         width: 306px;
@@ -772,10 +819,11 @@
       @media (max-width: 1280px) {
         top: 38px;
         width: 306px;
+        right: 4px;
       }
     }
     &_3 {
-      right: 4px;
+      right: 5px;
       top: 100px;
       width: 322px;
       &::after {
@@ -788,11 +836,12 @@
       @media (max-width: 1280px) {
         top: 76px;
         width: 252px;
+        right: 4px;
       }
     }
     &_4 {
       width: 368px;
-      right: 4px;
+      right: 5px;
       top: 150px;
       &::after {
         width: 347px;
@@ -804,11 +853,12 @@
       @media (max-width: 1280px) {
         top: 114px;
         width: 288px;
+        right: 4px;
       }
     }
     &_5 {
       width: 389px;
-      right: 4px;
+      right: 5px;
       top: 200px;
       &::after {
         width: 323px;
@@ -820,6 +870,7 @@
       @media (max-width: 1280px) {
         top: 152px;
         width: 305px;
+        right: 4px;
       }
     }
     &_6 {
@@ -859,8 +910,8 @@
     }
     &_1 {
       top: 0;
-      left: 4px;
-      width: 445px;
+      left: 5px;
+      width: 440px;
       &::after {
         width: 73px;
         @media (max-width: 1280px) {
@@ -868,13 +919,14 @@
         }
       }
       @media (max-width: 1280px) {
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_2 {
       top: 50px;
-      left: 4px;
-      width: 445px;
+      left: 5px;
+      width: 440px;
       &::after {
         width: 118px;
         @media (max-width: 1280px) {
@@ -883,13 +935,14 @@
       }
       @media (max-width: 1280px) {
         top: 38px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_3 {
       top: 100px;
-      left: 4px;
-      width: 445px;
+      left: 5px;
+      width: 440px;
       &::after {
         width: 153px;
         @media (max-width: 1280px) {
@@ -898,13 +951,14 @@
       }
       @media (max-width: 1280px) {
         top: 76px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
     &_4 {
       top: 150px;
-      left: 4px;
-      width: 445px;
+      left: 5px;
+      width: 440px;
       &::after {
         width: 328px;
         @media (max-width: 1280px) {
@@ -913,7 +967,8 @@
       }
       @media (max-width: 1280px) {
         top: 114px;
-        width: 349px;
+        left: 3px;
+        width: 354px;
       }
     }
   }

@@ -39,7 +39,7 @@ body {
 }
 
 .swiper-button-disabled {
-  cursor: default;
+  cursor: default !important;
   background: #1d1c1c !important;
   &:hover {
     background: #1d1c1c !important;
