@@ -1,6 +1,6 @@
 import { FC } from "react";
 import s from "./styles.module.scss";
-import sectionBg from "@/public/media/heroSection/heroSecBg.png";
+import sectionBg from "@/public/media/heroSection/heroSecBg.webp";
 import { Button } from "@/shared/ui/Button";
 
 interface HeroSectionProps {}
