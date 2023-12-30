@@ -60,16 +60,61 @@
 }
 .media_marquee {
   gap: 105px;
+  position: relative;
+
+  @media (max-width: 1280px) {
+    gap: 0;
+  }
+}
+
+.back {
+  position: relative;
   margin-top: 44px;
   @media (max-width: 1280px) {
     margin-top: 10px;
-    gap: 0;
   }
 
   @media screen and (max-width: 650px) {
     margin-top: 0;
+    width: calc(100vw - 32px);
   }
 }
+
+.hover_2 {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(13, 13, 12, 1) 100%
+  );
+  // transform: scaleX(-1);
+  z-index: 2;
+  @media screen and (max-width: 650px) {
+    width: 100px;
+  }
+}
+
+.hover_1 {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 13, 12, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 2;
+  @media screen and (max-width: 650px) {
+    width: 100px;
+  }
+}
+
 .media_title {
   color: #e5c787;
   text-align: center;
