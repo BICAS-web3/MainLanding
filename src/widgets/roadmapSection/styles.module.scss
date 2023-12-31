@@ -215,7 +215,7 @@
   @media screen and (max-width: 650px) {
     margin-top: 44px;
     width: 100vw;
-    margin-left: -32px;
+    margin-left: -16px;
     overflow-x: visible;
   }
   @media (max-width: 335px) {
@@ -491,8 +491,8 @@
     font-size: 20px;
     letter-spacing: 0.4px;
   }
-  @media (max-width: 650px) {
-    margin-left: 26px;
+  @media (max-width: 370px) {
+    margin-left: 16px;
   }
   @media (max-width: 335px) {
     margin-left: 7px;
@@ -1008,6 +1008,10 @@
       }
       @media (max-width: 650px) {
         width: 520px;
+        left: 120px;
+      }
+      @media (max-width: 335px) {
+        width: 490px;
         left: 120px;
       }
     }
