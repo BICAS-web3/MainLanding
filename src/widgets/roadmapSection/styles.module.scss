@@ -215,8 +215,7 @@
   @media screen and (max-width: 650px) {
     margin-top: 44px;
     width: 100vw;
-    // margin-right: 16px;
-    margin-left: -16px;
+    margin-left: -32px;
     overflow-x: visible;
   }
 
@@ -257,6 +256,9 @@
 
   @media (max-width: 1280px) {
     max-width: 361px;
+  }
+  @media (max-width: 650px) {
+    max-width: 333px;
   }
   &_may {
     margin-left: 20px;
@@ -474,6 +476,9 @@
     font-size: 20px;
     letter-spacing: 0.4px;
   }
+  @media (max-width: 355px) {
+    margin-left: 32px;
+  }
 }
 
 .roadmap_data_container {
@@ -538,6 +543,9 @@
     font-size: 13px;
     letter-spacing: 0.65px;
   }
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
   &_may {
     &_1 {
       width: 440px;
@@ -546,6 +554,9 @@
       @media (max-width: 1280px) {
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_2 {
@@ -556,6 +567,9 @@
         top: 38px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_3 {
@@ -577,6 +591,9 @@
         left: 3px;
         width: 354px;
       }
+      @media (max-width: 650px) {
+        width: 326px;
+      }
       top: 0;
       left: 5px;
     }
@@ -588,6 +605,9 @@
         top: 38px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_3 {
@@ -621,6 +641,10 @@
         width: 492px;
         left: 226px;
       }
+      @media (max-width: 650px) {
+        width: 450px;
+        left: 200px;
+      }
     }
     &_2 {
       left: 295px;
@@ -630,6 +654,10 @@
         top: 38px;
         width: 492px;
         left: 226px;
+      }
+      @media (max-width: 650px) {
+        width: 450px;
+        left: 200px;
       }
     }
   }
@@ -643,6 +671,9 @@
         top: 76px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_2 {
@@ -664,6 +695,9 @@
       @media (max-width: 1280px) {
         width: 407px;
         left: 3px;
+        @media (max-width: 650px) {
+          width: 360px;
+        }
       }
     }
     &_2 {
@@ -674,6 +708,9 @@
         top: 38px;
         width: 540px;
         left: 3px;
+      }
+      @media (max-width: 650px) {
+        width: 360px;
       }
     }
   }
@@ -687,6 +724,9 @@
         left: 3px;
         width: 354px;
       }
+      @media (max-width: 650px) {
+        width: 326px;
+      }
     }
     &_2 {
       left: 5px;
@@ -696,6 +736,9 @@
         top: 114px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_3 {
@@ -707,6 +750,9 @@
         left: 3px;
         width: 354px;
       }
+      @media (max-width: 650px) {
+        width: 326px;
+      }
     }
   }
   &_november {
@@ -717,6 +763,9 @@
       @media (max-width: 1280px) {
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_2 {
@@ -804,6 +853,9 @@
         width: 339px;
         left: 3px;
       }
+      @media (max-width: 650px) {
+        width: 324px;
+      }
     }
     &_2 {
       width: 390px;
@@ -888,6 +940,10 @@
         width: 621px;
         left: 90px;
       }
+      @media (max-width: 650px) {
+        width: 520px;
+        left: 120px;
+      }
     }
   }
   &_january {
@@ -922,6 +978,9 @@
         left: 3px;
         width: 354px;
       }
+      @media (max-width: 650px) {
+        width: 326px;
+      }
     }
     &_2 {
       top: 50px;
@@ -937,6 +996,9 @@
         top: 38px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
     &_3 {
@@ -954,6 +1016,9 @@
         left: 3px;
         width: 354px;
       }
+      @media (max-width: 650px) {
+        width: 326px;
+      }
     }
     &_4 {
       top: 150px;
@@ -969,6 +1034,9 @@
         top: 114px;
         left: 3px;
         width: 354px;
+      }
+      @media (max-width: 650px) {
+        width: 326px;
       }
     }
   }
