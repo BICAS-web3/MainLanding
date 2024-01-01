@@ -63,18 +63,16 @@
   }
 
   @media screen and (max-width: 650px) {
-    height: fit-content;
-    width: 50%;
+    height: 411px;
+    max-height: 412px;
+    max-width: 50%;
   }
 
   @media screen and (max-width: 520px) {
-    height: fit-content;
-    width: 250px;
+    height: 330px;
+    max-height: 331px;
+    max-width: 250px;
   }
-
-  // @media screen and (max-width: 400px) {
-  //   width: 60%;
-  // }
 }
 
 .bg_ellipse {
