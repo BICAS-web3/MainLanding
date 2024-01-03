@@ -204,6 +204,16 @@ export const DraxSection: FC<DraxSectionProps> = () => {
 export const Swap = () => {
   const { connectors, connect } = useConnect();
   const { isConnected } = useAccount();
+  const [connectText, setConnectText] = useState("Connect Wallet");
+
+  useEffect(() => {
+    if (isConnected) {
+      setConnectText("Connected");
+    } else {
+      setConnectText("Connect Wallet");
+    }
+  }, [isConnected]);
+
   return (
     <div className={s.drax_swap_under}>
       <div className={s.drax_swap}>
@@ -251,8 +261,7 @@ export const Swap = () => {
             }}
             className={s.drax_connect}
           >
-            {/* {isConnected ? "Connected" : "Connect Wallet"} */}
-            Connect Wallet
+            {connectText}
           </Button>
           <Button className={s.drax_buy} isGray={true}>
             Buy with BNB
