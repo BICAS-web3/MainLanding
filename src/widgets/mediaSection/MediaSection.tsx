@@ -147,7 +147,9 @@ export const MediaSection: FC<MediaSectionProps> = () => {
             </div>
             <div className={s.media_links_container}>
               <div
-                onClick={() => window.open("", "_blank")}
+                onClick={() =>
+                  window.open("https://docs.greekkeepers.io/", "_blank")
+                }
                 className={s.media_links}
               >
                 Gitbook <GitbookIcon />
