@@ -24,6 +24,29 @@ import clsx from "clsx";
 
 interface SocialSectionProps {}
 
+const socials = [
+  {
+    link: "https://t.me/greekkeepers",
+    icon: <TelegramIcon />,
+  },
+  {
+    link: "https://instagram.com/greekkeepers?igshid=NTc4MTIwNjQ2YQ==",
+    icon: <InstagramIcon />,
+  },
+  { link: "https://twitter.com/GreekKeepers", icon: <TwitterIcon /> },
+  { link: "https://discord.gg/ReJVd2xJSk", icon: <DiscordIcon /> },
+  {
+    link: "https://www.facebook.com/profile.php?id=100092326343777",
+    icon: <FacebookIcon />,
+  },
+  {
+    link: "https://www.reddit.com/user/GreekKeepers/?rdt=59831",
+    icon: <RedditIcon />,
+  },
+  { link: "https://medium.com/@greekkeepers", icon: <GreenIcon /> },
+  { link: "https://docs.greekkeepers.io/", icon: <SocialDraxIcon /> },
+];
+
 export const SocialSection: FC<SocialSectionProps> = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -177,15 +200,50 @@ export const SocialSection: FC<SocialSectionProps> = () => {
           </div>
         </div>
         <article className={s.social_wrapper}>
-          {isMobile ? (
+          <h2 className={s.social_subtitle}>Join our socials</h2>
+          <div className={s.social_body}>
+            <div>
+              {socials.map((item, id) => (
+                <div
+                  className={clsx(s.socials_item, s[`socials_item_${id + 1}`])}
+                  onClick={() => window.open(item.link, "_blank")}
+                  key={id}
+                >
+                  {item.icon}
+                </div>
+              ))}
+            </div>
+
+            <div className={s.social_statistic}>
+              <div className={s.social_text_data}>
+                <span className={s.social_about}>Community members</span>
+                <span className={s.social_count}>8K +</span>
+              </div>
+              <div className={s.social_text_data}>
+                <span className={s.social_about}>Multilangual communities</span>
+                <span className={s.social_count}>15 +</span>
+              </div>
+              <div className={s.social_text_data}>
+                <span className={s.social_about}>Community Ambassadors</span>
+                <span className={s.social_count}>20 +</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+};
+
+{
+  /* {isMobile ? (
             <Image src={line_mobile} alt="" className={s.social_line} />
           ) : (
             <Image src={line} alt="" className={s.social_line} />
-          )}
-
-          <h2 className={s.social_subtitle}>Join our socials</h2>
-          <div className={s.social_body}>
-            <div className={s.social_media}>
+          )} */
+}
+{
+  /* <div className={s.social_media}>
               <div className={s.social_media_links}>
                 <TelegramIcon
                   onClick={() =>
@@ -275,24 +333,5 @@ export const SocialSection: FC<SocialSectionProps> = () => {
                   />
                 </svg>
               </div>
-            </div>
-            <div className={s.social_statistic}>
-              <div className={s.social_text_data}>
-                <span className={s.social_about}>Community members</span>
-                <span className={s.social_count}>322K +</span>
-              </div>
-              <div className={s.social_text_data}>
-                <span className={s.social_about}>Multilangual communities</span>
-                <span className={s.social_count}>15 +</span>
-              </div>
-              <div className={s.social_text_data}>
-                <span className={s.social_about}>Community Ambassadors</span>
-                <span className={s.social_count}>20 +</span>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-  );
-};
+            </div> */
+}
