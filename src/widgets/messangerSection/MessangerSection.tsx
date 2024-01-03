@@ -51,7 +51,7 @@ export const MessangerSection: FC<MessangerSectionProps> = () => {
                     distributed ledger data storage
                   </p>
                 </div>
-                <Button isGray className={s.messanger_btn}>
+                <Button isGray isDisabled={true} className={s.messanger_btn}>
                   Release Soon
                 </Button>
               </div>

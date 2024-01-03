@@ -96,20 +96,28 @@ export const DraxSection: FC<DraxSectionProps> = () => {
                 DRAX <span>Token</span>
               </h2>
               <p className={s.drax_text}>
-                DRAX is the native token that powers GreekKeepers Space to open
-                certain rights and rewards for each stakeholder. Holders be able
-                to vote on feature proposals in the future, get access to
-                discount, bonuses, pools, messenger premium features and much
-                more
+                DRAX, our exclusive token, unlocks a world of privileges and
+                rewards in our project. We&apos;re enhancing DRAX&apos;s
+                features and allocating 20% of our ecosystem&apos;s revenue to
+                burn DRAX tokens, aiming to reduce supply and potentially boost
+                value.
               </p>
             </div>
             <div className={s.drax_bottom_container}>
               <div className={s.btn_container}>
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://pancakeswap.finance/swap?outputCurrency=0x7f7F49B6128F7CB89BAaB704F6EA1662A270455b",
+                      "_blank"
+                    )
+                  }
+                  className={clsx(s.drax_btn, s.drax_btn_2)}
+                >
+                  <PancakeIcon /> Buy on PancakeSwap
+                </Button>
                 <Button className={clsx(s.drax_btn, s.drax_btn_1)}>
                   <MetamaskIcon /> Add Drax to MetaMask
-                </Button>
-                <Button className={clsx(s.drax_btn, s.drax_btn_2)}>
-                  <PancakeIcon /> Buy on PancakeSwap
                 </Button>
               </div>
               {is1280 && <Swap />}
@@ -255,16 +263,8 @@ export const Swap = () => {
           </div>
         </div>
         <div className={s.drax_btn_container}>
-          <Button
-            onClick={() => {
-              connect({ connector: connectors[0] });
-            }}
-            className={s.drax_connect}
-          >
-            {connectText}
-          </Button>
-          <Button className={s.drax_buy} isGray={true}>
-            Buy with BNB
+          <Button className={s.drax_buy} isDisabled={true} isGray={true}>
+            Coming soon
           </Button>
         </div>
         <div className={s.drax_undertitle}>

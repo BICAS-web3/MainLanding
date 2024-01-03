@@ -172,15 +172,22 @@
   gap: 16px;
   width: 356px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
+  padding: 0 0 0 60px;
+  justify-content: start;
   @media (max-width: 1280px) {
     width: 278px;
+    padding: 0 0 0 40px;
+  }
+
+  @media (max-width: 996px) {
+    padding: 0 0 0 52px;
   }
 
   @media screen and (max-width: 650px) {
     max-width: 250px;
-    padding-left: 0;
+    padding: 0 0 0 37px;
   }
 }
 

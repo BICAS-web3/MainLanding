@@ -51,6 +51,10 @@
   }
 }
 
+.disabled_btn {
+  cursor: default;
+}
+
 .hover_el_light {
   transition: all 0.2s;
   content: "";
