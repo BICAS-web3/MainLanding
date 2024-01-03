@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import s from "./styles.module.scss";
 import logo from "@/public/media/common/headerLogo.svg";
 import Link from "next/link";
@@ -42,7 +42,7 @@ export const socialLinks = [
   },
   {
     ico: githubIco,
-    href: "#",
+    href: "https://github.com/BICAS-web3",
   },
   {
     ico: linkedinIco,
@@ -143,6 +143,42 @@ export const Header: FC<HeaderProps> = () => {
     }
   };
 
+  const [isMobile, setisMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 700) {
+        setisMobile(true);
+      } else {
+        setisMobile(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpened && isMobile) {
+      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.height = "100vh";
+    } else {
+      document.documentElement.style.overflow = "visible";
+      document.documentElement.style.height = "auto";
+    }
+    return () => {
+      document.documentElement.style.overflow = "visible";
+      document.documentElement.style.height = "auto";
+    };
+  }, [isOpened]);
+
   return (
     <>
       <div className={s.header}>
@@ -154,9 +190,9 @@ export const Header: FC<HeaderProps> = () => {
               className={clsx(s.burger_btn, isOpened && s.burger_anim)}
               onClick={handleBurgerOpen}
             >
-              <div className={s.burger_line}></div>
-              <div className={s.burger_line}></div>
-              <div className={s.burger_line}></div>
+              <span className={clsx(s.burger_line, s.burger_line_1)}></span>
+              <span className={clsx(s.burger_line, s.burger_line_2)}></span>
+              <span className={clsx(s.burger_line, s.burger_line_3)}></span>
             </div>
           </div>
         </div>
@@ -183,7 +219,7 @@ export const Header: FC<HeaderProps> = () => {
                   className={s.header_links_list_item}
                   key={ind}
                 >
-                  {item.title}
+                  <div onClick={close}> {item.title}</div>
                 </Link>
               ))}
             </div>

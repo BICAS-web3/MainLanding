@@ -168,7 +168,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
             </svg>
           </button>
           <Swiper
-            initialSlide={data.length - 1}
+            // initialSlide={data.length - 1}
             modules={[Navigation]}
             slidesPerView={"auto"}
             ref={swiperRef}
