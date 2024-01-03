@@ -45,15 +45,7 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
       <img src={bgImg2.src} alt="bg-img" className={s.section_bg_img} />
       <img src={bgImg.src} alt="bg-img-2" className={s.section_bg_img_2} />
       <div className={s.bg_ellipse}></div>
-      <div
-        className={"container"}
-        // style={{
-        //   maxWidth:
-        //     windowWidth > 1280
-        //       ? 1500 + (windowWidth - 1500) / 2
-        //       : 1075 + (windowWidth - 1075) / 2,
-        // }}
-      >
+      <div className={"container"}>
         <div className={s.welcome_section_body}>
           <div className={s.welcome_section_info}>
             <div className={s.welcome_section_info_block}>
@@ -62,12 +54,19 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
                 <span>Gaming</span>
               </h2>
               <p className={s.welcome_section_text}>
-                Step into a New Dimension of Gaming with Our Cutting-Edge Web
-                3.0 Platform: Seamless, Decentralized, and Limitless in
-                Possibilities&quot;
+                GreekKeepers is a Web3 gaming platform on blockchain with
+                transparency of results through VRF, no registration or deposits
+                required, with full user control over their funds.
               </p>
             </div>
-            <Button className={s.join_btn}>Join Game</Button>
+            <Button
+              className={s.join_btn}
+              onClick={() =>
+                window.open("https://game.greekkeepers.io/", "_blank")
+              }
+            >
+              Join Game
+            </Button>
           </div>
           <div className={s.right_img_wrap}>
             <img

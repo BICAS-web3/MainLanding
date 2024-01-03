@@ -43,13 +43,21 @@ export const NftSection: FC<NftSectionProps> = () => {
                 Explore Our <span>NFT Market</span> for Unique Digital Assets
               </h2>
               <p className={s.nft_section_text}>
-                Discover an array of unique digital assets in our NFT
-                marketplace. Explore a diverse collection of non-fungible
-                tokens, from art to virtual assets, and find the perfect
-                addition to your digital portfolio
+                The collection includes ancient Greek gods represented as 800
+                unique NFTs. Each of these gods has its own level in the
+                hierarchy, which is assigned based on its rank. Users who hold
+                NFTs will be able to earn drop, which will be distributed among
+                the NFTs according to the god's rank.
               </p>
             </div>
-            <Button className={s.nft_market_btn}>NFT Market</Button>
+            <Button
+              className={s.nft_market_btn}
+              onClick={() =>
+                window.open("https://game.greekkeepers.io/nftmarket", "_blank")
+              }
+            >
+              NFT Market
+            </Button>
           </div>
         </div>
       </div>

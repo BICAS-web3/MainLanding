@@ -119,15 +119,7 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
         el.classList.remove(s.item_animated);
       });
     }, 17000);
-
-    // return () => {
-    //   clearInterval(intervalId);
-    // };
   }, []);
-
-  // useEffect(() => {
-
-  // }, [])
 
   return (
     <div className={s.partners_section} id="partners_section">
@@ -152,9 +144,8 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
               <p
                 className={`${s.partners_info_text} ${s.partners_info_text_one}`}
               >
-                Invite your friends, colleagues, and family members to join our
-                community and reap the benefits together. The more you refer,
-                the more you earn.
+                Join our Referral Program and enjoy exclusive benefits! Invite
+                friends and family to our community and earn more as you refer.
               </p>
               <p
                 className={`${s.partners_info_text} ${s.partners_info_text_two}`}
@@ -162,7 +153,14 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
                 Start sharing now and be part of our rewarding referral program!
               </p>
             </div>
-            <Button className={s.alpha_btn}>Join Alpha</Button>
+            <Button
+              className={s.alpha_btn}
+              onClick={() =>
+                window.open("https://affiliate.greekkeepers.io/", "_blank")
+              }
+            >
+              Join
+            </Button>
           </div>
           <div className={s.imgs_group_block}>
             <img src={rightImg.src} alt="right-img" className={s.right_img} />

@@ -22,7 +22,17 @@ export const HeroSection: FC<HeroSectionProps> = () => {
             mythology and modern blockchain. Discover a Web3.0 filled with
             decentralized apps, NFT games, and GameFi experiences.
           </p>
-          <Button className={s.buy_token_btn}>Buy Token</Button>
+          <Button
+            className={s.buy_token_btn}
+            onClick={() =>
+              window.open(
+                "https://pancakeswap.finance/swap?outputCurrency=0x7f7F49B6128F7CB89BAaB704F6EA1662A270455b",
+                "_blank"
+              )
+            }
+          >
+            Buy Token
+          </Button>
         </div>
       </div>
     </div>
