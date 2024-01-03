@@ -4,7 +4,7 @@ import bgImg from "@/public/media/welcomeSection/welcomeSectionBg.png";
 import bgImg2 from "@/public/media/common/commonSectionsBg.png";
 import imgsGroup from "@/public/media/welcomeSection/imgsGroup.png";
 import imgsGroup1280 from "@/public/media/welcomeSection/imgsGroup1280.png";
-import imgsGroupMob from "@/public/media/welcomeSection/mob1.5.png";
+import imgsGroupMob from "@/public/media/welcomeSection/mob2x.webp";
 import { Button } from "@/shared/ui/Button";
 
 interface WelcomeSectionProps {}

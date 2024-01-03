@@ -21,6 +21,11 @@ export const Button: FC<ButtonProps> = (props) => {
       disabled={disabled}
       className={clsx(s.button, isGray && s.button_gray, className)}
     >
+      {isGray ? (
+        <div className={s.hover_el_gray}></div>
+      ) : (
+        <div className={s.hover_el_light}></div>
+      )}
       {children}
     </button>
   );

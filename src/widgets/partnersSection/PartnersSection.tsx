@@ -3,7 +3,8 @@ import s from "./styles.module.scss";
 import imgBg from "@/public/media/common/commonSectionsBg.png";
 import rightImg from "@/public/media/partnersImgs/rightImg.webp";
 import topImg from "@/public/media/partnersImgs/topImg.webp";
-import bottomImg from "@/public/media/partnersImgs/bottomImg.webp";
+import topImgMob from "@/public/media/partnersImgs/stats2x.webp";
+import bottomImgMob from "@/public/media/partnersImgs/mobWithdrawals.webp";
 import { Button } from "@/shared/ui/Button";
 import recentIco from "@/public/media/common/recentIco.svg";
 import clsx from "clsx";
@@ -52,11 +53,14 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [animStop, setAnimStop] = useState(false);
   const [top, setTop] = useState(0);
+  const [is650, setIs650] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       setWindowWidth(window.innerWidth);
+
+      width < 650 ? setIs650(true) : setIs650(false);
     };
 
     handleResize();
@@ -162,9 +166,13 @@ export const PartnersSection: FC<PartnersSectionProps> = () => {
           </div>
           <div className={s.imgs_group_block}>
             <img src={rightImg.src} alt="right-img" className={s.right_img} />
-            <img src={topImg.src} alt="top-img" className={s.top_img} />
             <img
-              src={bottomImg.src}
+              src={is650 ? topImgMob.src : topImg.src}
+              alt="top-img"
+              className={s.top_img}
+            />
+            <img
+              src={bottomImgMob.src}
               alt="top-img"
               className={clsx(s.bottom_img, s.mob_bottom)}
             />
