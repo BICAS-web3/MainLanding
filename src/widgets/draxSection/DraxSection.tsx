@@ -146,7 +146,15 @@ export const DraxSection: FC<DraxSectionProps> = () => {
                 )}
               </p>
             </div>
-            <Button className={s.contact_btn}>
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://bscscan.com/token/0x7f7f49b6128f7cb89baab704f6ea1662a270455b#code",
+                  "_blank"
+                )
+              }
+              className={s.contact_btn}
+            >
               <ContactIcon /> Contract
             </Button>
           </div>

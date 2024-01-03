@@ -28,7 +28,14 @@ export const ProgramSection: FC<ProgramSectionProps> = () => {
               Premium Benefits with Our Elite VIP Program&quot;
             </p>
           </div>
-          <Button className={clsx(s.program_btn)}>Learn more</Button>
+          <Button
+            onClick={() =>
+              window.open("https://game.greekkeepers.io/VipClub", "_blank")
+            }
+            className={clsx(s.program_btn)}
+          >
+            Learn more
+          </Button>
         </div>
         {/* <Image className={s.program_leptop} src={leptop} alt="leptop" /> */}
         <Image className={s.program_leptop} src={leptop_2} alt="leptop" />
