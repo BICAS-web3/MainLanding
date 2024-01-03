@@ -25,16 +25,20 @@
 }
 .container {
   display: flex;
-  gap: 91px;
+  // gap: 91px;
+  justify-content: space-between;
+  // background-color: red;
+  gap: 71px;
+  // padding: 0;
   @media (max-width: 1600px) {
-    gap: 50px;
+    // gap: 50px;
   }
   @media (max-width: 998px) {
-    gap: 21px;
+    // gap: 21px;
   }
   @media (max-width: 700px) {
     flex-direction: column-reverse;
-    gap: 40px;
+    // gap: 40px;
   }
 }
 
@@ -77,6 +81,7 @@
   flex-direction: column;
   position: relative;
   margin-top: 86px;
+  // background-color: blue;
   @media (max-width: 1280px) {
     margin-top: 56px;
   }
@@ -235,18 +240,34 @@
   border: 2px solid #363636;
   background: rgba(24, 24, 24, 0.52);
   width: 100%;
+  width: 891px;
   padding-bottom: 51px;
   padding-top: 40px;
   position: relative;
   overflow: hidden;
+  height: 570px;
+  // @media (max-width: 1920px) {
+  //   min-width: 471px;
+  // }
   @media (max-width: 1700px) {
     padding-top: 17px;
+    width: 820px;
     padding-bottom: 19px;
+  }
+  @media (max-width: 1280px) {
+    width: 471px;
+    height: 356px;
+  }
+  @media (max-width: 998px) {
+    width: 310px;
+    height: 224px;
   }
   @media (max-width: 700px) {
     padding-top: 20px;
     padding-bottom: 30px;
     border-radius: 12px;
+    height: 366px;
+    width: 100%;
   }
 }
 
@@ -378,7 +399,9 @@
   letter-spacing: 0.84px;
   text-align: center;
   margin: 0 auto;
-  @media (max-width: 1600px) {
+  position: relative;
+  z-index: 1;
+  @media (max-width: 1280px) {
     font-size: 24px;
     letter-spacing: 0.48px;
   }
@@ -400,6 +423,9 @@
   @media (max-width: 998px) {
     gap: 3px;
   }
+  @media (max-width: 450px) {
+    max-width: 120px;
+  }
 }
 
 .social_about {
@@ -410,10 +436,12 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.6px;
-  @media (max-width: 1920px) {
-    font-size: 23px;
-  }
-  @media (max-width: 1600px) {
+  position: relative;
+  z-index: 1;
+  // @media (max-width: 1920px) {
+  //   font-size: 23px;
+  // }
+  @media (max-width: 1280px) {
     font-size: 15px;
     letter-spacing: 0.3px;
   }
@@ -429,6 +457,8 @@
 }
 
 .social_count {
+  position: relative;
+  z-index: 1;
   color: #e5c787;
   text-align: left;
   font-size: 42px;
@@ -436,10 +466,10 @@
   font-weight: 900;
   line-height: normal;
   letter-spacing: 0.84px;
-  @media (max-width: 1920px) {
-    font-size: 30px;
-  }
-  @media (max-width: 1600px) {
+  // @media (max-width: 1920px) {
+  //   font-size: 30px;
+  // }
+  @media (max-width: 1280px) {
     font-size: 26px;
     letter-spacing: 0.52px;
   }
@@ -630,5 +660,430 @@
     left: 54px;
     height: 12px;
     bottom: 12px;
+  }
+}
+
+.socials_item {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_1 {
+    border-radius: 35px;
+    background: #172f39;
+    filter: drop-shadow(0px 0px 14px #37aee2);
+    width: 142.414px;
+    height: 142.414px;
+    transform: rotate(17.268deg);
+    bottom: 17px;
+    left: -44px;
+    @media (max-width: 1280px) {
+      left: -28px;
+      width: 75.283px;
+      height: 75.283px;
+      border-radius: 18px;
+      filter: drop-shadow(0px 0px 13.174px #37aee2);
+    }
+    @media (max-width: 998px) {
+      left: -19px;
+      bottom: 14px;
+      width: 47.65px;
+      height: 47.65px;
+      border-radius: 11px;
+      filter: drop-shadow(0px 0px 8.338px #37aee2);
+    }
+    @media (max-width: 700px) {
+      width: 79.564px;
+      height: 79.564px;
+      filter: drop-shadow(0px 0px 13.924px #37aee2);
+      border-radius: 19px;
+      left: -40px;
+      bottom: 19px;
+    }
+    svg {
+      width: 55.185px;
+      height: 48.065px;
+      @media (max-width: 1280px) {
+        width: 29px;
+        height: 25px;
+      }
+      @media (max-width: 998px) {
+        width: 18.463px;
+        height: 16.08px;
+      }
+      @media (max-width: 700px) {
+        width: 30.8px;
+        height: 26.8px;
+      }
+    }
+  }
+  &_2 {
+    border-radius: 21px;
+    background: #391627;
+    filter: drop-shadow(0px 0px 14.906px #e13189);
+    width: 85.177px;
+    height: 85.177px;
+    transform: rotate(-17.709deg);
+    bottom: 183px;
+    left: 70px;
+    @media (max-width: 1280px) {
+      left: 37px;
+      bottom: 105px;
+      width: 45.026px;
+      height: 45.026px;
+      border-radius: 11px;
+      filter: drop-shadow(0px 0px 7.88px #e13189);
+    }
+    @media (max-width: 998px) {
+      width: 28.497px;
+      height: 28.497px;
+      border-radius: 7px;
+      left: 22px;
+      bottom: 69px;
+      filter: drop-shadow(0px 0px 4.987px #e13189);
+    }
+    @media (max-width: 700px) {
+      width: 47.587px;
+      height: 47.587px;
+      bottom: 109px;
+      left: 29px;
+      filter: drop-shadow(0px 0px 8.328px #e13189);
+      border-radius: 11px;
+    }
+    svg {
+      width: 34px;
+      height: 34px;
+      @media (max-width: 1280px) {
+        width: 18px;
+        height: 18px;
+      }
+      @media (max-width: 998px) {
+        width: 11.4px;
+        height: 11.4px;
+      }
+      @media (max-width: 700px) {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+  &_3 {
+    border-radius: 27px;
+    background: linear-gradient(180deg, #121f24 0%, #0f0f0f 100%);
+    filter: drop-shadow(0px 0px 15px #eaeaea);
+    width: 109.579px;
+    height: 109.579px;
+    transform: rotate(10.595deg);
+    left: 184px;
+    bottom: 94px;
+    @media (max-width: 1280px) {
+      left: 97px;
+      bottom: 59px;
+      width: 57.925px;
+      border-radius: 14px;
+      height: 57.925px;
+      filter: drop-shadow(0px 0px 10.137px #eaeaea);
+    }
+    @media (max-width: 998px) {
+      width: 36.66px;
+      height: 36.66px;
+      left: 60px;
+      bottom: 39px;
+      filter: drop-shadow(0px 0px 6.416px #eaeaea);
+      border-radius: 9px;
+    }
+    @media (max-width: 700px) {
+      width: 61.22px;
+      height: 61.22px;
+      bottom: 59px;
+      left: auto;
+      right: 230px;
+      filter: drop-shadow(0px 0px 10.713px #eaeaea);
+      border-radius: 15px;
+    }
+    @media (max-width: 400px) {
+      left: 92px;
+      right: auto;
+    }
+    svg {
+      width: 41px;
+      height: 41px;
+      @media (max-width: 1280px) {
+        width: 21px;
+        height: 21px;
+      }
+      @media (max-width: 998px) {
+        width: 13.7px;
+        height: 13.7px;
+      }
+      @media (max-width: 700px) {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+  &_4 {
+    border-radius: 31px;
+    background: #25263f;
+    filter: drop-shadow(0px 0px 21.403px #7c81ff);
+    width: 122.3px;
+    height: 122.3px;
+    transform: rotate(17.72deg);
+    top: 197px;
+    left: 279px;
+    @media (max-width: 1280px) {
+      left: 147px;
+      top: 150px;
+      width: 64.65px;
+      height: 64.65px;
+      border-radius: 16px;
+      filter: drop-shadow(0px 0px 11.314px #7c81ff);
+    }
+    @media (max-width: 998px) {
+      width: 40.916px;
+      height: 40.916px;
+      top: 90px;
+      left: 92px;
+      filter: drop-shadow(0px 0px 7.16px #7c81ff);
+      border-radius: 10px;
+    }
+    @media (max-width: 700px) {
+      width: 68.327px;
+      height: 68.327px;
+      top: 151px;
+      left: 138px;
+      filter: drop-shadow(0px 0px 11.957px #7c81ff);
+      border-radius: 17px;
+    }
+    svg {
+      width: 53.506px;
+      height: 41.276px;
+      @media (max-width: 1280px) {
+        width: 28px;
+        height: 21px;
+      }
+      @media (max-width: 998px) {
+        width: 18px;
+        height: 14px;
+      }
+      @media (max-width: 700px) {
+        width: 29px;
+        height: 23px;
+      }
+    }
+  }
+  &_5 {
+    border-radius: 35px;
+    background: #102c3e;
+    filter: drop-shadow(0px 0px 24.529px #13a0f8);
+    width: 140.163px;
+    height: 140.163px;
+    top: 80px;
+    left: 133px;
+    @media (max-width: 1280px) {
+      left: 70px;
+      top: 89px;
+      width: 74.093px;
+      height: 74.093px;
+      border-radius: 18px;
+      filter: drop-shadow(0px 0px 12.966px #13a0f8);
+    }
+    @media (max-width: 998px) {
+      width: 46.892px;
+      height: 46.892px;
+      top: 52px;
+      left: 43px;
+      filter: drop-shadow(0px 0px 8.206px #13a0f8);
+      border-radius: 11px;
+    }
+    @media (max-width: 700px) {
+      width: 78.307px;
+      height: 78.307px;
+      top: 85px;
+      right: 220px;
+      left: auto;
+      filter: drop-shadow(0px 0px 13.704px #13a0f8);
+      border-radius: 19px;
+    }
+    @media (max-width: 550px) {
+      width: 78.307px;
+      height: 78.307px;
+      top: 86px;
+      left: 64px;
+      filter: drop-shadow(0px 0px 13.704px #13a0f8);
+      border-radius: 19px;
+    }
+    svg {
+      width: 52.561px;
+      height: 52.561px;
+      @media (max-width: 1280px) {
+        width: 27px;
+        height: 27px;
+      }
+      @media (max-width: 998px) {
+        width: 17.5px;
+        height: 17.5px;
+      }
+      @media (max-width: 700px) {
+        width: 29px;
+        height: 29px;
+      }
+    }
+  }
+  &_6 {
+    border-radius: 28px;
+    background: #3f1a0c;
+    filter: drop-shadow(0px 0px 19.95px #f40);
+    width: 114px;
+    height: 114px;
+    transform: rotate(-15.423deg);
+    bottom: -33px;
+    left: 293px;
+    @media (max-width: 1280px) {
+      left: 154px;
+      bottom: -14px;
+      width: 60.263px;
+      height: 60.263px;
+      border-radius: 15px;
+      filter: drop-shadow(0px 0px 10.546px #f40);
+    }
+    @media (max-width: 998px) {
+      width: 38.139px;
+      height: 38.139px;
+      left: 97px;
+      bottom: -6px;
+      filter: drop-shadow(0px 0px 6.674px #f40);
+      border-radius: 9px;
+    }
+    @media (max-width: 700px) {
+      width: 63.69px;
+      height: 63.69px;
+      left: 153px;
+      left: auto;
+      right: 110px;
+      bottom: -17px;
+      filter: drop-shadow(0px 0px 11.146px #f40);
+      border-radius: 15px;
+    }
+    @media (max-width: 450px) {
+      left: 153px;
+      right: auto;
+    }
+    svg {
+      width: 45.6px;
+      height: 41.325px;
+      @media (max-width: 1280px) {
+        width: 24px;
+        height: 21px;
+      }
+      @media (max-width: 998px) {
+        width: 15px;
+        height: 13px;
+      }
+      @media (max-width: 700px) {
+        width: 25px;
+        height: 23px;
+      }
+    }
+  }
+  &_7 {
+    border-radius: 28px;
+    background: #0c2e22;
+    filter: drop-shadow(0px 0px 20.125px #00ab6c);
+    width: 115px;
+    height: 115px;
+    bottom: -38px;
+    left: 133px;
+    @media (max-width: 1280px) {
+      left: 70px;
+      bottom: -11px;
+      width: 60.791px;
+      height: 60.791px;
+      border-radius: 15px;
+      filter: drop-shadow(0px 0px 10.638px #00ab6c);
+    }
+    @media (max-width: 998px) {
+      width: 38.474px;
+      height: 38.474px;
+      left: 43px;
+      bottom: -5px;
+      filter: drop-shadow(0px 0px 6.733px #00ab6c);
+      border-radius: 9px;
+    }
+    @media (max-width: 700px) {
+      width: 64.248px;
+      height: 64.248px;
+      left: 64px;
+      bottom: -14px;
+      filter: drop-shadow(0px 0px 11.243px #00ab6c);
+      border-radius: 16px;
+    }
+    svg {
+      width: 50.313px;
+      height: 30.188px;
+      @media (max-width: 1280px) {
+        width: 26px;
+        height: 15px;
+      }
+      @media (max-width: 998px) {
+        width: 16px;
+        height: 10px;
+      }
+      @media (max-width: 700px) {
+        width: 28px;
+        height: 16px;
+      }
+    }
+  }
+  &_8 {
+    border-radius: 30px;
+    background: #3a3026;
+    filter: drop-shadow(0px 0px 21.653px #d9b06e);
+    width: 123.732px;
+    height: 123.732px;
+    transform: rotate(-10.673deg);
+    top: 135px;
+    left: -38px;
+    @media (max-width: 1280px) {
+      left: -20px;
+      top: 117px;
+      width: 65.407px;
+      height: 65.407px;
+      border-radius: 16px;
+      filter: drop-shadow(0px 0px 11.446px #d9b06e);
+    }
+    @media (max-width: 998px) {
+      width: 41.395px;
+      height: 41.395px;
+      top: 70px;
+      left: -13px;
+      filter: drop-shadow(0px 0px 7.244px #d9b06e);
+      border-radius: 10px;
+    }
+    @media (max-width: 700px) {
+      width: 69.127px;
+      height: 69.127px;
+      top: 116px;
+      left: -31px;
+      filter: drop-shadow(0px 0px 12.097px #d9b06e);
+      border-radius: 17px;
+    }
+    svg {
+      width: 58.773px;
+      height: 44.853px;
+      @media (max-width: 1280px) {
+        width: 31px;
+        height: 23px;
+      }
+      @media (max-width: 998px) {
+        width: 19px;
+        height: 15px;
+      }
+      @media (max-width: 700px) {
+        width: 32px;
+        height: 25px;
+      }
+    }
   }
 }
