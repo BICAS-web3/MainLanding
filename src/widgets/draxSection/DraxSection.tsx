@@ -251,7 +251,8 @@ export const Swap = () => {
             }}
             className={s.drax_connect}
           >
-            {isConnected ? "Connected" : "Connect Wallet"}
+            {/* {isConnected ? "Connected" : "Connect Wallet"} */}
+            Connect Wallet
           </Button>
           <Button className={s.drax_buy} isGray={true}>
             Buy with BNB
