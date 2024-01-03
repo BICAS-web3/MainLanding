@@ -117,6 +117,7 @@ export const Footer: FC<FooterProps> = () => {
               >
                 {socialLinks.map((item, ind) => (
                   <Link
+                    target="_blank"
                     key={ind}
                     href={item.href}
                     className={s.footer_socials_list_item}

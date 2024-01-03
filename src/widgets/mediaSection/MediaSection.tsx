@@ -105,11 +105,8 @@ export const MediaSection: FC<MediaSectionProps> = () => {
           <span className={s.hover_1}></span>
           <span className={s.hover_2}></span>
 
-          <Marquee className={s.media_marquee}>
-            {(isMobile
-              ? [...imgMobArr, ...imgMobArr, ...imgMobArr]
-              : [...imgArr, ...imgArr]
-            ).map((el, i) => (
+          <Marquee autoFill={true} className={s.media_marquee}>
+            {(isMobile ? [...imgMobArr] : [...imgArr]).map((el, i) => (
               <div className={s.media_img_wrap} key={i}>
                 <Image src={el} alt="img" />
               </div>
@@ -156,7 +153,9 @@ export const MediaSection: FC<MediaSectionProps> = () => {
                 Gitbook <GitbookIcon />
               </div>
               <div
-                onClick={() => window.open("", "_blank")}
+                onClick={() =>
+                  window.open("https://github.com/BICAS-web3", "_blank")
+                }
                 className={s.media_links}
               >
                 Github <GithubIcon />
