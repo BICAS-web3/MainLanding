@@ -30,6 +30,7 @@ import clsx from "clsx";
 import Image from "next/image";
 
 import imgBg from "@/public/media/common/commonSectionsBg.png";
+import { useAccount, useConnect } from "wagmi";
 interface DraxSectionProps {}
 
 export const DraxSection: FC<DraxSectionProps> = () => {
@@ -201,6 +202,18 @@ export const DraxSection: FC<DraxSectionProps> = () => {
 };
 
 export const Swap = () => {
+  const { connectors, connect } = useConnect();
+  const { isConnected } = useAccount();
+  const [connectText, setConnectText] = useState("Connect Wallet");
+
+  useEffect(() => {
+    if (isConnected) {
+      setConnectText("Connected");
+    } else {
+      setConnectText("Connect Wallet");
+    }
+  }, [isConnected]);
+
   return (
     <div className={s.drax_swap_under}>
       <div className={s.drax_swap}>
@@ -242,7 +255,14 @@ export const Swap = () => {
           </div>
         </div>
         <div className={s.drax_btn_container}>
-          <Button className={s.drax_connect}>Connect Wallet</Button>
+          <Button
+            onClick={() => {
+              connect({ connector: connectors[0] });
+            }}
+            className={s.drax_connect}
+          >
+            {connectText}
+          </Button>
           <Button className={s.drax_buy} isGray={true}>
             Buy with BNB
           </Button>

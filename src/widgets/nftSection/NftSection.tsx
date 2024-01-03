@@ -49,7 +49,14 @@ export const NftSection: FC<NftSectionProps> = () => {
                 addition to your digital portfolio
               </p>
             </div>
-            <Button className={s.nft_market_btn}>NFT Market</Button>
+            <Button
+              onClick={() =>
+                window.open("https://game.greekkeepers.io/nftmarket", "_blank")
+              }
+              className={s.nft_market_btn}
+            >
+              NFT Market
+            </Button>
           </div>
         </div>
       </div>
