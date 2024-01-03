@@ -59,12 +59,7 @@
   flex-direction: column;
 }
 .media_marquee {
-  gap: 105px;
   position: relative;
-
-  @media (max-width: 1280px) {
-    gap: 0;
-  }
 }
 
 .back {
@@ -697,6 +692,9 @@
 }
 
 .media_links {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
   width: 100%;
   border-radius: 20px;
   border: 1px solid #363636;
