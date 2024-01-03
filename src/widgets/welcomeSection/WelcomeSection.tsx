@@ -67,7 +67,17 @@ export const WelcomeSection: FC<WelcomeSectionProps> = () => {
                 Possibilities&quot;
               </p>
             </div>
-            <Button className={s.join_btn}>Join Game</Button>
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://game.greekkeepers.io/games/CoinFlip",
+                  "_blank"
+                )
+              }
+              className={s.join_btn}
+            >
+              Join Game
+            </Button>
           </div>
           <div className={s.right_img_wrap}>
             <img
