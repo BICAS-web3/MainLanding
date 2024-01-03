@@ -4,6 +4,7 @@ import Image from "next/image";
 import s from "./styles.module.scss";
 
 import leptop from "@/public/media/programSection/program.png";
+import leptop_2 from "@/public/media/programSection/program_2.png";
 
 import clsx from "clsx";
 import { Button } from "@/shared/ui/Button";
@@ -29,7 +30,9 @@ export const ProgramSection: FC<ProgramSectionProps> = () => {
           </div>
           <Button className={clsx(s.program_btn)}>Learn more</Button>
         </div>
-        <Image className={s.program_leptop} src={leptop} alt="leptop" />
+        {/* <Image className={s.program_leptop} src={leptop} alt="leptop" /> */}
+        <Image className={s.program_leptop} src={leptop_2} alt="leptop" />
+        {/* <img className={s.program_leptop} src={leptop_2.src} alt="leptop" /> */}
       </div>
     </section>
   );

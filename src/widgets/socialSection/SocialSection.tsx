@@ -6,8 +6,9 @@ import s from "./styles.module.scss";
 import line from "@/public/media/socialSection/social_line.svg";
 import line_mobile from "@/public/media/socialSection/social_line_mobile.svg";
 import telegram from "@/public/media/socialSection/telegram.svg";
+import imgBg from "@/public/media/common/commonSectionsBg.png";
+import line_silver from "@/public/media/common/silver_line.svg";
 
-import clsx from "clsx";
 import { Button } from "@/shared/ui/Button";
 import { TelegramIcon } from "@/shared/SVG/TelegramIcon";
 import { InstagramIcon } from "@/shared/SVG/InstagramIcon";
@@ -17,9 +18,10 @@ import { FacebookIcon } from "@/shared/SVG/FacebookIcon";
 import { RedditIcon } from "@/shared/SVG/RedditIcon";
 import { GreenIcon } from "@/shared/SVG/GreenIcon";
 import { SocialDraxIcon } from "@/shared/SVG/SocialDraxIcon";
-import line_silver from "@/public/media/common/silver_line.svg";
+import * as Api from "@/shared/api";
 
-import imgBg from "@/public/media/common/commonSectionsBg.png";
+import clsx from "clsx";
+
 interface SocialSectionProps {}
 
 export const SocialSection: FC<SocialSectionProps> = () => {
@@ -44,7 +46,80 @@ export const SocialSection: FC<SocialSectionProps> = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const [email, setEmail] = useState<string>("");
+  const [error, setError] = useState(false);
+  const [notValidMail, setNotValidMail] = useState(false);
+  const [start, setStart] = useState(false);
 
+  function validateEmail(email: string) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  useEffect(() => {
+    if (notValidMail) {
+      setTimeout(() => {
+        setNotValidMail(false);
+      }, 2000);
+    }
+  }, [notValidMail]);
+
+  const [errorReq, setErrorReq] = useState(false);
+  const [requestDone, setRequestDone] = useState(false);
+  useEffect(() => {
+    (async () => {
+      if (start) {
+        const request = await Api.submitQuestion({
+          name: " ",
+          email: email,
+          message: " ",
+        });
+        if ((request as any).status === "OK") {
+          setEmail("");
+          setStart(false);
+          setRequestDone(true);
+        } else {
+          setEmail("");
+          setError(true);
+          setErrorReq(true);
+          setStart(false);
+          setRequestDone(true);
+        }
+      }
+    })();
+  }, [start]);
+
+  useEffect(() => {
+    if (requestDone) {
+      const timeout = setTimeout(() => {
+        setRequestDone(false);
+      }, 5000);
+      return () => clearTimeout(timeout);
+    }
+  }, [requestDone]);
+
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError((prev) => !prev);
+      }, 2000);
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if (errorReq) {
+      setTimeout(() => {
+        setErrorReq((prev) => !prev);
+      }, 2000);
+    }
+  }, [errorReq]);
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    if (width < 650) {
+      setIsMobile(true);
+    }
+  }, []);
   return (
     <section className={s.social} id="community_section">
       <Image src={imgBg} alt="img-bg-static" className={s.bg_img} />
@@ -62,9 +137,43 @@ export const SocialSection: FC<SocialSectionProps> = () => {
               to receive an rewards from Gods and rise to the Web3 Olympus
             </p>
           </div>
-          <div className={s.social_form}>
-            <input placeholder="Enter your e-mail address" type="text" />
-            <Button className={s.social_fotm_btn}>Subscribe</Button>
+          <div
+            className={clsx(
+              s.social_form,
+              error && !email && s.error_input,
+              notValidMail && s.error_input
+            )}
+          >
+            {/* <input placeholder="Enter your e-mail address" type="text" /> */}
+            <input
+              type="text"
+              placeholder={
+                errorReq
+                  ? "Request error"
+                  : notValidMail
+                  ? "Not valid email"
+                  : "Enter your e-mail address"
+              }
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <Button
+              onClick={() => {
+                if (!email) {
+                  setError(true);
+                } else if (validateEmail(email) === false) {
+                  setNotValidMail(true);
+                  setEmail("");
+                } else {
+                  setStart(true);
+                }
+              }}
+              className={s.social_fotm_btn}
+            >
+              Subscribe
+            </Button>
           </div>
         </div>
         <article className={s.social_wrapper}>
