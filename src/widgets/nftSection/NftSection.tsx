@@ -47,7 +47,7 @@ export const NftSection: FC<NftSectionProps> = () => {
                 unique NFTs. Each of these gods has its own level in the
                 hierarchy, which is assigned based on its rank. Users who hold
                 NFTs will be able to earn drop, which will be distributed among
-                the NFTs according to the god's rank.
+                the NFTs according to the god&apos;s rank.
               </p>
             </div>
             <Button

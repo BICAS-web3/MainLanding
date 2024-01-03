@@ -96,9 +96,10 @@ export const DraxSection: FC<DraxSectionProps> = () => {
               </h2>
               <p className={s.drax_text}>
                 DRAX, our exclusive token, unlocks a world of privileges and
-                rewards in our project. We're enhancing DRAX's features and
-                allocating 20% of our ecosystem's revenue to burn DRAX tokens,
-                aiming to reduce supply and potentially boost value.
+                rewards in our project. We&apos;re enhancing DRAX&apos;s
+                features and allocating 20% of our ecosystem&apos;s revenue to
+                burn DRAX tokens, aiming to reduce supply and potentially boost
+                value.
               </p>
             </div>
             <div className={s.drax_bottom_container}>
