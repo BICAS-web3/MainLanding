@@ -2,7 +2,7 @@ import s from "./styles.module.scss";
 import { FC, useEffect, useState } from "react";
 import bgImg from "@/public/media/nftSection/NftsectionBg.png";
 import mainBgImg from "@/public/media/common/commonSectionsBg.png";
-import mainBgImgMob from "@/public/media/nftSection/bgMobImg.png";
+import mainBgImgMob from "@/public/media/nftSection/mobGroup.webp";
 import { Button } from "@/shared/ui/Button";
 
 import line from "@/public/media/common/silver_line.svg";
@@ -17,7 +17,7 @@ export const NftSection: FC<NftSectionProps> = () => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      width < 650 && setIs650(true);
+      width < 650 ? setIs650(true) : setIs650(false);
     };
 
     handleResize();
@@ -31,7 +31,11 @@ export const NftSection: FC<NftSectionProps> = () => {
 
   return (
     <div className={s.nft_section} id="nft_section">
-      <img src={bgImg.src} className={s.nft_bg_img} alt="bg-img-nft-static" />
+      <img
+        src={is650 ? mainBgImgMob.src : bgImg.src}
+        className={s.nft_bg_img}
+        alt="bg-img-nft-static"
+      />
       <img src={mainBgImg.src} className={s.main_bg_img} alt="bg-static" />
       <Image className={s.silver_line} src={line} alt="line" />
       <div className={s.bg_ellipse}></div>
