@@ -171,7 +171,9 @@ export const SocialSection: FC<SocialSectionProps> = () => {
             <input
               type="text"
               placeholder={
-                errorReq
+                requestDone
+                  ? "Done !"
+                  : errorReq
                   ? "Request error"
                   : notValidMail
                   ? "Not valid email"

@@ -101,7 +101,7 @@ export const MediaSection: FC<MediaSectionProps> = () => {
         <h2 className={s.media_title}>
           <span>GreekKeepers </span>in Media
         </h2>
-        <div className={s.back} style={{ widows: "100%" }}>
+        <div className={s.back}>
           <span className={s.hover_1}></span>
           <span className={s.hover_2}></span>
 
