@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 import imgBg from "@/public/media/common/commonSectionsBg.png";
 import rightImg from "@/public/media/partnersImgs/right2x.png";
-import topImg from "@/public/media/partnersImgs/topImg.webp";
+import topImg from "@/public/media/partnersImgs/topImg.png";
 import topImgMob from "@/public/media/partnersImgs/stats2x.webp";
 import bottomImgMob from "@/public/media/partnersImgs/mobWithdrawals.webp";
 import { Button } from "@/shared/ui/Button";
