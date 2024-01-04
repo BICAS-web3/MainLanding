@@ -516,7 +516,7 @@
   border-radius: 20px;
   border: 1px solid #363636;
   padding-top: 257px;
-  padding-left: 77px;
+  padding-left: 39px;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -528,19 +528,20 @@
   padding-right: 20px;
   @media (max-width: 1600px) {
     padding-top: 100px;
-    padding-left: 51px;
+    // padding-left: 51px;
   }
   @media (max-width: 1280px) {
     padding-top: 170px;
     gap: 13px;
     height: 371px;
+    padding-left: 24px;
   }
   @media (max-width: 900px) {
     padding-top: 105px;
   }
   @media (max-width: 998px) {
     height: 229px;
-    padding-left: 32px;
+    // padding-left: 32px;
     border-radius: 12px;
   }
   @media (max-width: 700px) {
@@ -705,7 +706,7 @@
   border-radius: 20px;
   border: 1px solid #363636;
   display: flex;
-  padding: 0 58px;
+  padding: 0 39px;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -722,7 +723,7 @@
   cursor: pointer;
   @media (max-width: 1280px) {
     font-size: 16px;
-    padding: 0 38px;
+    padding: 0 24px;
     border-radius: 13px;
   }
   @media (max-width: 998px) {
@@ -732,6 +733,7 @@
     border-radius: 12px;
   }
   @media (max-width: 700px) {
+    padding: 0 23px;
   }
 }
 

@@ -192,7 +192,11 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                     s[`roadmap_article_title_${article.title.toLowerCase()}`]
                   )}
                 >
-                  {article.title}
+                  {article.title === "January"
+                    ? "January 2024"
+                    : article.title === "May"
+                    ? "May 2023"
+                    : article.title}
                 </h3>
                 <div className={s.roadmap_data_container}>
                   {article.times.map((time, i) => (
