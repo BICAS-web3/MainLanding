@@ -191,7 +191,7 @@ export const DraxSection: FC<DraxSectionProps> = () => {
                         s.statistic_tab,
                         el === activeTab && s.statistic_tab_active
                       )}
-                      onClick={() => setActiveTab(el)}
+                      // onClick={() => setActiveTab(el)}
                       key={el}
                     >
                       {el}
@@ -256,7 +256,7 @@ export const Swap = () => {
               Amount in <span>ARB</span> you pay
             </span>
             <div className={s.drax_input_wrapp}>
-              <input placeholder="0" className={s.drax_} type="text" />
+              <input disabled placeholder="0" className={s.drax_} type="text" />
               <ArbitrumIcon />
             </div>
           </div>
@@ -265,15 +265,16 @@ export const Swap = () => {
               Amount in <span>DRAX</span> you receive
             </span>
             <div className={s.drax_input_wrapp}>
-              <input placeholder="0" className={s.drax_} type="text" />
+              <input disabled placeholder="0" className={s.drax_} type="text" />
               <DraxIcon />
             </div>
           </div>
         </div>
         <div className={s.drax_btn_container}>
-          <Button className={s.drax_buy} isDisabled={true} isGray={true}>
+          <button className={s.drax_buy} disabled>
+            <div className={s.hover_el_gray}></div>
             Coming soon
-          </Button>
+          </button>
         </div>
         <div className={s.drax_undertitle}>
           Powered by
