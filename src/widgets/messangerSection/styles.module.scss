@@ -99,10 +99,14 @@
 }
 
 .messanger_content_body {
+  margin-right: 10px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1500px) {
+    margin-right: 0;
+  }
 
   @media screen and (max-width: 700px) {
     margin-right: 190px;
@@ -114,7 +118,7 @@
 }
 
 .messanger_info_title {
-  max-width: 475px;
+  max-width: 589px;
   color: #eaeaea;
   font-family: var(--font-nunito-sans);
   font-size: 50px;
@@ -124,6 +128,9 @@
   display: block;
   margin-bottom: 30px;
 
+  @media (max-width: 1500px) {
+    max-width: 516px;
+  }
   span {
     color: #e5c787;
   }
@@ -132,6 +139,7 @@
     font-size: 32px;
     line-height: 38.4px;
     margin-bottom: 20px;
+    max-width: 475px;
   }
 
   @media screen and (max-width: 700px) {
@@ -149,7 +157,7 @@
 }
 
 .messanger_info_text {
-  max-width: 475px;
+  max-width: 681px;
   color: #eaeaea;
   font-family: var(--font-source-sans-3);
   font-size: 18px;
@@ -157,7 +165,10 @@
   font-weight: 400;
   line-height: 25.2px;
   letter-spacing: 0.9px;
-
+  @media (max-width: 1500px) {
+    max-width: 516px;
+    font-size: 16px;
+  }
   @media screen and (max-width: 1280px) {
     font-size: 15px;
     line-height: 21px;
