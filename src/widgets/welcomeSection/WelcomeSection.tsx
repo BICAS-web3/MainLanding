@@ -2,9 +2,9 @@ import s from "./styles.module.scss";
 import { FC, useEffect, useState } from "react";
 import bgImg from "@/public/media/welcomeSection/welcomeSectionBg.png";
 import bgImg2 from "@/public/media/common/commonSectionsBg.png";
-import imgsGroup from "@/public/media/welcomeSection/imgsGroup.png";
-import imgsGroup1280 from "@/public/media/welcomeSection/imgsGroup1280.png";
-import imgsGroupMob from "@/public/media/welcomeSection/mob2x.webp";
+import imgsGroup from "@/public/media/welcomeSection/groupDesk.png";
+import imgsGroup1280 from "@/public/media/welcomeSection/group1280.png";
+import imgsGroupMob from "@/public/media/welcomeSection/groupMob.png";
 import { Button } from "@/shared/ui/Button";
 
 interface WelcomeSectionProps {}

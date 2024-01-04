@@ -22,6 +22,14 @@
 .welcome_section_info {
   position: relative;
   z-index: 10;
+
+  @media screen and (max-width: 1450px) {
+    margin-right: 100px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    margin-right: 0;
+  }
 }
 
 .section_bg_img {
@@ -44,17 +52,22 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  bottom: -45px;
-  right: 0;
+  bottom: 0;
+  right: -100px;
   z-index: 2;
-  width: fit-content;
-  height: fit-content;
+  width: 1060px;
+  height: 767px;
+
+  @media screen and (max-width: 1655px) {
+    right: -250px;
+  }
 
   @media screen and (max-width: 1280px) {
     height: 40vw;
     width: 60%;
     position: absolute;
     bottom: 0px;
+    right: -50px;
   }
 
   @media screen and (max-width: 700px) {
@@ -69,15 +82,21 @@
   }
 
   @media screen and (max-width: 520px) {
-    height: 411px;
-    max-height: 412px;
+    height: 384px;
+    max-height: 385px;
     max-width: 280px;
   }
 
   @media screen and (max-width: 370px) {
-    height: 310px;
-    max-height: 311px;
-    max-width: 210px;
+    height: 350px;
+    max-height: 351px;
+    max-width: 266px;
+    width: 265px;
+  }
+
+  @media screen and (max-width: 325px) {
+    right: -30px;
+    bottom: -10px;
   }
 }
 
@@ -105,10 +124,14 @@
 
 .welcome_section_body {
   width: 100%;
-  padding: 117px 0 0 0;
+  padding: 240px 0 0 0;
   min-height: 1005px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 1450px) {
+    padding: 220px 0 0 0;
+  }
 
   @media screen and (max-width: 1280px) {
     padding: 217px 0 0 0;
