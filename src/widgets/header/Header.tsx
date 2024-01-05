@@ -136,6 +136,7 @@ export const Header: FC<HeaderProps> = () => {
   ]);
 
   const handleBurgerOpen = () => {
+    console.log("click");
     if (!isOpened) {
       open();
     } else {
