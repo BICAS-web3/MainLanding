@@ -36,6 +36,14 @@ import s from "./styles.module.scss";
 
 import clsx from "clsx";
 import { GitbookIcon, GithubIcon } from "@/shared/SVG";
+import { Integ1 } from "@/shared/SVG/Integ1";
+import { Integ2 } from "@/shared/SVG/Integ2";
+import { Integ3 } from "@/shared/SVG/Integ3";
+import { Integ4 } from "@/shared/SVG/Integ4";
+import { Integ5 } from "@/shared/SVG/Integ5";
+import { Integ6 } from "@/shared/SVG/Integ6";
+import { Integ7 } from "@/shared/SVG/Integ7";
+import { Integ8 } from "@/shared/SVG/Integ8";
 
 interface MediaSectionProps {}
 
@@ -84,14 +92,14 @@ export const MediaSection: FC<MediaSectionProps> = () => {
   ];
 
   const integrationImg = [
-    integration_1,
-    integration_2,
-    integration_3,
-    integration_4,
-    integration_5,
-    integration_6,
-    integration_7,
-    integration_8,
+    { el: <Integ1 /> },
+    { el: <Integ2 /> },
+    { el: <Integ3 /> },
+    { el: <Integ4 /> },
+    { el: <Integ5 /> },
+    { el: <Integ6 /> },
+    { el: <Integ7 /> },
+    { el: <Integ8 /> },
   ];
 
   return (
@@ -121,15 +129,15 @@ export const MediaSection: FC<MediaSectionProps> = () => {
               innovations
             </p>
             {integrationImg.map((el, i) => (
-              <Image
+              <div
                 key={i}
                 className={clsx(
                   s.media_integration_img,
                   s[`media_integration_img_${i + 1}`]
                 )}
-                src={el}
-                alt="integration"
-              />
+              >
+                {el.el}
+              </div>
             ))}
           </div>
 
