@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import s from "./styles.module.scss";
 import bgGroup from "@/public/media/common/commonSectionsBg.png";
-import logo from "@/public/media/common/footerLogo.svg";
+import logo from "@/public/media/common/footerLogo_2.png";
 
 import youtubeIco from "@/public/media/footerImages/youtube.svg";
 import tiktokIco from "@/public/media/footerImages/tiktok.svg";
