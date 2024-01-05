@@ -285,3 +285,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+
+.img {
+  position: relative;
+  z-index: 1;
+}
