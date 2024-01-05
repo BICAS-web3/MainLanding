@@ -186,13 +186,12 @@ export const Header: FC<HeaderProps> = () => {
         <div className={s.header_container}>
           <div className={s.header_body}>
             <img src={logo.src} alt="header-logo" />
-            <div
-              className={clsx(s.burger_btn, isOpened && s.burger_anim)}
-              onClick={handleBurgerOpen}
-            >
-              <span className={clsx(s.burger_line, s.burger_line_1)}></span>
-              <span className={clsx(s.burger_line, s.burger_line_2)}></span>
-              <span className={clsx(s.burger_line, s.burger_line_3)}></span>
+            <div className={s.burger_open_wrap} onClick={handleBurgerOpen}>
+              <div className={clsx(s.burger_btn, isOpened && s.burger_anim)}>
+                <span className={clsx(s.burger_line, s.burger_line_1)}></span>
+                <span className={clsx(s.burger_line, s.burger_line_2)}></span>
+                <span className={clsx(s.burger_line, s.burger_line_3)}></span>
+              </div>
             </div>
           </div>
         </div>
