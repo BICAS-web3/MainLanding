@@ -185,7 +185,14 @@ export const Header: FC<HeaderProps> = () => {
         <img src={bgGroup.src} className={s.header_bg_img} alt="" />
         <div className={s.header_container}>
           <div className={s.header_body}>
-            <img src={logo.src} alt="header-logo" />
+            <img
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+              className={s.img}
+              src={logo.src}
+              alt="header-logo"
+            />
             <div
               className={clsx(s.burger_btn, isOpened && s.burger_anim)}
               onClick={handleBurgerOpen}
