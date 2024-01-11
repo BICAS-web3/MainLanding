@@ -305,9 +305,14 @@
   // left: 0;
   right: 0;
   z-index: 1;
+  min-width: 1px;
   // @media (max-width: 998px) {
   //   display: none;
   // }
+}
+
+.roadmap_line_j {
+  opacity: 0;
 }
 
 .roadmap_line_2 {
