@@ -222,7 +222,10 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                   ))}
                 </div>
                 <Image
-                  className={s.roadmap_line}
+                  className={clsx(
+                    s.roadmap_line,
+                    article.title === "January" && s.roadmap_line_j
+                  )}
                   src={roadmap_line_1}
                   alt="line"
                 />
