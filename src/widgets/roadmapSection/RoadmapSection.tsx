@@ -110,6 +110,26 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
         "Collaborate with various projects",
       ],
     },
+    {
+      title: "February",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Introducing new games and content to enrich the catalog",
+        "Providing players with new entertainment options",
+        "Improving sound design",
+        "Fixing of technical issues identified by users",
+        "Ensuring platform stability and improving overall performance",
+      ],
+    },
+    {
+      title: "March",
+      times: [5, 12, 19, 26, 29],
+      text: [
+        "Improving user experience",
+        "Updating the game platform design",
+        "Optimize the interface to improve navigation",
+      ],
+    },
   ];
 
   const swiperRef = useRef<SwiperRef>(null);
@@ -224,7 +244,7 @@ export const RoadmapSection: FC<RoadmapSectionProps> = () => {
                 <Image
                   className={clsx(
                     s.roadmap_line,
-                    article.title === "January" && s.roadmap_line_j
+                    article.title === "March" && s.roadmap_line_j
                   )}
                   src={roadmap_line_1}
                   alt="line"
